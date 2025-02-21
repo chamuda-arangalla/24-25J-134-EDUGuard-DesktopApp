@@ -6,16 +6,11 @@ import socket
 import struct
 import pickle
 import time
-from utils.mongodb_util import save_posture_data,update_posture_outputs
+from utils.mongodb_util import update_posture_outputs
 import sys
-import h5py
-import os
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
-import tensorflow as tf 
+
 
 # Load the model
-# model = joblib.load(r'C:\SLIIT\Research\plan\4 Models\models\posture_classifier.pkl')
-
 model = joblib.load(r"C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\models\random_forest_model.joblib")
 
 # Get the authenticated user email from command-line arguments
