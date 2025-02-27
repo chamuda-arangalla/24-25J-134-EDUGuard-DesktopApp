@@ -16,10 +16,6 @@ namespace EDUGuard_DesktopApp.Models
         public string Password { get; set; }
         public string ContactNumber { get; set; }
 
-        // field for Posture Data 
-        public List<List<string>> PostureData { get; set; } = new List<List<string>>();
-
-        public List<List<string>> StressData { get; set; } = new List<List<string>>();
 
     }
 
