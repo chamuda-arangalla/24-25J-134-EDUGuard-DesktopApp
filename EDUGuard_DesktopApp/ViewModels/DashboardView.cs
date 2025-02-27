@@ -22,7 +22,10 @@ namespace EDUGuard_DesktopApp.Views
         private Process _webcamServerProcess;
         private bool _isModel1Running = false, _isModel2Running = false, _isModel3Running = false, _isModel4Running = false;
         private readonly string _currentUserEmail;
-        private Timer _alertTimer;
+        //private Timer _alertTimer;
+        private Timer _postureMonitorTimer;
+        private int _processedArraysCount = 0; // Keep track of already processed arrays
+        private Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
         private readonly string _logFilePath = "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\error_log.txt";
 
         public DashboardView()
@@ -117,7 +120,7 @@ namespace EDUGuard_DesktopApp.Views
         }
 
 
-        private Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
+        
 
         private void StartModel(string modelName, ref bool isRunning, Button modelButton, string scriptPath)
         {
@@ -162,6 +165,12 @@ namespace EDUGuard_DesktopApp.Views
                 });
 
                 isRunning = true;
+
+                // Start posture monitoring if it's the posture model
+                if (modelName.ToLower() == "posture")
+                {
+                    StartPostureMonitoring(progressReportId);
+                }
             }
             catch (Exception ex)
             {
@@ -193,6 +202,13 @@ namespace EDUGuard_DesktopApp.Views
                     else
                     {
                         LogError($"Could not find progress report ID for {modelName}.");
+                    }
+
+                    //Stop posture monitoring when posture model stops
+                    if (modelName.ToLower() == "posture")
+                    {
+                        _postureMonitorTimer?.Stop();
+                        _postureMonitorTimer?.Dispose();
                     }
 
                     UpdateButtonUI(modelButton, false, $"Start {modelName}", $"Stop {modelName}");
@@ -296,6 +312,64 @@ namespace EDUGuard_DesktopApp.Views
             });
         }
 
+        private void StartPostureMonitoring(string progressReportId)
+        {
+            _processedArraysCount = 0; // Reset count when model starts
+            _postureMonitorTimer = new Timer(120000); // Runs every 2 minutes (120000 ms)
+            _postureMonitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
+            _postureMonitorTimer.AutoReset = true;
+            _postureMonitorTimer.Start();
+
+        }
+
+        private async Task CheckPostureAlerts(string progressReportId)
+        {
+            try
+            {
+                // Fetch latest progress report
+                var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+                var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+                if (report == null || report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
+                {
+                    LogError("No posture data found for monitoring.");
+                    return;
+                }
+
+                // Process only new arrays (ignore already processed ones)
+                for (int i = _processedArraysCount; i < report.PostureData.Outputs.Count; i++)
+                {
+                    var batch = report.PostureData.Outputs[i];
+
+                    if (batch.Count == 0) continue; // Skip empty batches
+
+                    // Calculate the percentage of "Bad Posture" occurrences in the batch
+                    int badPostureCount = batch.Count(p => p == "Bad Posture");
+                    double badPosturePercentage = (double)badPostureCount / batch.Count * 100;
+
+                    // Trigger notification only if "Bad Posture" exceeds 60%
+                    if (badPosturePercentage > 60)
+                    {
+                        ShowNotification($"Alert: Your posture quality is poor! {badPosturePercentage:F1}% bad posture detected.");
+                    }
+
+                    // Mark this batch as processed
+                    _processedArraysCount++;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogError($"Error checking posture alerts: {ex.Message}");
+            }
+        }
+
+        //warning alert 
+        private void ShowNotification(string message)
+        {
+            // Example: Windows Toast Notification (you can modify based on your UI)
+            MessageBox.Show(message, "Posture Alert", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
         private void Model1Button_Click(object sender, RoutedEventArgs e)
         {
             ToggleModel("posture", ref _isModel1Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\posture_detection1.py");
@@ -366,12 +440,12 @@ namespace EDUGuard_DesktopApp.Views
         //}
 
 
-        protected override void OnClosed(EventArgs e)
-        {
-            _alertTimer?.Stop();
-            _alertTimer?.Dispose();
-            base.OnClosed(e);
-        }
+        //protected override void OnClosed(EventArgs e)
+        //{
+        //    _alertTimer?.Stop();
+        //    _alertTimer?.Dispose();
+        //    base.OnClosed(e);
+        //}
 
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
