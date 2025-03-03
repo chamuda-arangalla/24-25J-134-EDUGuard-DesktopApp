@@ -1,6 +1,7 @@
 ﻿<Window x:Class="EDUGuard_DesktopApp.Views.DashboardView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         Title="Dashboard" Height="600" Width="800" Background="#F5F5F5"
         WindowStartupLocation="CenterScreen">
 
@@ -100,8 +101,14 @@
 
             <TabItem Header="Reports">
                 <Border Background="White" Margin="10" Padding="20" CornerRadius="10">
-                    <TextBlock Text="Reports Section" FontSize="22" FontWeight="Bold"
-                               Foreground="#333" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Grid>
+                        <lvc:PieChart Name="PostureChart" Height="300" Width="400">
+                            <lvc:PieChart.Series>
+                                <lvc:PieSeries Values="{Binding PostureValues}" Title="Good Posture" Fill="ForestGreen" />
+                                <lvc:PieSeries Values="{Binding PostureValues}" Title="Bad Posture" Fill="OrangeRed" />
+                            </lvc:PieChart.Series>
+                        </lvc:PieChart>
+                    </Grid>
                 </Border>
             </TabItem>
 
