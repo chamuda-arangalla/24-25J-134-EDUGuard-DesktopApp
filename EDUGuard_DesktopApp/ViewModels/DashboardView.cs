@@ -316,6 +316,7 @@ namespace EDUGuard_DesktopApp.Views
         {
             _processedArraysCount = 0; // Reset count when model starts
             _postureMonitorTimer = new Timer(120000); // Runs every 2 minutes (120000 ms)
+            //_postureMonitorTimer.Elapsed += (sender, e) => LogError($"Timer CAlled. {DateTime.Now}");
             _postureMonitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
             _postureMonitorTimer.AutoReset = true;
             _postureMonitorTimer.Start();
@@ -340,8 +341,14 @@ namespace EDUGuard_DesktopApp.Views
                 for (int i = _processedArraysCount; i < report.PostureData.Outputs.Count; i++)
                 {
                     var batch = report.PostureData.Outputs[i];
+                    LogError($"PostureData.Outputs {batch}");
 
-                    if (batch.Count == 0) continue; // Skip empty batches
+
+                    if (batch.Count == 0)
+                    {
+                        LogError($"Batch empty {batch}");
+                        continue;
+                    } // Skip empty batches
 
                     // Calculate the percentage of "Bad Posture" occurrences in the batch
                     int badPostureCount = batch.Count(p => p == "Bad Posture");
@@ -350,6 +357,7 @@ namespace EDUGuard_DesktopApp.Views
                     // Trigger notification only if "Bad Posture" exceeds 60%
                     if (badPosturePercentage > 60)
                     {
+                        LogError($"badposture Notify: {DateTime.Now}");
                         ShowNotification($"Alert: Your posture quality is poor! {badPosturePercentage:F1}% bad posture detected.");
                     }
 
