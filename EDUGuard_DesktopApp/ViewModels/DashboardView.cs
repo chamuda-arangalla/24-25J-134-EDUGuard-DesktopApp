@@ -12,11 +12,13 @@ using MongoDB.Driver;
 using System.Linq;
 using System.Timers;
 using MongoDB.Bson;
+using EDUGuard_DesktopApp.ViewModels;
 
 namespace EDUGuard_DesktopApp.Views
 {
     public partial class DashboardView : Window
     {
+        private ReportViewModel _reportViewModel;
         private readonly DatabaseHelper _dbHelper = new DatabaseHelper();
         private readonly Dictionary<string, Process> _modelProcesses = new Dictionary<string, Process>();
         private Process _webcamServerProcess;
@@ -26,13 +28,12 @@ namespace EDUGuard_DesktopApp.Views
         private Timer _postureMonitorTimer;
         private int _processedArraysCount = 0; // Keep track of already processed arrays
         private Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
-        private readonly string _logFilePath = "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\error_log.txt";
 
         public DashboardView()
         {
             if (!SessionManager.IsLoggedIn)
             {
-                LogError("Access Denied: User not logged in.");
+                Logger.LogError("Access Denied: User not logged in.");
                 Close();
                 return;
             }
@@ -41,12 +42,15 @@ namespace EDUGuard_DesktopApp.Views
             InitializeComponent();
             StartWebcamServer();
             LoadUserProfile();
+            // Set ViewModel for Data Binding
+            _reportViewModel = new ReportViewModel();
+            DataContext = _reportViewModel;
 
             // Get the current user's email
             _currentUserEmail = SessionManager.CurrentUser?.Email;
             if (string.IsNullOrEmpty(_currentUserEmail))
             {
-                LogError("Failed to retrieve the user's email.");
+                Logger.LogError("Failed to retrieve the user's email.");
                 Close();
             }
 
@@ -83,12 +87,12 @@ namespace EDUGuard_DesktopApp.Views
                 _webcamServerProcess = Process.Start(processInfo);
                 if (_webcamServerProcess == null)
                 {
-                    LogError("Failed to start the webcam server.");
+                    Logger.LogError("Failed to start the webcam server.");
                 }
             }
             catch (Exception ex)
             {
-                LogError($"Error starting the webcam server: {ex.Message}");
+                Logger.LogError($"Error starting the webcam server: {ex.Message}");
             }
         }
 
@@ -129,7 +133,7 @@ namespace EDUGuard_DesktopApp.Views
 
             if (string.IsNullOrEmpty(progressReportId))
             {
-                LogError($"Failed to create progress report for {modelName}.");
+                Logger.LogError($"Failed to create progress report for {modelName}.");
                 return;
             }
 
@@ -151,7 +155,7 @@ namespace EDUGuard_DesktopApp.Views
                 var process = Process.Start(processInfo);
                 if (process == null)
                 {
-                    LogError($"Failed to start {modelName}.");
+                    Logger.LogError($"Failed to start {modelName}.");
                     return;
                 }
 
@@ -161,7 +165,7 @@ namespace EDUGuard_DesktopApp.Views
                 Task.Run(() =>
                 {
                     ReadStreamAsync(process.StandardOutput, line => Console.WriteLine($"[{modelName} Output]: {line}"));
-                    ReadStreamAsync(process.StandardError, line => LogError($"[{modelName} Error]: {line}"));
+                    ReadStreamAsync(process.StandardError, line => Logger.LogError($"[{modelName} Error]: {line}"));
                 });
 
                 isRunning = true;
@@ -174,7 +178,7 @@ namespace EDUGuard_DesktopApp.Views
             }
             catch (Exception ex)
             {
-                LogError($"Error starting {modelName}: {ex.Message}");
+                Logger.LogError($"Error starting {modelName}: {ex.Message}");
             }
         }
 
@@ -201,7 +205,7 @@ namespace EDUGuard_DesktopApp.Views
                     }
                     else
                     {
-                        LogError($"Could not find progress report ID for {modelName}.");
+                        Logger.LogError($"Could not find progress report ID for {modelName}.");
                     }
 
                     //Stop posture monitoring when posture model stops
@@ -217,7 +221,7 @@ namespace EDUGuard_DesktopApp.Views
             }
             catch (Exception ex)
             {
-                LogError($"Error stopping {modelName}: {ex.Message}");
+                Logger.LogError($"Error stopping {modelName}: {ex.Message}");
             }
         }
 
@@ -307,7 +311,7 @@ namespace EDUGuard_DesktopApp.Views
                 }
                 catch (Exception ex)
                 {
-                    LogError($"Stream read error: {ex.Message}");
+                    Logger.LogError($"Stream read error: {ex.Message}");
                 }
             });
         }
@@ -333,7 +337,7 @@ namespace EDUGuard_DesktopApp.Views
 
                 if (report == null || report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
                 {
-                    LogError("No posture data found for monitoring.");
+                    Logger.LogError("No posture data found for monitoring.");
                     return;
                 }
 
@@ -341,12 +345,12 @@ namespace EDUGuard_DesktopApp.Views
                 for (int i = _processedArraysCount; i < report.PostureData.Outputs.Count; i++)
                 {
                     var batch = report.PostureData.Outputs[i];
-                    LogError($"PostureData.Outputs {batch}");
+                    Logger.LogError($"PostureData.Outputs {batch}");
 
 
                     if (batch.Count == 0)
                     {
-                        LogError($"Batch empty {batch}");
+                        Logger.LogError($"Batch empty {batch}");
                         continue;
                     } // Skip empty batches
 
@@ -357,7 +361,7 @@ namespace EDUGuard_DesktopApp.Views
                     // Trigger notification only if "Bad Posture" exceeds 60%
                     if (badPosturePercentage > 60)
                     {
-                        LogError($"badposture Notify: {DateTime.Now}");
+                        Logger.LogError($"badposture Notify: {DateTime.Now}");
                         ShowNotification($"Alert: Your posture quality is poor! {badPosturePercentage:F1}% bad posture detected.");
                     }
 
@@ -367,7 +371,7 @@ namespace EDUGuard_DesktopApp.Views
             }
             catch (Exception ex)
             {
-                LogError($"Error checking posture alerts: {ex.Message}");
+                Logger.LogError($"Error checking posture alerts: {ex.Message}");
             }
         }
 
@@ -491,7 +495,7 @@ namespace EDUGuard_DesktopApp.Views
                 }
                 catch (Exception ex)
                 {
-                    LogError($"Error stopping {modelName}: {ex.Message}");
+                    Logger.LogError($"Error stopping {modelName}: {ex.Message}");
                 }
             }
 
@@ -504,7 +508,7 @@ namespace EDUGuard_DesktopApp.Views
                 }
                 catch (Exception ex)
                 {
-                    LogError($"Error stopping Webcam Server: {ex.Message}");
+                    Logger.LogError($"Error stopping Webcam Server: {ex.Message}");
                 }
             }
         }
@@ -515,7 +519,7 @@ namespace EDUGuard_DesktopApp.Views
             {
                 if (string.IsNullOrEmpty(progressReportId) || !ObjectId.TryParse(progressReportId, out _))
                 {
-                    LogError($"Invalid progress report ID: {progressReportId}");
+                    Logger.LogError($"Invalid progress report ID: {progressReportId}");
                     return;
                 }
 
@@ -536,31 +540,31 @@ namespace EDUGuard_DesktopApp.Views
                     var result = _dbHelper.ProgressReports.UpdateOne(filter, update);
                     if (result.ModifiedCount == 0)
                     {
-                        LogError($"Failed to update end time for {modelName} (ID: {progressReportId}).");
+                        Logger.LogError($"Failed to update end time for {modelName} (ID: {progressReportId}).");
                     }
                 }
             }
             catch (Exception ex)
             {
-                LogError($"Error saving end time for {modelName} (ID: {progressReportId}): {ex.Message}");
+                Logger.LogError($"Error saving end time for {modelName} (ID: {progressReportId}): {ex.Message}");
             }
         }
 
 
 
 
-        private void LogError(string message)
-        {
-            try
-            {
-                string logMessage = $"{DateTime.Now}: {message}\n";
-                File.AppendAllText(_logFilePath, logMessage);
-            }
-            catch
-            {
-                // Avoid crashes if logging fails
-            }
-        }
+        //private void LogError(string message)
+        //{
+        //    try
+        //    {
+        //        string logMessage = $"{DateTime.Now}: {message}\n";
+        //        File.AppendAllText(_logFilePath, logMessage);
+        //    }
+        //    catch
+        //    {
+        //        // Avoid crashes if logging fails
+        //    }
+        //}
     }
 
  
