@@ -9,3 +9,93 @@
 2/27/2025 8:10:32 PM: Timer CAlled. 2/27/2025 8:10:32 PM
 2/27/2025 8:12:32 PM: Timer CAlled. 2/27/2025 8:12:32 PM
 2/27/2025 8:14:32 PM: Timer CAlled. 2/27/2025 8:14:32 PM
+3/4/2025 7:57:05 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 8:00:31 AM: postureDataByDay data :  System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
+3/4/2025 8:00:31 AM: DAY data :  10.2,73.8
+3/4/2025 8:00:43 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 8:03:19 AM: Filter data :  MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 8:03:19 AM: progressReports data :  System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
+3/4/2025 8:03:19 AM: postureDataByDay data :  System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
+3/4/2025 8:03:19 AM: DAY data :  10.2,73.8
+3/4/2025 8:03:34 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 8:07:06 AM: User Id data :  67bfc81d6620dda65683974f
+3/4/2025 8:07:06 AM: Filter data :  MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 8:07:06 AM: progressReports data :  System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
+3/4/2025 8:07:06 AM: postureDataByDay data :  System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
+3/4/2025 8:07:06 AM: DAY data :  10.2,73.8
+3/4/2025 8:07:29 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 9:34:00 AM: User Id data : 67bfc81d6620dda65683974f
+3/4/2025 9:34:00 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 9:34:00 AM: progressReports data : System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff78ac02771d3aa83c4ae
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
+3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
+3/4/2025 9:34:00 AM: postureDataByDay data : System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
+3/4/2025 9:34:00 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
+3/4/2025 9:34:08 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 9:38:27 AM: User Id data : 67bfc81d6620dda65683974f
+3/4/2025 9:38:27 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 9:38:27 AM: progressReports data : System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff78ac02771d3aa83c4ae
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
+3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
+3/4/2025 9:38:27 AM: postureDataByDay data : System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
+3/4/2025 9:38:27 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
+3/4/2025 9:38:34 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 9:40:31 AM: User Id data : 67bfc81d6620dda65683974f
+3/4/2025 9:40:31 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 9:40:32 AM: progressReports data : EDUGuard_DesktopApp.Models.ProgressReports[]
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff78ac02771d3aa83c4ae
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
+3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
+3/4/2025 9:40:32 AM: postureDataByDay data : System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
+3/4/2025 9:40:32 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
+3/4/2025 9:40:36 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 9:50:18 AM: User Id data : 67bfc81d6620dda65683974f
+3/4/2025 9:50:18 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 9:50:19 AM: progressReports data count: 10
+3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
+3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
+3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
+3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
+3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
+3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
+3/4/2025 9:50:19 AM: postureDataByDay data count : 1
+3/4/2025 9:50:19 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
+3/4/2025 9:50:27 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 9:57:52 AM: User Id data : 67bfc81d6620dda65683974f
+3/4/2025 9:57:52 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
+3/4/2025 9:57:53 AM: progressReports data count: 10
+3/4/2025 9:57:53 AM: Processing report ID: 67bff6b9c02771d3aa83c4a9
+3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=1, Bad=1
+3/4/2025 9:57:53 AM: Processing report ID: 67c070740f61738392d7ed91
+3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=6.3, Bad=29.7
+3/4/2025 9:57:53 AM: Processing report ID: 67c0765c9703a8c47ce57670
+3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=2.1, Bad=9.9
+3/4/2025 9:57:53 AM: Processing report ID: 67c078705a392b0462b15074
+3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=0.8, Bad=33.2
+3/4/2025 9:57:53 AM: postureDataByDay data count : 1
+3/4/2025 9:58:00 AM: Error fetching posture data: Object reference not set to an instance of an object.
+3/4/2025 11:21:37 AM: [posture Error]: 2025-03-04 11:21:37.038719: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/4/2025 11:22:02 AM: [posture Error]: 2025-03-04 11:22:02.981548: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/4/2025 11:23:31 AM: [posture Error]: 2025-03-04 11:23:31.684863: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/4/2025 11:23:34 AM: [posture Error]: 2025-03-04 11:23:34.275930: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/4/2025 11:24:42 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/4/2025 11:24:42 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/4/2025 11:24:42 AM: [posture Error]: W0000 00:00:1741067682.488044    4948 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/4/2025 11:24:42 AM: [posture Error]: W0000 00:00:1741067682.583887   11036 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/4/2025 11:24:43 AM: [posture Error]: W0000 00:00:1741067683.741676   22920 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/4/2025 11:25:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/4/2025 11:25:28 AM: badposture Notify: 3/4/2025 11:25:28 AM

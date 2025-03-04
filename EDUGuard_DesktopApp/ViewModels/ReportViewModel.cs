@@ -5,21 +5,28 @@ using LiveCharts.Wpf;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace EDUGuard_DesktopApp.ViewModels
 {
     public class ReportViewModel : INotifyPropertyChanged
     {
         private readonly DatabaseHelper _dbHelper;
-        private ChartValues<int> _postureValues;
-        private List<string> _postureLabels;
+
+        private SeriesCollection _postureSeries;
+        private ObservableCollection<string> _timeLabels;
+        public SeriesCollection PosturePieSeries { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ChartValues<int> PostureValues
+        //PieChart Data Collection
+        private ChartValues<double> _postureValues = new ChartValues<double> { 0, 0 };
+        public ChartValues<double> PostureValues
         {
             get => _postureValues;
             set
@@ -29,61 +36,168 @@ namespace EDUGuard_DesktopApp.ViewModels
             }
         }
 
-        public List<string> PostureLabels
+        // Bindable property for X-axis labels (Dates)
+        public ObservableCollection<string> TimeLabels
         {
-            get => _postureLabels;
+            get => _timeLabels;
             set
             {
-                _postureLabels = value;
+                _timeLabels = value;
                 OnPropertyChanged();
             }
         }
 
+        //Bindable property for posture data series (Chart Bars)
+        public SeriesCollection PostureSeries
+        {
+            get => _postureSeries;
+            set
+            {
+                _postureSeries = value;
+                OnPropertyChanged();
+            }
+        }
+
+        //Constructor: Initializes collections & Fetches data
         public ReportViewModel()
         {
             _dbHelper = new DatabaseHelper();
-            PostureValues = new ChartValues<int> { 0, 0 }; // Initial values for Good & Bad Posture
-            PostureLabels = new List<string> { "Good Posture", "Bad Posture" };
+
+            TimeLabels = new ObservableCollection<string>();
+
+            PostureSeries = new SeriesCollection
+            {
+                new ColumnSeries { Values = new ChartValues<double>(), Title = "Good Posture" },
+                new ColumnSeries { Values = new ChartValues<double>(), Title = "Bad Posture" }
+            };
+
+            //Initialize PieChart data series
+            PosturePieSeries = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Good Posture",
+                    Values = new ChartValues<double> { 0 },
+                    Fill = Brushes.ForestGreen,
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Bad Posture",
+                    Values = new ChartValues<double> { 0 },
+                    Fill = Brushes.OrangeRed,
+                    DataLabels = true
+                }
+            };
 
             FetchPostureData();
+            FetchPostureDataForPieChart();
         }
 
+
+
+        //Fetch and process posture data from MongoDB
         public async void FetchPostureData()
         {
             try
             {
-                var currentUserId = SessionManager.CurrentUser.Id; // Get logged-in user ID
+                // 🟢 Get the logged-in user ID
+                var currentUserId = SessionManager.CurrentUser.Id;
+                Console.WriteLine($"User Id data : {currentUserId}");
 
-                // Find all completed posture monitoring sessions for the user
-                var filter = Builders<ProgressReports>.Filter.And(
-                    Builders<ProgressReports>.Filter.Eq(p => p.UserId, currentUserId),
-                    Builders<ProgressReports>.Filter.Ne(p => p.PostureData.EndTime, DateTime.MinValue) // Ensure session ended
-                );
+                // 🟢 Create MongoDB filter for user reports
+                var filter = Builders<ProgressReports>.Filter.Eq(p => p.UserId, currentUserId);
+                Console.WriteLine($"Filter data : {filter}");
 
-                var reports = await _dbHelper.ProgressReports.Find(filter)
-                                   .SortByDescending(p => p.PostureData.StartTime)
-                                   .ToListAsync(); // Get all relevant reports
+                // 🟢 Retrieve all progress reports
+                var progressReports = await _dbHelper.ProgressReports
+                    .Find(filter)
+                    .SortByDescending(p => p.PostureData.StartTime)
+                    .ToListAsync();
 
-                int totalGood = 0;
-                int totalBad = 0;
-
-                foreach (var report in reports)
+                if (progressReports == null || progressReports.Count == 0)
                 {
-                    if (report.PostureData.Outputs != null && report.PostureData.Outputs.Count > 0)
-                    {
-                        foreach (var array in report.PostureData.Outputs)
-                        {
-                            int badCount = array.Count(p => p == "Bad Posture");
-                            int goodCount = array.Count - badCount; // Remaining are Good Postures
-
-                            totalBad += badCount;
-                            totalGood += goodCount;
-                        }
-                    }
+                    Console.WriteLine("No progress reports found.");
+                    return;
                 }
 
-                // Update chart values dynamically
-                PostureValues = new ChartValues<int> { totalGood, totalBad };
+                Console.WriteLine($"progressReports data count: {progressReports.Count}");
+
+                // 🟢 Dictionary to store total Good/Bad posture duration **by day**
+                var postureDataByDay = new Dictionary<DateTime, (double goodPosture, double badPosture)>();
+
+                foreach (var report in progressReports)
+                {
+                    Console.WriteLine($"Processing report ID: {report.Id}");
+
+                    if (report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
+                    {
+                        Console.WriteLine($"PostureData.Outputs is EMPTY in report ID: {report.Id}");
+                        continue;
+                    }
+
+                    // 🟢 Get the date of the posture session
+                    var reportDate = report.PostureData.StartTime.Date;
+
+                    double totalGood = 0;
+                    double totalBad = 0;
+
+                    foreach (var batch in report.PostureData.Outputs)
+                    {
+                        if (batch == null || batch.Count == 0) continue; // Skip empty batches
+
+                        int badCount = batch.Count(p => p == "Bad Posture");
+                        int goodCount = batch.Count - badCount;
+
+                        // Each batch represents 2 minutes
+                        double batchDuration = 2.0;
+
+                        totalGood += (goodCount / (double)batch.Count) * batchDuration;
+                        totalBad += (badCount / (double)batch.Count) * batchDuration;
+                    }
+
+                    // 🟢 Store posture data by date
+                    if (!postureDataByDay.ContainsKey(reportDate))
+                    {
+                        postureDataByDay[reportDate] = (totalGood, totalBad);
+                    }
+                    else
+                    {
+                        var existing = postureDataByDay[reportDate];
+                        postureDataByDay[reportDate] = (existing.goodPosture + totalGood, existing.badPosture + totalBad);
+                    }
+
+                    Console.WriteLine($"Processed data for {reportDate}: Good={totalGood}, Bad={totalBad}");
+                }
+
+                Console.WriteLine($"postureDataByDay data count : {postureDataByDay.Count}");
+
+                if (postureDataByDay.Count == 0)
+                {
+                    Console.WriteLine("No valid posture data found after processing.");
+                    return;
+                }
+
+                // 🟢 Update UI Chart (Ensure **Thread Safety**)
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    TimeLabels.Clear();
+                    PostureSeries[0].Values.Clear();
+                    PostureSeries[1].Values.Clear();
+
+                    foreach (var entry in postureDataByDay.OrderBy(e => e.Key))
+                    {
+                        TimeLabels.Add(entry.Key.ToString("MM/dd/yyyy"));
+                        PostureSeries[0].Values.Add(entry.Value.goodPosture);
+                        PostureSeries[1].Values.Add(entry.Value.badPosture);
+                    }
+
+                    // ✅ Notify UI about updates
+                    OnPropertyChanged(nameof(TimeLabels));
+                    OnPropertyChanged(nameof(PostureSeries));
+
+                    Console.WriteLine("Successfully updated chart data.");
+                });
             }
             catch (Exception ex)
             {
@@ -91,8 +205,67 @@ namespace EDUGuard_DesktopApp.ViewModels
             }
         }
 
+        //Fetch Posture Data for PieChart
+        public async void FetchPostureDataForPieChart()
+        {
+            try
+            {
+                var currentUserId = SessionManager.CurrentUser.Id;
+                Console.WriteLine($"User Id data : {currentUserId}");
 
-        // Notify UI about data updates
+                var filter = Builders<ProgressReports>.Filter.Eq(p => p.UserId, currentUserId);
+                var latestReport = await _dbHelper.ProgressReports
+                    .Find(filter)
+                    .SortByDescending(p => p.PostureData.StartTime)
+                    .FirstOrDefaultAsync();
+
+                if (latestReport == null || latestReport.PostureData?.Outputs == null || latestReport.PostureData.Outputs.Count == 0)
+                {
+                    Console.WriteLine("⚠ No valid posture data found. Setting default values.");
+                    PosturePieSeries[0].Values = new ChartValues<double> { 1 };
+                    PosturePieSeries[1].Values = new ChartValues<double> { 1 };
+                    return;
+                }
+
+                double totalGood = 0;
+                double totalBad = 0;
+
+                foreach (var batch in latestReport.PostureData.Outputs)
+                {
+                    if (batch == null || batch.Count == 0) continue;
+
+                    int badCount = batch.Count(p => p == "Bad Posture");
+                    int goodCount = batch.Count - badCount;
+
+                    // Each batch represents 2 minutes
+                    double batchDuration = 2.0;
+
+                    totalGood += (goodCount / (double)batch.Count) * batchDuration;
+                    totalBad += (badCount / (double)batch.Count) * batchDuration;
+                }
+
+                Console.WriteLine($"✅ Processed Pie Chart Data: Good={totalGood}, Bad={totalBad}");
+
+                // Update UI on the main thread
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    PosturePieSeries[0].Values = new ChartValues<double> { totalGood };
+                    PosturePieSeries[1].Values = new ChartValues<double> { totalBad };
+
+                    PostureValues = new ChartValues<double> { totalGood, totalBad };
+                    OnPropertyChanged(nameof(PosturePieSeries));
+                    OnPropertyChanged(nameof(PostureValues));
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error fetching Pie Chart data: {ex.Message}");
+            }
+        }
+
+
+
+        //Notify UI about data updates
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

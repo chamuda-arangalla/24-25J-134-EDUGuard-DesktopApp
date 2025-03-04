@@ -101,14 +101,42 @@
 
             <TabItem Header="Reports">
                 <Border Background="White" Margin="10" Padding="20" CornerRadius="10">
+                
                     <Grid>
+                        <!-- Define two columns -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <!-- First column -->
+                            <ColumnDefinition Width="2*" />
+                            <!-- Second column -->
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Pie Chart in First Column -->
                         <lvc:PieChart Name="PostureChart" Height="300" Width="400">
                             <lvc:PieChart.Series>
-                                <lvc:PieSeries Values="{Binding PostureValues}" Title="Good Posture" Fill="ForestGreen" />
-                                <lvc:PieSeries Values="{Binding PostureValues}" Title="Bad Posture" Fill="OrangeRed" />
+                                <lvc:PieSeries Values="{Binding PosturePieSeries[0].Values}" Title="Good Posture" Fill="ForestGreen" DataLabels="True"/>
+                                <lvc:PieSeries Values="{Binding PosturePieSeries[1].Values}" Title="Bad Posture" Fill="OrangeRed" DataLabels="True"/>
                             </lvc:PieChart.Series>
                         </lvc:PieChart>
+
+
+                        <!-- Cartesian Chart in Second Column -->
+                        <lvc:CartesianChart Name="ReportChart" Height="300" Width="600" Grid.Column="1">
+                            <lvc:CartesianChart.Series>
+                                <lvc:ColumnSeries Values="{Binding PostureSeries[0].Values}" Title="Good Posture" />
+                                <lvc:ColumnSeries Values="{Binding PostureSeries[1].Values}" Title="Bad Posture" />
+                            </lvc:CartesianChart.Series>
+
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Title="Date" Labels="{Binding TimeLabels}" />
+                            </lvc:CartesianChart.AxisX>
+
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis Title="Duration (Minutes)" />
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
                     </Grid>
+
                 </Border>
             </TabItem>
 

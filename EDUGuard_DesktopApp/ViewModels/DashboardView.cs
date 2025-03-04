@@ -18,7 +18,7 @@ namespace EDUGuard_DesktopApp.Views
 {
     public partial class DashboardView : Window
     {
-        private ReportViewModel _reportViewModel;
+        private readonly ReportViewModel _reportViewModel;
         private readonly DatabaseHelper _dbHelper = new DatabaseHelper();
         private readonly Dictionary<string, Process> _modelProcesses = new Dictionary<string, Process>();
         private Process _webcamServerProcess;
@@ -27,7 +27,7 @@ namespace EDUGuard_DesktopApp.Views
         //private Timer _alertTimer;
         private Timer _postureMonitorTimer;
         private int _processedArraysCount = 0; // Keep track of already processed arrays
-        private Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
 
         public DashboardView()
         {
