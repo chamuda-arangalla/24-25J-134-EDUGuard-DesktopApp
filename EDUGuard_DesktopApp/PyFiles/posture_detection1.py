@@ -11,7 +11,8 @@ import sys
 
 
 # Load the model
-model = joblib.load(r"C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\models\posture_classifier.pkl")
+model_path = 'C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\models\\posture_classifier.pkl'
+model = joblib.load(model_path)
 
 # Get the authenticated user email from command-line arguments
 if len(sys.argv) < 2:

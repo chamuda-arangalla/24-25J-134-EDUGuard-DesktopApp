@@ -1,147 +1,77 @@
-2/27/2025 8:06:35 PM: [posture Error]: 2025-02-27 20:06:35.517302: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2/27/2025 8:06:37 PM: [posture Error]: 2025-02-27 20:06:37.321108: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2/27/2025 8:06:46 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-2/27/2025 8:06:46 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-2/27/2025 8:06:46 PM: [posture Error]: W0000 00:00:1740667006.502401   11716 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-2/27/2025 8:06:46 PM: [posture Error]: W0000 00:00:1740667006.572774   11716 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-2/27/2025 8:06:47 PM: [posture Error]: W0000 00:00:1740667007.353177    5892 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-2/27/2025 8:08:32 PM: Timer CAlled. 2/27/2025 8:08:32 PM
-2/27/2025 8:10:32 PM: Timer CAlled. 2/27/2025 8:10:32 PM
-2/27/2025 8:12:32 PM: Timer CAlled. 2/27/2025 8:12:32 PM
-2/27/2025 8:14:32 PM: Timer CAlled. 2/27/2025 8:14:32 PM
-3/4/2025 7:57:05 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 8:00:31 AM: postureDataByDay data :  System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
-3/4/2025 8:00:31 AM: DAY data :  10.2,73.8
-3/4/2025 8:00:43 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 8:03:19 AM: Filter data :  MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 8:03:19 AM: progressReports data :  System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
-3/4/2025 8:03:19 AM: postureDataByDay data :  System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
-3/4/2025 8:03:19 AM: DAY data :  10.2,73.8
-3/4/2025 8:03:34 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 8:07:06 AM: User Id data :  67bfc81d6620dda65683974f
-3/4/2025 8:07:06 AM: Filter data :  MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 8:07:06 AM: progressReports data :  System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
-3/4/2025 8:07:06 AM: postureDataByDay data :  System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
-3/4/2025 8:07:06 AM: DAY data :  10.2,73.8
-3/4/2025 8:07:29 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 9:34:00 AM: User Id data : 67bfc81d6620dda65683974f
-3/4/2025 9:34:00 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 9:34:00 AM: progressReports data : System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67bff78ac02771d3aa83c4ae
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
-3/4/2025 9:34:00 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
-3/4/2025 9:34:00 AM: postureDataByDay data : System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
-3/4/2025 9:34:00 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
-3/4/2025 9:34:08 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 9:38:27 AM: User Id data : 67bfc81d6620dda65683974f
-3/4/2025 9:38:27 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 9:38:27 AM: progressReports data : System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67bff78ac02771d3aa83c4ae
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
-3/4/2025 9:38:27 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
-3/4/2025 9:38:27 AM: postureDataByDay data : System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
-3/4/2025 9:38:27 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
-3/4/2025 9:38:34 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 9:40:31 AM: User Id data : 67bfc81d6620dda65683974f
-3/4/2025 9:40:31 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 9:40:32 AM: progressReports data : EDUGuard_DesktopApp.Models.ProgressReports[]
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67bff78ac02771d3aa83c4ae
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
-3/4/2025 9:40:32 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
-3/4/2025 9:40:32 AM: postureDataByDay data : System.Collections.Generic.Dictionary`2[System.DateTime,System.Collections.Generic.List`1[EDUGuard_DesktopApp.Models.ProgressReports]]
-3/4/2025 9:40:32 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
-3/4/2025 9:40:36 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 9:50:18 AM: User Id data : 67bfc81d6620dda65683974f
-3/4/2025 9:50:18 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 9:50:19 AM: progressReports data count: 10
-3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff6c7c02771d3aa83c4aa
-3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff719c02771d3aa83c4ab
-3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff758c02771d3aa83c4ac
-3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67bff763c02771d3aa83c4ad
-3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67c0701d0f61738392d7ed90
-3/4/2025 9:50:19 AM: PostureData.Outputs is EMPTY in report ID: 67c070a90f61738392d7ed92
-3/4/2025 9:50:19 AM: postureDataByDay data count : 1
-3/4/2025 9:50:19 AM: Processed data for 2/27/2025 12:00:00 AM: Good=10.2, Bad=73.8
-3/4/2025 9:50:27 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 9:57:52 AM: User Id data : 67bfc81d6620dda65683974f
-3/4/2025 9:57:52 AM: Filter data : MongoDB.Driver.SimpleFilterDefinition`2[EDUGuard_DesktopApp.Models.ProgressReports,System.String]
-3/4/2025 9:57:53 AM: progressReports data count: 10
-3/4/2025 9:57:53 AM: Processing report ID: 67bff6b9c02771d3aa83c4a9
-3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=1, Bad=1
-3/4/2025 9:57:53 AM: Processing report ID: 67c070740f61738392d7ed91
-3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=6.3, Bad=29.7
-3/4/2025 9:57:53 AM: Processing report ID: 67c0765c9703a8c47ce57670
-3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=2.1, Bad=9.9
-3/4/2025 9:57:53 AM: Processing report ID: 67c078705a392b0462b15074
-3/4/2025 9:57:53 AM: Processed data for 2/27/2025 12:00:00 AM: Good=0.8, Bad=33.2
-3/4/2025 9:57:53 AM: postureDataByDay data count : 1
-3/4/2025 9:58:00 AM: Error fetching posture data: Object reference not set to an instance of an object.
-3/4/2025 11:21:37 AM: [posture Error]: 2025-03-04 11:21:37.038719: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 11:22:02 AM: [posture Error]: 2025-03-04 11:22:02.981548: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 11:23:31 AM: [posture Error]: 2025-03-04 11:23:31.684863: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 11:23:34 AM: [posture Error]: 2025-03-04 11:23:34.275930: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 11:24:42 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/4/2025 11:24:42 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/4/2025 11:24:42 AM: [posture Error]: W0000 00:00:1741067682.488044    4948 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/4/2025 11:24:42 AM: [posture Error]: W0000 00:00:1741067682.583887   11036 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/4/2025 11:24:43 AM: [posture Error]: W0000 00:00:1741067683.741676   22920 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/4/2025 11:25:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/4/2025 11:25:28 AM: badposture Notify: 3/4/2025 11:25:28 AM
-3/4/2025 8:07:44 PM: [posture Error]: 2025-03-04 20:07:44.601804: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 8:07:46 PM: [posture Error]: 2025-03-04 20:07:46.794141: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 8:07:56 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/4/2025 8:07:56 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/4/2025 8:07:56 PM: [posture Error]: W0000 00:00:1741099076.986038   20984 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/4/2025 8:07:57 PM: [posture Error]: W0000 00:00:1741099077.091581   22532 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/4/2025 8:07:59 PM: [posture Error]: W0000 00:00:1741099079.461781   20984 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/4/2025 8:09:15 PM: [stress Error]: 2025-03-04 20:09:15.752570: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 8:09:16 PM: [stress Error]: 2025-03-04 20:09:16.866805: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/4/2025 8:09:24 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/4/2025 8:09:24 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/4/2025 8:09:24 PM: [stress Error]: 2025-03-04 20:09:24.427922: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/4/2025 8:09:24 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/4/2025 8:09:25 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/4/2025 8:09:25 PM: [stress Error]:   warnings.warn(
-3/4/2025 8:09:25 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/4/2025 8:09:25 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/6/2025 9:04:37 AM: [stress Error]: 2025-03-06 09:04:37.020207: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:05:09 AM: [stress Error]: 2025-03-06 09:05:09.065526: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:06:42 AM: [posture Error]: 2025-03-06 09:06:42.906193: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:06:44 AM: [posture Error]: 2025-03-06 09:06:44.970752: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:07:39 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/6/2025 9:07:40 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/6/2025 9:07:40 AM: [posture Error]: W0000 00:00:1741232260.009726   12480 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/6/2025 9:07:40 AM: [posture Error]: W0000 00:00:1741232260.055064    7076 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/6/2025 9:07:41 AM: [posture Error]: W0000 00:00:1741232261.336541   25004 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/6/2025 9:08:04 AM: [stress Error]: 2025-03-06 09:08:04.007676: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:08:06 AM: [stress Error]: 2025-03-06 09:08:06.086868: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:08:14 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/6/2025 9:08:14 AM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/6/2025 9:08:14 AM: [stress Error]: 2025-03-06 09:08:14.017262: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/6/2025 9:08:14 AM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/6/2025 9:08:14 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/6/2025 9:08:14 AM: [stress Error]:   warnings.warn(
-3/6/2025 9:08:14 AM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/6/2025 9:08:14 AM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/6/2025 9:13:16 AM: [stress Error]: 2025-03-06 09:13:16.887780: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:13:19 AM: [stress Error]: 2025-03-06 09:13:19.750949: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/6/2025 9:13:29 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/6/2025 9:13:29 AM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/6/2025 9:13:29 AM: [stress Error]: 2025-03-06 09:13:29.793398: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/6/2025 9:13:29 AM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/6/2025 9:13:30 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/6/2025 9:13:30 AM: [stress Error]:   warnings.warn(
-3/6/2025 9:13:30 AM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/6/2025 9:13:30 AM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/6/2025 9:33:57 PM: [posture Error]: 2025-03-06 21:33:57.247473: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:34:12 PM: [posture Error]: 2025-03-06 21:34:12.157973: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:35:50 PM: [stress Error]: 2025-03-06 21:35:50.165222: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:35:54 PM: No posture data found for monitoring.
+3/6/2025 9:35:55 PM: [stress Error]: 2025-03-06 21:35:55.078251: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:36:11 PM: [posture Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:380: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.5.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+3/6/2025 9:36:11 PM: [posture Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+3/6/2025 9:36:11 PM: [posture Error]:   warnings.warn(
+3/6/2025 9:36:11 PM: [posture Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:380: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.5.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+3/6/2025 9:36:11 PM: [posture Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+3/6/2025 9:36:11 PM: [posture Error]:   warnings.warn(
+3/6/2025 9:36:11 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/6/2025 9:36:11 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/6/2025 9:36:11 PM: [posture Error]: W0000 00:00:1741277171.699257   19056 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:36:11 PM: [posture Error]: W0000 00:00:1741277171.807166   19056 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:36:12 PM: [posture Error]: W0000 00:00:1741277172.987726    4108 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/6/2025 9:36:15 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/6/2025 9:36:15 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/6/2025 9:36:15 PM: [stress Error]: 2025-03-06 21:36:15.754561: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/6/2025 9:36:15 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/6/2025 9:36:16 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/6/2025 9:36:16 PM: [stress Error]:   warnings.warn(
+3/6/2025 9:36:16 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/6/2025 9:36:16 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/6/2025 9:37:54 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/6/2025 9:37:54 PM: badposture Notify: 3/6/2025 9:37:54 PM
+3/6/2025 9:37:58 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/6/2025 9:37:58 PM: badposture Notify: 3/6/2025 9:37:58 PM
+3/6/2025 9:37:59 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/6/2025 9:37:59 PM: badposture Notify: 3/6/2025 9:37:59 PM
+3/6/2025 9:38:26 PM: [posture Error]: 2025-03-06 21:38:26.103743: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:38:32 PM: [posture Error]: 2025-03-06 21:38:32.351203: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:38:40 PM: [posture Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:380: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.5.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+3/6/2025 9:38:40 PM: [posture Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+3/6/2025 9:38:40 PM: [posture Error]:   warnings.warn(
+3/6/2025 9:38:40 PM: [posture Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:380: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.5.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+3/6/2025 9:38:40 PM: [posture Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+3/6/2025 9:38:40 PM: [posture Error]:   warnings.warn(
+3/6/2025 9:38:40 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/6/2025 9:38:40 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/6/2025 9:38:40 PM: [posture Error]: W0000 00:00:1741277320.507498   13240 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:38:40 PM: [posture Error]: W0000 00:00:1741277320.584969   13240 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:38:40 PM: [posture Error]: W0000 00:00:1741277320.613846   27344 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/6/2025 9:42:26 PM: [posture Error]: 2025-03-06 21:42:26.731674: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:42:32 PM: [posture Error]: 2025-03-06 21:42:32.251529: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:42:45 PM: [posture Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:380: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.5.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+3/6/2025 9:42:45 PM: [posture Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+3/6/2025 9:42:45 PM: [posture Error]:   warnings.warn(
+3/6/2025 9:42:45 PM: [posture Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:380: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.5.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+3/6/2025 9:42:45 PM: [posture Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+3/6/2025 9:42:45 PM: [posture Error]:   warnings.warn(
+3/6/2025 9:42:45 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/6/2025 9:42:46 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/6/2025 9:42:46 PM: [posture Error]: W0000 00:00:1741277566.075064    4292 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:42:46 PM: [posture Error]: W0000 00:00:1741277566.121519    8056 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:42:46 PM: [posture Error]: W0000 00:00:1741277566.822293   19220 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/6/2025 9:47:07 PM: [posture Error]: 2025-03-06 21:47:07.048215: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:47:13 PM: [posture Error]: 2025-03-06 21:47:13.442512: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:47:39 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/6/2025 9:47:40 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/6/2025 9:47:40 PM: [posture Error]: W0000 00:00:1741277860.061861    2936 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:47:40 PM: [posture Error]: W0000 00:00:1741277860.127025    2936 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/6/2025 9:47:40 PM: [posture Error]: W0000 00:00:1741277860.881649   28168 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/6/2025 9:48:02 PM: [stress Error]: 2025-03-06 21:48:02.150771: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:48:05 PM: [stress Error]: 2025-03-06 21:48:05.284679: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/6/2025 9:48:18 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/6/2025 9:48:18 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/6/2025 9:48:18 PM: [stress Error]: 2025-03-06 21:48:18.713036: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/6/2025 9:48:18 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/6/2025 9:48:19 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/6/2025 9:48:19 PM: [stress Error]:   warnings.warn(
+3/6/2025 9:48:19 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/6/2025 9:48:19 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/6/2025 9:49:04 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/6/2025 9:49:04 PM: badposture Notify: 3/6/2025 9:49:04 PM
+3/6/2025 9:49:08 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/6/2025 9:49:08 PM: badposture Notify: 3/6/2025 9:49:08 PM
