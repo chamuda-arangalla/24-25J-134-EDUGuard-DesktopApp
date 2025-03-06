@@ -94,3 +94,16 @@ def update_stress_outputs(progress_report_id, new_outputs):
 
     except Exception as e:
         print(f"Error updating progress report: {e}")
+
+
+def update_eye_blink_outputs(progress_report_id, batch_data):
+    try:
+
+        filter_query = {"_id": ObjectId(progress_report_id)}
+        update_query = {"$push": {"CVSData.Outputs": {"$each": batch_data}}}
+
+        result = progress_reports_collection.update_one(filter_query, update_query)
+        print(f"Updated {result.modified_count} records for eye blink data.")
+
+    except Exception as e:
+        print(f"Error updating eye blink data: {e}")
