@@ -11,7 +11,7 @@ import sys
 
 
 # Load the model
-model = joblib.load(r"C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\models\random_forest_model.joblib")
+model = joblib.load(r"C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\models\posture_classifier.pkl")
 
 # Get the authenticated user email from command-line arguments
 if len(sys.argv) < 2:
