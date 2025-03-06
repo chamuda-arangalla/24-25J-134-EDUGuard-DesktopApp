@@ -304,15 +304,15 @@ namespace EDUGuard_DesktopApp.ViewModels
         {
             try
             {
-                // 🟢 Get the currently logged-in user ID
+                // Get the currently logged-in user ID
                 var currentUserId = SessionManager.CurrentUser.Id;
                 Console.WriteLine($"User Id data : {currentUserId}");
 
-                // 🟢 Create MongoDB filter
+                // Create MongoDB filter
                 var filter = Builders<ProgressReports>.Filter.Eq(p => p.UserId, currentUserId);
                 Console.WriteLine($"Filter data : {filter}");
 
-                // 🟢 Retrieve all progress reports
+                // Retrieve all progress reports
                 var progressReports = await _dbHelper.ProgressReports
                     .Find(filter)
                     .SortByDescending(p => p.StressData.StartTime)
@@ -326,10 +326,10 @@ namespace EDUGuard_DesktopApp.ViewModels
 
                 Console.WriteLine($"progressReports data count: {progressReports.Count}");
 
-                // 🟢 Categories for stress emotions
+                // Categories for stress emotions
                 string[] categories = { "happy", "surprise", "sad", "neutral", "fear", "disgust", "angry" };
 
-                // 🟢 Dictionary to store total duration per category
+                // Dictionary to store total duration per category
                 Dictionary<string, double> totalCategoryDuration = new Dictionary<string, double>();
 
                 // Initialize all categories with 0
@@ -338,7 +338,7 @@ namespace EDUGuard_DesktopApp.ViewModels
                     totalCategoryDuration[category] = 0;
                 }
 
-                // 🟢 Dictionary to store stress data per day
+                // Dictionary to store stress data per day
                 Dictionary<DateTime, Dictionary<string, double>> stressDataByDay = new Dictionary<DateTime, Dictionary<string, double>>();
 
                 foreach (var report in progressReports)
@@ -351,7 +351,7 @@ namespace EDUGuard_DesktopApp.ViewModels
                         continue; // Skip empty records
                     }
 
-                    // 🟢 Get the date of the stress session
+                    // Get the date of the stress session
                     var reportDate = report.StressData.StartTime.Date;
 
                     // Initialize category totals for the day
@@ -394,7 +394,7 @@ namespace EDUGuard_DesktopApp.ViewModels
                     return;
                 }
 
-                // 🟢 Update Pie Chart for Stress Categories
+                // Update Pie Chart for Stress Categories
                 StressPieSeries = new SeriesCollection
         {
             new PieSeries { Values = new ChartValues<double> { totalCategoryDuration["happy"] }, Title = "Happy", Fill = System.Windows.Media.Brushes.Green, DataLabels = true },
@@ -406,7 +406,7 @@ namespace EDUGuard_DesktopApp.ViewModels
             new PieSeries { Values = new ChartValues<double> { totalCategoryDuration["angry"] }, Title = "Angry", Fill = System.Windows.Media.Brushes.Red, DataLabels = true }
         };
 
-                // 🟢 Update Bar Chart for Stress Data Per Day
+                // Update Bar Chart for Stress Data Per Day
                 StressLabels.Clear();
                 for (int i = 0; i < StressBarSeries.Count; i++)
                 {
