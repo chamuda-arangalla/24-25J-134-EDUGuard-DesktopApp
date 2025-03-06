@@ -21,6 +21,11 @@ namespace EDUGuard_DesktopApp.Models
         // Stress data stored as an object
         public ModelData StressData { get; set; } = new ModelData();
 
+        // Cvs data stored as an object
+        public ModelData CVSData { get; set; } = new ModelData();
+        // Hydration data stored as an object
+        public ModelData HydrationData { get; set; } = new ModelData();
+
     }
 
     public class ModelData
