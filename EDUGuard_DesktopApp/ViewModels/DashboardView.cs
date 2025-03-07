@@ -411,9 +411,9 @@ namespace EDUGuard_DesktopApp.Views
             {
                 SessionManager.EndSession();
                 StopAllProcesses();
-                Close();
                 var mainWindow = new MainWindow();
                 mainWindow.Show();
+                Close();
             }
         }
 

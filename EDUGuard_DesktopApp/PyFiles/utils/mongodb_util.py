@@ -58,7 +58,7 @@ def update_posture_outputs(progress_report_id, new_outputs):
 
         update_query = {
             "$push": {
-                "PostureData.Outputs": {"$each": [new_outputs]}  # Append new outputs to existing array
+                "PostureData.Outputs": {"$each": [new_outputs]}  
             }
         }
 
@@ -99,8 +99,13 @@ def update_stress_outputs(progress_report_id, new_outputs):
 def update_eye_blink_outputs(progress_report_id, batch_data):
     try:
 
-        filter_query = {"_id": ObjectId(progress_report_id)}
-        update_query = {"$push": {"CVSData.Outputs": {"$each": batch_data}}}
+        object_id = ObjectId(progress_report_id)
+
+        filter_query = {"_id": object_id}
+        update_query = {"$push": {
+            "CVSData.Outputs": {"$each": batch_data}
+            }
+        }
 
         result = progress_reports_collection.update_one(filter_query, update_query)
         print(f"Updated {result.modified_count} records for eye blink data.")

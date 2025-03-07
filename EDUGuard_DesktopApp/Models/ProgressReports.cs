@@ -13,17 +13,21 @@ namespace EDUGuard_DesktopApp.Models
         public string Id { get; set; }
 
         [BsonRepresentation(BsonType.ObjectId)]
-        public string UserId { get; set; } 
+        public string UserId { get; set; }
 
         // Posture data stored as an object
+        [BsonIgnoreIfNull]
         public ModelData PostureData { get; set; } = new ModelData();
 
         // Stress data stored as an object
+        [BsonIgnoreIfNull]
         public ModelData StressData { get; set; } = new ModelData();
 
         // Cvs data stored as an object
+        [BsonIgnoreIfNull]
         public ModelData CVSData { get; set; } = new ModelData();
         // Hydration data stored as an object
+        [BsonIgnoreIfNull]
         public ModelData HydrationData { get; set; } = new ModelData();
 
     }
