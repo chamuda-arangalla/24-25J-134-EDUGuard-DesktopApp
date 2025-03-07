@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import time
 import sys
+import json
 import socket
 import struct
 import pickle
@@ -147,7 +148,16 @@ try:
             # Save data at intervals
             current_time = time.time()
             if current_time - last_saved_time >= save_interval:
-                current_batch.append({"eye_state": eye_state, "distance": distance_msg, "blink_count": blink_count})
+                data_object = {
+                    "eye_state": eye_state,
+                    "distance": distance_msg,
+                    "blink_count": blink_count
+                }
+    
+                # Convert dictionary to a JSON string
+                data_string = json.dumps(data_object)
+
+                current_batch.append(data_string)  # Append as a string
                 last_saved_time = current_time
 
             # Save batch to database every 30 seconds

@@ -103,7 +103,7 @@ def update_eye_blink_outputs(progress_report_id, batch_data):
 
         filter_query = {"_id": object_id}
         update_query = {"$push": {
-            "CVSData.Outputs": {"$each": batch_data}
+            "CVSData.Outputs": {"$each": [batch_data]}
             }
         }
 
