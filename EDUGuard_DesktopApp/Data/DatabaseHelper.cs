@@ -44,6 +44,10 @@ namespace EDUGuard_DesktopApp
             {
                 progressReport.PostureData.StartTime = startTime;
             }
+            else if (modelName.IndexOf("cvs", StringComparison.OrdinalIgnoreCase) >= 0 || modelName == "Model3")
+            {
+                progressReport.CVSData.StartTime = startTime;
+            }
 
             ProgressReports.InsertOne(progressReport);
             return progressReport.Id;

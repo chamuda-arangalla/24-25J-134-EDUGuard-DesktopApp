@@ -1,4 +1,4 @@
-import cv2
+﻿import cv2
 import numpy as np
 import time
 import sys
@@ -98,6 +98,10 @@ try:
         distance_msg = "No Face Detected"
         color = (0, 0, 255)  # Red for warnings
 
+        # 🛠 Fix: Initialize `minutes` and `seconds` before use
+        minutes = 0
+        seconds = 0
+
         if len(faces) > 0:
             # Start or continue screen time tracking
             if start_time is None:
@@ -136,7 +140,7 @@ try:
                     blink_count += 1
                     eye_closed = False
 
-            # Calculate screen time
+            # ✅ Fix: Ensure `minutes` and `seconds` are always defined
             elapsed_time = time.time() - start_time
             minutes = int(elapsed_time // 60)
             seconds = int(elapsed_time % 60)
@@ -159,6 +163,7 @@ try:
 
                 current_batch.append(data_string)  # Append as a string
                 last_saved_time = current_time
+                last_saved_time = current_time
 
             # Save batch to database every 30 seconds
             if current_time - last_batch_time >= batch_interval:
@@ -168,17 +173,17 @@ try:
                 last_batch_time = current_time
 
         # Display text overlay
-        cv2.putText(frame, f'Blink Count: {blink_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        cv2.putText(frame, f'Eye State: {eye_state}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        cv2.putText(frame, f'Distance: {distance_msg}', (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
-        cv2.putText(frame, f'Screen Time: {minutes:02}:{seconds:02}', (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
+        #cv2.putText(frame, f'Blink Count: {blink_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        #cv2.putText(frame, f'Eye State: {eye_state}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        #cv2.putText(frame, f'Distance: {distance_msg}', (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
+        #cv2.putText(frame, f'Screen Time: {minutes:02}:{seconds:02}', (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
 
         # Show video feed
-        cv2.imshow('Eye Blink & Distance Monitoring', frame)
+        #cv2.imshow('Eye Blink & Distance Monitoring', frame)
 
         # Press 'q' to quit
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+        #if cv2.waitKey(1) & 0xFF == ord('q'):
+        #    break
 
 finally:
     client_socket.close()

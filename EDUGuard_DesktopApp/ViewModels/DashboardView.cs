@@ -140,6 +140,8 @@ namespace EDUGuard_DesktopApp.Views
             // Store the progress report ID for later retrieval
             _modelProgressReports[modelName] = progressReportId;
 
+            Logger.LogError($"modelReport : {_modelProgressReports}");
+
             var processInfo = new ProcessStartInfo
             {
                 FileName = "python",
@@ -394,7 +396,7 @@ namespace EDUGuard_DesktopApp.Views
 
         private void Model3Button_Click(object sender, RoutedEventArgs e)
         {
-            ToggleModel("CVS", ref _isModel3Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\cvs_detection.py");
+            ToggleModel("cvs", ref _isModel3Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\cvs_detection.py");
         }
 
         private void Model4Button_Click(object sender, RoutedEventArgs e)
