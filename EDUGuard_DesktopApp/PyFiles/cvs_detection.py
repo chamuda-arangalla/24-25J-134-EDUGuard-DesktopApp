@@ -9,7 +9,7 @@ import pickle
 from tensorflow.keras.models import load_model
 from utils.mongodb_util import update_eye_blink_outputs  # Update function in MongoDB
 
-# Load the model
+# Load the pre-trained model
 model_path = "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\models\\eye_blink_model.h5"
 model = load_model(model_path)
 
@@ -38,6 +38,8 @@ NORMAL_DISTANCE_CM = 60
 CLOSE_THRESHOLD = 50  # cm
 FAR_THRESHOLD = 70  # cm
 SCREEN_TIME_LIMIT = 20 * 60  # 20 minutes
+FACE_LOSS_RESET_TIME = 3  # Time in seconds to reset blink count if face is lost
+EYE_LOSS_RESET_TIME = 2  # Time in seconds to reset blink count if eyes are lost
 
 # Timer setup
 last_saved_time = time.time()
@@ -49,6 +51,8 @@ current_batch = []  # Store batch data
 blink_count = 0
 eye_closed = False
 start_time = None  # Timer for screen time tracking
+last_seen_time = time.time()  # Track last detected face time
+last_eye_seen_time = time.time()  # Track last detected eye time
 
 # Function to preprocess frame for model
 def preprocess_frame(frame, target_size=(26, 34)):
@@ -76,7 +80,7 @@ try:
             data += packet
 
         packed_msg_size = data[:struct.calcsize("Q")]
-        data = data[struct.calcsize("Q"):]
+        data = data[struct.calcsize("Q" ):]
         msg_size = struct.unpack("Q", packed_msg_size)[0]
 
         while len(data) < msg_size:
@@ -98,92 +102,66 @@ try:
         distance_msg = "No Face Detected"
         color = (0, 0, 255)  # Red for warnings
 
-        # 🛠 Fix: Initialize `minutes` and `seconds` before use
-        minutes = 0
-        seconds = 0
-
         if len(faces) > 0:
-            # Start or continue screen time tracking
+            last_seen_time = time.time()  # Update last seen time
+            
             if start_time is None:
                 start_time = time.time()
             
-            x, y, w, h = max(faces, key=lambda f: f[2] * f[3])  # Select largest face
-            distance_cm = estimate_distance(w)  
+            x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
+            distance_cm = estimate_distance(w)
 
-            # Distance warning messages
             if distance_cm:
                 if distance_cm < CLOSE_THRESHOLD:
                     distance_msg = "Too Close!"
-                    color = (0, 0, 255)  # Red
+                    color = (0, 0, 255)
                 elif distance_cm > FAR_THRESHOLD:
                     distance_msg = "Too Far!"
-                    color = (255, 0, 0)  # Blue
+                    color = (255, 0, 0)
                 else:
                     distance_msg = "Good Distance"
-                    color = (0, 255, 0)  # Green
+                    color = (0, 255, 0)
 
-            # Define ROI for eye detection (top half of the face)
             roi = gray_frame[y:y + h // 2, x:x + w]
 
-            # Ensure ROI has valid dimensions before processing
-            if roi.size > 0 and roi.shape[0] > 0 and roi.shape[1] > 0:
+            if roi.size > 0:
                 preprocessed_roi = preprocess_frame(roi)
-
-                # Predict eye state
                 prediction = model.predict(preprocessed_roi, verbose=0)
                 eye_state = "Closed" if prediction > 0.5 else "Open"
+                last_eye_seen_time = time.time()
 
-                # Blink detection logic
                 if eye_state == "Closed" and not eye_closed:
                     eye_closed = True
                 elif eye_state == "Open" and eye_closed:
                     blink_count += 1
                     eye_closed = False
 
-            # ✅ Fix: Ensure `minutes` and `seconds` are always defined
             elapsed_time = time.time() - start_time
-            minutes = int(elapsed_time // 60)
-            seconds = int(elapsed_time % 60)
 
-            # Check if screen time exceeds 20 minutes
-            if elapsed_time >= SCREEN_TIME_LIMIT:
-                cv2.putText(frame, "Take a Break!", (100, 250), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 5)
+        else:
+            if time.time() - last_seen_time > FACE_LOSS_RESET_TIME:
+                blink_count = 0
+                start_time = None
 
-            # Save data at intervals
-            current_time = time.time()
-            if current_time - last_saved_time >= save_interval:
-                data_object = {
-                    "eye_state": eye_state,
-                    "distance": distance_msg,
-                    "blink_count": blink_count
-                }
-    
-                # Convert dictionary to a JSON string
-                data_string = json.dumps(data_object)
+        if time.time() - last_eye_seen_time > EYE_LOSS_RESET_TIME:
+            blink_count = 0
 
-                current_batch.append(data_string)  # Append as a string
-                last_saved_time = current_time
-                last_saved_time = current_time
+        current_time = time.time()
+        if current_time - last_saved_time >= save_interval:
+            data_object = {
+                "eye_state": eye_state,
+                "distance": distance_msg,
+                "blink_count": blink_count
+            }
+            data_string = json.dumps(data_object)
+            current_batch.append(data_string)
+            last_saved_time = current_time
 
-            # Save batch to database every 30 seconds
-            if current_time - last_batch_time >= batch_interval:
-                if current_batch:
-                    update_eye_blink_outputs(progress_report_id, current_batch)
-                    current_batch = []
-                last_batch_time = current_time
-
-        # Display text overlay
-        #cv2.putText(frame, f'Blink Count: {blink_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        #cv2.putText(frame, f'Eye State: {eye_state}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        #cv2.putText(frame, f'Distance: {distance_msg}', (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
-        #cv2.putText(frame, f'Screen Time: {minutes:02}:{seconds:02}', (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
-
-        # Show video feed
-        #cv2.imshow('Eye Blink & Distance Monitoring', frame)
-
-        # Press 'q' to quit
-        #if cv2.waitKey(1) & 0xFF == ord('q'):
-        #    break
+        if current_time - last_batch_time >= batch_interval:
+            if current_batch:
+                update_eye_blink_outputs(progress_report_id, current_batch)
+                current_batch = []
+            last_batch_time = current_time
 
 finally:
     client_socket.close()
