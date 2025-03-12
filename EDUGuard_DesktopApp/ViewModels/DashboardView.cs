@@ -13,6 +13,7 @@ using System.Linq;
 using System.Timers;
 using MongoDB.Bson;
 using EDUGuard_DesktopApp.ViewModels;
+using System.Threading;
 
 namespace EDUGuard_DesktopApp.Views
 {
@@ -25,7 +26,7 @@ namespace EDUGuard_DesktopApp.Views
         private bool _isModel1Running = false, _isModel2Running = false, _isModel3Running = false, _isModel4Running = false;
         private readonly string _currentUserEmail;
         //private Timer _alertTimer;
-        private Timer _postureMonitorTimer;
+        private System.Timers.Timer _postureMonitorTimer;
         private int _processedArraysCount = 0; // Keep track of already processed arrays
         private readonly Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
 
@@ -321,7 +322,7 @@ namespace EDUGuard_DesktopApp.Views
         private void StartPostureMonitoring(string progressReportId)
         {
             _processedArraysCount = 0; // Reset count when model starts
-            _postureMonitorTimer = new Timer(120000); // Runs every 2 minutes (120000 ms)
+            _postureMonitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms)
             //_postureMonitorTimer.Elapsed += (sender, e) => LogError($"Timer CAlled. {DateTime.Now}");
             _postureMonitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
             _postureMonitorTimer.AutoReset = true;
@@ -381,8 +382,20 @@ namespace EDUGuard_DesktopApp.Views
         private void ShowNotification(string message)
         {
             // Example: Windows Toast Notification (you can modify based on your UI)
-            MessageBox.Show(message, "Posture Alert", MessageBoxButton.OK, MessageBoxImage.Warning);
+            
+            Thread notificationThread = new Thread(() =>
+            {
+                // Create and show the custom message box on the new thread
+                CustomMessageBox msgBox = new CustomMessageBox(message);
+                msgBox.ShowDialog();
+            });
+
+
+            // Set the thread to STA before starting it
+            notificationThread.SetApartmentState(ApartmentState.STA);
+            notificationThread.Start();
         }
+        
 
         private void Model1Button_Click(object sender, RoutedEventArgs e)
         {

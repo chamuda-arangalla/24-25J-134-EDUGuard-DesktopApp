@@ -1,56 +1,44 @@
-3/7/2025 11:16:53 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:16:55 AM: [cvs Error]: 2025-03-07 11:16:55.439358: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:16:59 AM: [cvs Error]: 2025-03-07 11:16:59.139830: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:17:21 AM: [cvs Error]: 2025-03-07 11:17:21.135396: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:17:21 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:17:21 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/7/2025 11:17:23 AM: [cvs Error]: Traceback (most recent call last):
-3/7/2025 11:17:23 AM: [cvs Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\cvs_detection.py", line 174, in <module>
-3/7/2025 11:17:23 AM: [cvs Error]:     cv2.putText(frame, f'Screen Time: {minutes:02}:{seconds:02}', (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
-3/7/2025 11:17:23 AM: [cvs Error]:                                        ^^^^^^^
-3/7/2025 11:17:23 AM: [cvs Error]: NameError: name 'minutes' is not defined
-3/7/2025 11:23:46 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:23:49 AM: [cvs Error]: 2025-03-07 11:23:49.110353: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:23:53 AM: [cvs Error]: 2025-03-07 11:23:53.118391: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:24:12 AM: [cvs Error]: 2025-03-07 11:24:12.007232: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:24:12 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:24:12 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/7/2025 11:28:11 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:28:14 AM: [cvs Error]: 2025-03-07 11:28:14.519126: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:28:19 AM: [cvs Error]: 2025-03-07 11:28:19.156434: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:28:32 AM: [cvs Error]: 2025-03-07 11:28:32.357876: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:28:32 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:28:32 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/7/2025 11:31:48 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:31:50 AM: [cvs Error]: 2025-03-07 11:31:50.668279: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:31:55 AM: [cvs Error]: 2025-03-07 11:31:55.487331: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:32:17 AM: [cvs Error]: 2025-03-07 11:32:17.523636: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:32:17 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:32:18 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/7/2025 11:33:15 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:33:18 AM: [cvs Error]: 2025-03-07 11:33:18.500321: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:33:21 AM: [cvs Error]: 2025-03-07 11:33:21.631678: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:33:37 AM: [cvs Error]: 2025-03-07 11:33:37.781728: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:33:37 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:33:38 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/7/2025 11:34:41 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:34:42 AM: [cvs Error]: 2025-03-07 11:34:42.612846: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:34:45 AM: [cvs Error]: 2025-03-07 11:34:45.548317: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:35:06 AM: [cvs Error]: 2025-03-07 11:35:06.760670: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:35:06 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:35:07 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/7/2025 11:36:36 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/7/2025 11:36:38 AM: [cvs Error]: 2025-03-07 11:36:38.299803: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:36:40 AM: [cvs Error]: 2025-03-07 11:36:40.370961: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/7/2025 11:37:01 AM: [cvs Error]: 2025-03-07 11:37:01.363155: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/7/2025 11:37:01 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/7/2025 11:37:02 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/8/2025 12:07:43 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/8/2025 12:07:52 PM: [cvs Error]: 2025-03-08 12:07:52.596096: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/8/2025 12:08:35 PM: [cvs Error]: 2025-03-08 12:08:35.447524: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/8/2025 12:15:16 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/8/2025 12:15:17 PM: [cvs Error]: 2025-03-08 12:15:17.071124: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/8/2025 12:15:19 PM: [cvs Error]: 2025-03-08 12:15:19.087949: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/8/2025 12:15:27 PM: [cvs Error]: 2025-03-08 12:15:27.992580: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/8/2025 12:15:27 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/8/2025 12:15:28 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/12/2025 10:34:53 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/12/2025 10:34:57 PM: [posture Error]: 2025-03-12 22:34:57.573089: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/12/2025 10:35:01 PM: [posture Error]: 2025-03-12 22:35:01.542552: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/12/2025 10:35:14 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/12/2025 10:35:14 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/12/2025 10:35:14 PM: [posture Error]: W0000 00:00:1741799114.245979    5680 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/12/2025 10:35:14 PM: [posture Error]: W0000 00:00:1741799114.312467   18356 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/12/2025 10:35:15 PM: [posture Error]: W0000 00:00:1741799115.930735    9708 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/12/2025 10:36:53 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 10:36:53 PM: badposture Notify: 3/12/2025 10:36:53 PM
+3/12/2025 10:36:54 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
+3/12/2025 10:36:54 PM: Error checking posture alerts: The calling thread must be STA, because many UI components require this.
+3/12/2025 10:51:09 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/12/2025 10:51:12 PM: [posture Error]: 2025-03-12 22:51:12.893019: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/12/2025 10:51:15 PM: [posture Error]: 2025-03-12 22:51:15.308599: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/12/2025 10:51:33 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/12/2025 10:51:33 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/12/2025 10:51:33 PM: [posture Error]: W0000 00:00:1741800093.678570   11128 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/12/2025 10:51:33 PM: [posture Error]: W0000 00:00:1741800093.726750   11128 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/12/2025 10:51:34 PM: [posture Error]: W0000 00:00:1741800094.390755   14940 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/12/2025 10:53:09 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 10:53:09 PM: badposture Notify: 3/12/2025 10:53:09 PM
+3/12/2025 10:53:09 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
+3/12/2025 10:53:09 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 10:53:09 PM: badposture Notify: 3/12/2025 10:53:09 PM
+3/12/2025 10:53:09 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
+3/12/2025 10:53:09 PM: No blink data found for monitoring.
+3/12/2025 10:53:09 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 10:53:09 PM: badposture Notify: 3/12/2025 10:53:09 PM
+3/12/2025 10:53:09 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
+3/12/2025 11:02:12 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/12/2025 11:02:15 PM: [posture Error]: 2025-03-12 23:02:15.532602: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/12/2025 11:02:17 PM: [posture Error]: 2025-03-12 23:02:17.679532: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/12/2025 11:02:24 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/12/2025 11:02:25 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/12/2025 11:02:25 PM: [posture Error]: W0000 00:00:1741800745.023650    6592 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/12/2025 11:02:25 PM: [posture Error]: W0000 00:00:1741800745.065629    6592 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/12/2025 11:02:25 PM: [posture Error]: W0000 00:00:1741800745.884965   13040 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/12/2025 11:04:12 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 11:04:12 PM: badposture Notify: 3/12/2025 11:04:12 PM
+3/12/2025 11:04:12 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 11:04:12 PM: badposture Notify: 3/12/2025 11:04:12 PM
+3/12/2025 11:04:12 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/12/2025 11:04:12 PM: badposture Notify: 3/12/2025 11:04:12 PM
