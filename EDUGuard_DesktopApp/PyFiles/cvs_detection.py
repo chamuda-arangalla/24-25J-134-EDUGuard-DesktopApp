@@ -44,7 +44,7 @@ EYE_LOSS_RESET_TIME = 2  # Time in seconds to reset blink count if eyes are lost
 # Timer setup
 last_saved_time = time.time()
 last_batch_time = time.time()
-save_interval = 6  # Save every 6 seconds
+save_interval = 2  # Save every 6 seconds
 batch_interval = 30  # Save batch every 30 seconds
 current_batch = []  # Store batch data
 
@@ -86,7 +86,7 @@ try:
         while len(data) < msg_size:
             data += client_socket.recv(4 * 1024)
 
-        frame_data = data[:msg_size]
+        frame_data = data[:msg_size] 
         data = data[msg_size:]
 
         # Deserialize the frame
@@ -151,7 +151,7 @@ try:
             data_object = {
                 "eye_state": eye_state,
                 "distance": distance_msg,
-                "blink_count": blink_count
+                "blink_count": int(blink_count)
             }
             data_string = json.dumps(data_object)
             current_batch.append(data_string)
