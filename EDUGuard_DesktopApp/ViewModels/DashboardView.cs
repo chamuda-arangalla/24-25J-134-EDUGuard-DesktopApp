@@ -14,6 +14,7 @@ using System.Timers;
 using MongoDB.Bson;
 using EDUGuard_DesktopApp.ViewModels;
 using System.Threading;
+using Newtonsoft.Json.Linq;
 
 namespace EDUGuard_DesktopApp.Views
 {
@@ -26,7 +27,7 @@ namespace EDUGuard_DesktopApp.Views
         private bool _isModel1Running = false, _isModel2Running = false, _isModel3Running = false, _isModel4Running = false;
         private readonly string _currentUserEmail;
         //private Timer _alertTimer;
-        private System.Timers.Timer _postureMonitorTimer;
+        private System.Timers.Timer _monitorTimer;
         private int _processedArraysCount = 0; // Keep track of already processed arrays
         private readonly Dictionary<string, string> _modelProgressReports = new Dictionary<string, string>();
 
@@ -125,7 +126,6 @@ namespace EDUGuard_DesktopApp.Views
         }
 
 
-        
 
         private void StartModel(string modelName, ref bool isRunning, Button modelButton, string scriptPath)
         {
@@ -173,10 +173,13 @@ namespace EDUGuard_DesktopApp.Views
 
                 isRunning = true;
 
+                
                 // Start posture monitoring if it's the posture model
-                if (modelName.ToLower() == "posture")
+                if (modelName.ToLower() == "posture" || modelName.ToLower() == "cvs")
                 {
-                    StartPostureMonitoring(progressReportId);
+                    Logger.LogError($"mODEL nAME : {modelName}");
+
+                    StartMonitoring(progressReportId);
                 }
             }
             catch (Exception ex)
@@ -214,8 +217,8 @@ namespace EDUGuard_DesktopApp.Views
                     //Stop posture monitoring when posture model stops
                     if (modelName.ToLower() == "posture")
                     {
-                        _postureMonitorTimer?.Stop();
-                        _postureMonitorTimer?.Dispose();
+                        _monitorTimer?.Stop();
+                        _monitorTimer?.Dispose();
                     }
 
                     UpdateButtonUI(modelButton, false, $"Start {modelName}", $"Stop {modelName}");
@@ -319,17 +322,18 @@ namespace EDUGuard_DesktopApp.Views
             });
         }
 
-        private void StartPostureMonitoring(string progressReportId)
+        private void StartMonitoring(string progressReportId)
         {
             _processedArraysCount = 0; // Reset count when model starts
-            _postureMonitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms)
-            //_postureMonitorTimer.Elapsed += (sender, e) => LogError($"Timer CAlled. {DateTime.Now}");
-            _postureMonitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
-            _postureMonitorTimer.AutoReset = true;
-            _postureMonitorTimer.Start();
+            _monitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms) 
+            _monitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
+            _monitorTimer.Elapsed += async (sender, e) => await CheckBlinkAlerts(progressReportId);
+            _monitorTimer.AutoReset = true;
+            _monitorTimer.Start();
 
         }
 
+        //Check posture
         private async Task CheckPostureAlerts(string progressReportId)
         {
             try
@@ -378,6 +382,105 @@ namespace EDUGuard_DesktopApp.Views
             }
         }
 
+        //Check blink count
+        private async Task CheckBlinkAlerts(string progressReportId)
+        {
+            
+            try
+            {
+                // Fetch latest progress report
+                var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+                var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+                if (report == null || report.CVSData?.Outputs == null || report.CVSData.Outputs.Count == 0)
+                {
+                    Logger.LogError("No blink data found for monitoring.");
+                    return;
+                }
+
+                // Process only new arrays (ignore already processed ones)
+                for (int i = _processedArraysCount; i < report.CVSData.Outputs.Count; i++)
+                {
+                    var batch = report.CVSData.Outputs[i];
+                    Logger.LogError($"BlinkData.Outputs {batch}");
+
+                    if (batch.Count == 0)
+                    {
+                        Logger.LogError($"Batch empty {batch}");
+                        continue;
+                    } // Skip empty batches
+
+                    // Extract latest blink count from the batch
+                    int blinkCount = ExtractBlinkCount(batch);
+                    Logger.LogError($"Processed Blink Count: {blinkCount}");
+
+                    // Alert for eye strain (15-17 blinks)
+                    if (!(blinkCount >= 15 && blinkCount <= 17))
+                    {
+                        Logger.LogError($"Eye strain detected: {DateTime.Now}");
+                        ShowNotification("Alert: You have eye strain. Take a break!");
+                    }
+                    // Alert for vision strain or dry eyes (above 17 blinks)
+                    else if (blinkCount > 17)
+                    {
+                        Logger.LogError($"High blink rate detected: {DateTime.Now}");
+                        ShowNotification("Warning: High blink rate detected. Look at a long-distance object!");
+                    }
+
+                    // Mark this batch as processed
+                    _processedArraysCount++;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Error checking blink alerts: {ex.Message}");
+            }
+        }
+
+
+
+        private int ExtractBlinkCount(List<string> batchData)
+        {
+            try
+            {
+                foreach (var entry in batchData)
+                {
+                    Logger.LogError($"Extracting Blink Data: {entry}"); // Debug log
+
+                    // If the data is in JSON format, attempt to parse it
+                    try
+                    {
+                        var parsedEntry = Newtonsoft.Json.Linq.JObject.Parse(entry);
+
+                        if (parsedEntry.ContainsKey("blink_count"))
+                        {
+                            return parsedEntry["blink_count"].Value<int>();
+                        }
+                    }
+                    catch (Exception jsonEx)
+                    {
+                        Logger.LogError($"JSON Parse Error: {jsonEx.Message}");
+                    }
+
+                    // If data is not in JSON format, attempt string parsing
+                    if (entry.Contains("blink_count"))
+                    {
+                        var parts = entry.Split(':');
+                        if (parts.Length > 1 && int.TryParse(parts[1].Trim(), out int blinkValue))
+                        {
+                            return blinkValue;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Error extracting blink count: {ex.Message}");
+            }
+
+            return 0; // Default return statement to satisfy the compiler
+        }
+
         //warning alert 
         private void ShowNotification(string message)
         {
@@ -414,7 +517,7 @@ namespace EDUGuard_DesktopApp.Views
 
         private void Model4Button_Click(object sender, RoutedEventArgs e)
         {
-            ToggleModel("Model4", ref _isModel4Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\model4.py");
+            ToggleModel("hydration", ref _isModel4Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\model4.py");
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
@@ -511,21 +614,6 @@ namespace EDUGuard_DesktopApp.Views
             }
         }
 
-
-
-
-        //private void LogError(string message)
-        //{
-        //    try
-        //    {
-        //        string logMessage = $"{DateTime.Now}: {message}\n";
-        //        File.AppendAllText(_logFilePath, logMessage);
-        //    }
-        //    catch
-        //    {
-        //        // Avoid crashes if logging fails
-        //    }
-        //}
     }
 
  

@@ -1,44 +1,44 @@
-3/12/2025 10:34:53 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/12/2025 10:34:57 PM: [posture Error]: 2025-03-12 22:34:57.573089: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/12/2025 10:35:01 PM: [posture Error]: 2025-03-12 22:35:01.542552: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/12/2025 10:35:14 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/12/2025 10:35:14 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/12/2025 10:35:14 PM: [posture Error]: W0000 00:00:1741799114.245979    5680 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/12/2025 10:35:14 PM: [posture Error]: W0000 00:00:1741799114.312467   18356 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/12/2025 10:35:15 PM: [posture Error]: W0000 00:00:1741799115.930735    9708 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/12/2025 10:36:53 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 10:36:53 PM: badposture Notify: 3/12/2025 10:36:53 PM
-3/12/2025 10:36:54 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
-3/12/2025 10:36:54 PM: Error checking posture alerts: The calling thread must be STA, because many UI components require this.
-3/12/2025 10:51:09 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/12/2025 10:51:12 PM: [posture Error]: 2025-03-12 22:51:12.893019: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/12/2025 10:51:15 PM: [posture Error]: 2025-03-12 22:51:15.308599: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/12/2025 10:51:33 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/12/2025 10:51:33 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/12/2025 10:51:33 PM: [posture Error]: W0000 00:00:1741800093.678570   11128 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/12/2025 10:51:33 PM: [posture Error]: W0000 00:00:1741800093.726750   11128 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/12/2025 10:51:34 PM: [posture Error]: W0000 00:00:1741800094.390755   14940 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/12/2025 10:53:09 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 10:53:09 PM: badposture Notify: 3/12/2025 10:53:09 PM
-3/12/2025 10:53:09 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
-3/12/2025 10:53:09 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 10:53:09 PM: badposture Notify: 3/12/2025 10:53:09 PM
-3/12/2025 10:53:09 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
-3/12/2025 10:53:09 PM: No blink data found for monitoring.
-3/12/2025 10:53:09 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 10:53:09 PM: badposture Notify: 3/12/2025 10:53:09 PM
-3/12/2025 10:53:09 PM: Check messege : Alert: Your posture quality is poor! 100.0% bad posture detected.
-3/12/2025 11:02:12 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/12/2025 11:02:15 PM: [posture Error]: 2025-03-12 23:02:15.532602: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/12/2025 11:02:17 PM: [posture Error]: 2025-03-12 23:02:17.679532: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/12/2025 11:02:24 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/12/2025 11:02:25 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/12/2025 11:02:25 PM: [posture Error]: W0000 00:00:1741800745.023650    6592 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/12/2025 11:02:25 PM: [posture Error]: W0000 00:00:1741800745.065629    6592 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/12/2025 11:02:25 PM: [posture Error]: W0000 00:00:1741800745.884965   13040 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/12/2025 11:04:12 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 11:04:12 PM: badposture Notify: 3/12/2025 11:04:12 PM
-3/12/2025 11:04:12 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 11:04:12 PM: badposture Notify: 3/12/2025 11:04:12 PM
-3/12/2025 11:04:12 PM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
-3/12/2025 11:04:12 PM: badposture Notify: 3/12/2025 11:04:12 PM
+3/16/2025 3:02:18 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/16/2025 3:02:19 PM: [cvs Error]: 2025-03-16 15:02:19.432521: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:02:21 PM: [cvs Error]: 2025-03-16 15:02:21.576688: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:02:30 PM: [cvs Error]: 2025-03-16 15:02:30.619427: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/16/2025 3:02:30 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/16/2025 3:02:30 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/16/2025 3:04:18 PM: No posture data found for monitoring.
+3/16/2025 3:04:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:04:18 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Close!", "blink_count": 0}
+3/16/2025 3:04:18 PM: Processed Blink Count: 0
+3/16/2025 3:04:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:04:18 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/16/2025 3:04:18 PM: Processed Blink Count: 0
+3/16/2025 3:04:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:04:18 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Close!", "blink_count": 1}
+3/16/2025 3:04:18 PM: Processed Blink Count: 1
+3/16/2025 3:06:18 PM: No posture data found for monitoring.
+3/16/2025 3:06:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:06:18 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Far!", "blink_count": 0}
+3/16/2025 3:06:18 PM: Processed Blink Count: 0
+3/16/2025 3:06:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:06:18 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/16/2025 3:06:18 PM: Processed Blink Count: 0
+3/16/2025 3:08:18 PM: No posture data found for monitoring.
+3/16/2025 3:10:18 PM: No posture data found for monitoring.
+3/16/2025 3:12:18 PM: No posture data found for monitoring.
+3/16/2025 3:14:18 PM: No posture data found for monitoring.
+3/16/2025 3:17:31 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/16/2025 3:17:31 PM: mODEL nAME : cvs
+3/16/2025 3:17:42 PM: [cvs Error]: 2025-03-16 15:17:42.156521: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:18:03 PM: [cvs Error]: 2025-03-16 15:18:03.620935: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:19:32 PM: No posture data found for monitoring.
+3/16/2025 3:20:16 PM: [cvs Error]: 2025-03-16 15:20:16.719841: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/16/2025 3:20:16 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/16/2025 3:20:17 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/16/2025 3:21:32 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:21:32 PM: No posture data found for monitoring.
+3/16/2025 3:21:32 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Far!", "blink_count": 0}
+3/16/2025 3:21:32 PM: Processed Blink Count: 0
+3/16/2025 3:21:32 PM: Eye strain detected: 3/16/2025 3:21:32 PM
+3/16/2025 3:21:32 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:21:32 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/16/2025 3:21:32 PM: Processed Blink Count: 0
+3/16/2025 3:21:32 PM: Eye strain detected: 3/16/2025 3:21:32 PM
