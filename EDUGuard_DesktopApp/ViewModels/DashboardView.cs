@@ -175,12 +175,8 @@ namespace EDUGuard_DesktopApp.Views
 
                 
                 // Start posture monitoring if it's the posture model
-                if (modelName.ToLower() == "posture" || modelName.ToLower() == "cvs")
-                {
-                    Logger.LogError($"mODEL nAME : {modelName}");
-
-                    StartMonitoring(progressReportId);
-                }
+                StartMonitoring(progressReportId);
+                
             }
             catch (Exception ex)
             {
@@ -328,6 +324,7 @@ namespace EDUGuard_DesktopApp.Views
             _monitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms) 
             _monitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
             _monitorTimer.Elapsed += async (sender, e) => await CheckBlinkAlerts(progressReportId);
+            _monitorTimer.Elapsed += async (sender, e) => await CheckStressAlerts(progressReportId);
             _monitorTimer.AutoReset = true;
             _monitorTimer.Start();
 
@@ -437,6 +434,78 @@ namespace EDUGuard_DesktopApp.Views
             }
         }
 
+        //Check Stress
+        private async Task CheckStressAlerts(string progressReportId)
+        {
+            try
+            {
+                // Fetch latest progress report
+                var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+                var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+                if (report == null || report.StressData?.Outputs == null || report.StressData.Outputs.Count == 0)
+                {
+                    Logger.LogError("No stress data found for monitoring.");
+                    return;
+                }
+
+                // Process only new batches (ignore already processed ones)
+                for (int i = _processedArraysCount; i < report.StressData.Outputs.Count; i++)
+                {
+                    var batch = report.StressData.Outputs[i];
+                    Logger.LogError($"StressData.Outputs {batch}");
+
+                    if (batch.Count == 0)
+                    {
+                        Logger.LogError($"Batch empty {batch}");
+                        continue;
+                    } // Skip empty batches
+
+                    // Count occurrences of each emotion in the batch
+                    int angerCount = batch.Count(e => e == "angry");
+                    int fearCount = batch.Count(e => e == "fear");
+                    int disgustCount = batch.Count(e => e == "disgust");
+                    int sadnessCount = batch.Count(e => e == "sad");
+                    int neutralCount = batch.Count(e => e == "neutral");
+                    int surpriseCount = batch.Count(e => e == "surprise");
+                    int happinessCount = batch.Count(e => e == "happy");
+
+                    int totalEmotions = batch.Count;
+
+                    // Calculate stress levels
+                    int negativeEmotions = angerCount + fearCount + disgustCount + sadnessCount;
+                    double negativePercentage = (double)negativeEmotions / totalEmotions * 100;
+
+                    Logger.LogError($"Stress Calculation - Negative: {negativePercentage:F1}%, Happy: {happinessCount}, Neutral: {neutralCount}");
+
+                    string stressLevel = "Unknown";
+
+                    if (negativePercentage > 60)
+                    {
+                        stressLevel = "High Stress";
+                        ShowNotification("High Stress Detected! Try relaxation techniques.");
+                    }
+                    else if (neutralCount >= happinessCount && neutralCount >= surpriseCount)
+                    {
+                        stressLevel = "Medium Stress";
+                        ShowNotification("Medium Stress Level. Consider taking a short break.");
+                    }
+                    else if (happinessCount > neutralCount)
+                    {
+                        stressLevel = "Low Stress";
+                    }
+
+                    Logger.LogError($"Determined Stress Level: {stressLevel}");
+
+                    // Mark this batch as processed
+                    _processedArraysCount++;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Error checking stress alerts: {ex.Message}");
+            }
+        }
 
 
         private int ExtractBlinkCount(List<string> batchData)

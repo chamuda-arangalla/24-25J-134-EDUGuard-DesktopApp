@@ -42,3 +42,49 @@
 3/16/2025 3:21:32 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
 3/16/2025 3:21:32 PM: Processed Blink Count: 0
 3/16/2025 3:21:32 PM: Eye strain detected: 3/16/2025 3:21:32 PM
+3/16/2025 3:46:21 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/16/2025 3:46:23 PM: [stress Error]: 2025-03-16 15:46:23.802005: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:46:26 PM: [stress Error]: 2025-03-16 15:46:26.731949: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:46:43 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/16/2025 3:46:43 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/16/2025 3:46:43 PM: [stress Error]: 2025-03-16 15:46:43.399989: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/16/2025 3:46:43 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/16/2025 3:46:44 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/16/2025 3:46:44 PM: [stress Error]:   warnings.warn(
+3/16/2025 3:46:44 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/16/2025 3:46:44 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/16/2025 3:46:44 PM: [stress Error]: Traceback (most recent call last):
+3/16/2025 3:46:44 PM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 54, in <module>
+3/16/2025 3:46:44 PM: [stress Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/16/2025 3:46:44 PM: [stress Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/16/2025 3:46:44 PM: [stress Error]: struct.error: unpack requires a buffer of 8 bytes
+3/16/2025 3:48:22 PM: No posture data found for monitoring.
+3/16/2025 3:48:22 PM: No blink data found for monitoring.
+3/16/2025 3:48:22 PM: No stress data found for monitoring.
+3/16/2025 3:50:22 PM: No blink data found for monitoring.
+3/16/2025 3:50:22 PM: No stress data found for monitoring.
+3/16/2025 3:50:34 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/16/2025 3:50:36 PM: [stress Error]: 2025-03-16 15:50:36.200145: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:50:38 PM: [stress Error]: 2025-03-16 15:50:38.402276: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/16/2025 3:50:53 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/16/2025 3:50:53 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/16/2025 3:50:53 PM: [stress Error]: 2025-03-16 15:50:53.849309: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/16/2025 3:50:53 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/16/2025 3:50:54 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/16/2025 3:50:54 PM: [stress Error]:   warnings.warn(
+3/16/2025 3:50:54 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/16/2025 3:50:54 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/16/2025 3:52:22 PM: No posture data found for monitoring.
+3/16/2025 3:52:22 PM: No stress data found for monitoring.
+3/16/2025 3:52:22 PM: No blink data found for monitoring.
+3/16/2025 3:52:35 PM: No posture data found for monitoring.
+3/16/2025 3:52:35 PM: No blink data found for monitoring.
+3/16/2025 3:52:35 PM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:52:35 PM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/16/2025 3:52:35 PM: Determined Stress Level: Medium Stress
+3/16/2025 3:52:35 PM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:52:35 PM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/16/2025 3:52:35 PM: Determined Stress Level: Medium Stress
+3/16/2025 3:52:35 PM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/16/2025 3:52:35 PM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/16/2025 3:52:35 PM: Determined Stress Level: Medium Stress
