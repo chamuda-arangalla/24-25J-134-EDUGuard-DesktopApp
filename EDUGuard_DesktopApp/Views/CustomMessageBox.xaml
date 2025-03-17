@@ -13,9 +13,10 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="366" Height="130">
             <!-- Content: Warning icon and centered text -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="335" Height="105">
-                <!-- Warning Icon (update Source as needed) -->
-                <Image Source="/EDUGuard_DesktopApp;component/Assets/warning.png" Width="32" Height="32" Margin="0,0,10,0"/>
-                <!-- Text Block, centered -->
+                <!-- Warning Icon -->
+                <Image Source="/EDUGuard_DesktopApp;component/Assets/warning.png" 
+                       Width="32" Height="32" Margin="0,0,10,0"/>
+                <!-- Centered Text -->
                 <TextBlock x:Name="MessageTextBlock"
                            Text="Your message here"
                            TextAlignment="Center"

@@ -1,90 +1,267 @@
-3/16/2025 3:02:18 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/16/2025 3:02:19 PM: [cvs Error]: 2025-03-16 15:02:19.432521: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:02:21 PM: [cvs Error]: 2025-03-16 15:02:21.576688: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:02:30 PM: [cvs Error]: 2025-03-16 15:02:30.619427: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/16/2025 3:02:30 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/16/2025 3:02:30 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/16/2025 3:04:18 PM: No posture data found for monitoring.
-3/16/2025 3:04:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:04:18 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Close!", "blink_count": 0}
-3/16/2025 3:04:18 PM: Processed Blink Count: 0
-3/16/2025 3:04:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:04:18 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
-3/16/2025 3:04:18 PM: Processed Blink Count: 0
-3/16/2025 3:04:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:04:18 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Close!", "blink_count": 1}
-3/16/2025 3:04:18 PM: Processed Blink Count: 1
-3/16/2025 3:06:18 PM: No posture data found for monitoring.
-3/16/2025 3:06:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:06:18 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Far!", "blink_count": 0}
-3/16/2025 3:06:18 PM: Processed Blink Count: 0
-3/16/2025 3:06:18 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:06:18 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
-3/16/2025 3:06:18 PM: Processed Blink Count: 0
-3/16/2025 3:08:18 PM: No posture data found for monitoring.
-3/16/2025 3:10:18 PM: No posture data found for monitoring.
-3/16/2025 3:12:18 PM: No posture data found for monitoring.
-3/16/2025 3:14:18 PM: No posture data found for monitoring.
-3/16/2025 3:17:31 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/16/2025 3:17:31 PM: mODEL nAME : cvs
-3/16/2025 3:17:42 PM: [cvs Error]: 2025-03-16 15:17:42.156521: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:18:03 PM: [cvs Error]: 2025-03-16 15:18:03.620935: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:19:32 PM: No posture data found for monitoring.
-3/16/2025 3:20:16 PM: [cvs Error]: 2025-03-16 15:20:16.719841: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/16/2025 3:20:16 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/16/2025 3:20:17 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/16/2025 3:21:32 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:21:32 PM: No posture data found for monitoring.
-3/16/2025 3:21:32 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Far!", "blink_count": 0}
-3/16/2025 3:21:32 PM: Processed Blink Count: 0
-3/16/2025 3:21:32 PM: Eye strain detected: 3/16/2025 3:21:32 PM
-3/16/2025 3:21:32 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:21:32 PM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
-3/16/2025 3:21:32 PM: Processed Blink Count: 0
-3/16/2025 3:21:32 PM: Eye strain detected: 3/16/2025 3:21:32 PM
-3/16/2025 3:46:21 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/16/2025 3:46:23 PM: [stress Error]: 2025-03-16 15:46:23.802005: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:46:26 PM: [stress Error]: 2025-03-16 15:46:26.731949: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:46:43 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/16/2025 3:46:43 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/16/2025 3:46:43 PM: [stress Error]: 2025-03-16 15:46:43.399989: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/16/2025 3:46:43 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/16/2025 3:46:44 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/16/2025 3:46:44 PM: [stress Error]:   warnings.warn(
-3/16/2025 3:46:44 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/16/2025 3:46:44 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/16/2025 3:46:44 PM: [stress Error]: Traceback (most recent call last):
-3/16/2025 3:46:44 PM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 54, in <module>
-3/16/2025 3:46:44 PM: [stress Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/16/2025 3:46:44 PM: [stress Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/16/2025 3:46:44 PM: [stress Error]: struct.error: unpack requires a buffer of 8 bytes
-3/16/2025 3:48:22 PM: No posture data found for monitoring.
-3/16/2025 3:48:22 PM: No blink data found for monitoring.
-3/16/2025 3:48:22 PM: No stress data found for monitoring.
-3/16/2025 3:50:22 PM: No blink data found for monitoring.
-3/16/2025 3:50:22 PM: No stress data found for monitoring.
-3/16/2025 3:50:34 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/16/2025 3:50:36 PM: [stress Error]: 2025-03-16 15:50:36.200145: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:50:38 PM: [stress Error]: 2025-03-16 15:50:38.402276: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/16/2025 3:50:53 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/16/2025 3:50:53 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/16/2025 3:50:53 PM: [stress Error]: 2025-03-16 15:50:53.849309: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/16/2025 3:50:53 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/16/2025 3:50:54 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/16/2025 3:50:54 PM: [stress Error]:   warnings.warn(
-3/16/2025 3:50:54 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/16/2025 3:50:54 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/16/2025 3:52:22 PM: No posture data found for monitoring.
-3/16/2025 3:52:22 PM: No stress data found for monitoring.
-3/16/2025 3:52:22 PM: No blink data found for monitoring.
-3/16/2025 3:52:35 PM: No posture data found for monitoring.
-3/16/2025 3:52:35 PM: No blink data found for monitoring.
-3/16/2025 3:52:35 PM: StressData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:52:35 PM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
-3/16/2025 3:52:35 PM: Determined Stress Level: Medium Stress
-3/16/2025 3:52:35 PM: StressData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:52:35 PM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
-3/16/2025 3:52:35 PM: Determined Stress Level: Medium Stress
-3/16/2025 3:52:35 PM: StressData.Outputs System.Collections.Generic.List`1[System.String]
-3/16/2025 3:52:35 PM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
-3/16/2025 3:52:35 PM: Determined Stress Level: Medium Stress
+3/17/2025 8:19:49 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:19:50 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:19:52 PM: [posture Error]: 2025-03-17 20:19:52.309661: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:19:52 PM: [stress Error]: 2025-03-17 20:19:52.309646: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:19:52 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:19:53 PM: [cvs Error]: 2025-03-17 20:19:53.401978: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:19:55 PM: [cvs Error]: 2025-03-17 20:19:55.576183: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:20:11 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/17/2025 8:20:11 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/17/2025 8:20:11 PM: [stress Error]: 2025-03-17 20:20:11.947079: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/17/2025 8:20:11 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/17/2025 8:20:12 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/17/2025 8:20:12 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/17/2025 8:20:13 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/17/2025 8:20:13 PM: [stress Error]:   warnings.warn(
+3/17/2025 8:20:13 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/17/2025 8:20:13 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/17/2025 8:20:13 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/17/2025 8:20:14 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/17/2025 8:20:14 PM: [posture Error]: W0000 00:00:1742223014.067819    8576 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/17/2025 8:20:14 PM: [posture Error]: W0000 00:00:1742223014.227092    8576 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/17/2025 8:20:14 PM: [posture Error]: W0000 00:00:1742223014.395547   14448 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/17/2025 8:24:28 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:24:29 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:24:30 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:24:31 PM: [stress Error]: 2025-03-17 20:24:31.236894: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:24:31 PM: [posture Error]: 2025-03-17 20:24:31.236902: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:24:31 PM: [cvs Error]: 2025-03-17 20:24:31.595277: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:24:34 PM: [cvs Error]: 2025-03-17 20:24:34.189845: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:24:34 PM: [posture Error]: 2025-03-17 20:24:34.189800: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:24:44 PM: [cvs Error]: 2025-03-17 20:24:44.377667: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/17/2025 8:24:44 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/17/2025 8:24:44 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/17/2025 8:24:44 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/17/2025 8:24:44 PM: [stress Error]: 2025-03-17 20:24:44.424464: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/17/2025 8:24:44 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/17/2025 8:24:44 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/17/2025 8:24:44 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/17/2025 8:24:44 PM: [stress Error]:   warnings.warn(
+3/17/2025 8:24:44 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/17/2025 8:24:44 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/17/2025 8:24:45 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/17/2025 8:24:46 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/17/2025 8:24:46 PM: [posture Error]: W0000 00:00:1742223286.008283    4492 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/17/2025 8:24:46 PM: [posture Error]: W0000 00:00:1742223286.064141    4492 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/17/2025 8:24:46 PM: [posture Error]: W0000 00:00:1742223286.096753    6088 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/17/2025 8:25:09 PM: [stress Error]: Traceback (most recent call last):
+3/17/2025 8:25:09 PM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 54, in <module>
+3/17/2025 8:25:09 PM: [stress Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/17/2025 8:25:09 PM: [stress Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/17/2025 8:25:09 PM: [stress Error]: struct.error: unpack requires a buffer of 8 bytes
+3/17/2025 8:25:09 PM: [cvs Error]: Traceback (most recent call last):
+3/17/2025 8:25:09 PM: [cvs Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\cvs_detection.py", line 84, in <module>
+3/17/2025 8:25:09 PM: [cvs Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/17/2025 8:25:09 PM: [cvs Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/17/2025 8:25:09 PM: [cvs Error]: struct.error: unpack requires a buffer of 8 bytes
+3/17/2025 8:25:09 PM: [posture Error]: Traceback (most recent call last):
+3/17/2025 8:25:09 PM: [posture Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\posture_detection1.py", line 62, in <module>
+3/17/2025 8:25:09 PM: [posture Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/17/2025 8:25:09 PM: [posture Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/17/2025 8:25:09 PM: [posture Error]: struct.error: unpack requires a buffer of 8 bytes
+3/17/2025 8:26:28 PM: No posture data found for monitoring.
+3/17/2025 8:26:28 PM: No blink data found for monitoring.
+3/17/2025 8:26:28 PM: No stress data found for monitoring.
+3/17/2025 8:26:29 PM: No posture data found for monitoring.
+3/17/2025 8:26:30 PM: No blink data found for monitoring.
+3/17/2025 8:26:30 PM: No stress data found for monitoring.
+3/17/2025 8:26:50 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:26:52 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:26:53 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:26:54 PM: [stress Error]: 2025-03-17 20:26:54.099541: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:26:54 PM: [cvs Error]: 2025-03-17 20:26:54.764070: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:26:57 PM: [cvs Error]: 2025-03-17 20:26:57.191016: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/17/2025 8:27:11 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/17/2025 8:27:11 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/17/2025 8:27:12 PM: [stress Error]: 2025-03-17 20:27:12.012684: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/17/2025 8:27:12 PM: [cvs Error]: 2025-03-17 20:27:12.012781: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/17/2025 8:27:12 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/17/2025 8:27:12 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/17/2025 8:27:12 PM: [cvs Error]: Traceback (most recent call last):
+3/17/2025 8:27:12 PM: [cvs Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\cvs_detection.py", line 84, in <module>
+3/17/2025 8:27:12 PM: [cvs Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/17/2025 8:27:12 PM: [cvs Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/17/2025 8:27:12 PM: [cvs Error]: struct.error: unpack requires a buffer of 8 bytes
+3/17/2025 8:27:12 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/17/2025 8:27:12 PM: [stress Error]:   warnings.warn(
+3/17/2025 8:27:12 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/17/2025 8:27:12 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/17/2025 8:27:12 PM: [stress Error]: Traceback (most recent call last):
+3/17/2025 8:27:12 PM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 54, in <module>
+3/17/2025 8:27:12 PM: [stress Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/17/2025 8:27:12 PM: [stress Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/17/2025 8:27:12 PM: [stress Error]: struct.error: unpack requires a buffer of 8 bytes
+3/17/2025 8:27:13 PM: [posture Error]: Traceback (most recent call last):
+3/17/2025 8:27:13 PM: [posture Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\posture_detection1.py", line 62, in <module>
+3/17/2025 8:27:13 PM: [posture Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
+3/17/2025 8:27:13 PM: [posture Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3/17/2025 8:27:13 PM: [posture Error]: struct.error: unpack requires a buffer of 8 bytes
+3/17/2025 8:27:13 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/17/2025 8:27:13 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/17/2025 8:27:13 PM: [posture Error]: W0000 00:00:1742223433.560880   10632 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/17/2025 8:27:13 PM: [posture Error]: W0000 00:00:1742223433.741460   22720 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/17/2025 8:28:28 PM: No posture data found for monitoring.
+3/17/2025 8:28:28 PM: No blink data found for monitoring.
+3/17/2025 8:28:28 PM: No stress data found for monitoring.
+3/17/2025 8:28:30 PM: No posture data found for monitoring.
+3/17/2025 8:28:30 PM: No blink data found for monitoring.
+3/17/2025 8:28:30 PM: No stress data found for monitoring.
+3/17/2025 8:28:51 PM: No posture data found for monitoring.
+3/17/2025 8:28:51 PM: No blink data found for monitoring.
+3/17/2025 8:28:51 PM: No stress data found for monitoring.
+3/17/2025 8:28:52 PM: No posture data found for monitoring.
+3/17/2025 8:28:52 PM: No blink data found for monitoring.
+3/17/2025 8:28:52 PM: No stress data found for monitoring.
+3/17/2025 8:28:54 PM: No posture data found for monitoring.
+3/17/2025 8:28:54 PM: No blink data found for monitoring.
+3/17/2025 8:28:54 PM: No stress data found for monitoring.
+3/17/2025 8:30:28 PM: No posture data found for monitoring.
+3/17/2025 8:30:28 PM: No blink data found for monitoring.
+3/17/2025 8:30:28 PM: No stress data found for monitoring.
+3/17/2025 8:30:30 PM: No posture data found for monitoring.
+3/17/2025 8:30:30 PM: No blink data found for monitoring.
+3/17/2025 8:30:30 PM: No stress data found for monitoring.
+3/17/2025 8:30:51 PM: No posture data found for monitoring.
+3/17/2025 8:30:51 PM: No blink data found for monitoring.
+3/17/2025 8:30:51 PM: No stress data found for monitoring.
+3/17/2025 8:30:52 PM: No posture data found for monitoring.
+3/17/2025 8:30:52 PM: No blink data found for monitoring.
+3/17/2025 8:30:52 PM: No stress data found for monitoring.
+3/17/2025 8:30:54 PM: No posture data found for monitoring.
+3/17/2025 8:30:54 PM: No blink data found for monitoring.
+3/17/2025 8:30:54 PM: No stress data found for monitoring.
+3/17/2025 8:31:35 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/17/2025 8:32:28 PM: No posture data found for monitoring.
+3/17/2025 8:32:28 PM: No blink data found for monitoring.
+3/17/2025 8:32:28 PM: No stress data found for monitoring.
+3/17/2025 8:32:30 PM: No posture data found for monitoring.
+3/17/2025 8:32:30 PM: No blink data found for monitoring.
+3/17/2025 8:32:30 PM: No stress data found for monitoring.
+3/17/2025 8:32:51 PM: No posture data found for monitoring.
+3/17/2025 8:32:51 PM: No blink data found for monitoring.
+3/17/2025 8:32:51 PM: No stress data found for monitoring.
+3/17/2025 8:32:52 PM: No posture data found for monitoring.
+3/17/2025 8:32:52 PM: No blink data found for monitoring.
+3/17/2025 8:32:52 PM: No stress data found for monitoring.
+3/17/2025 8:32:54 PM: No posture data found for monitoring.
+3/17/2025 8:32:54 PM: No blink data found for monitoring.
+3/17/2025 8:32:54 PM: No stress data found for monitoring.
+3/17/2025 8:34:28 PM: No posture data found for monitoring.
+3/17/2025 8:34:28 PM: No blink data found for monitoring.
+3/17/2025 8:34:28 PM: No stress data found for monitoring.
+3/17/2025 8:34:30 PM: No posture data found for monitoring.
+3/17/2025 8:34:30 PM: No blink data found for monitoring.
+3/17/2025 8:34:30 PM: No stress data found for monitoring.
+3/17/2025 8:34:51 PM: No posture data found for monitoring.
+3/17/2025 8:34:51 PM: No blink data found for monitoring.
+3/17/2025 8:34:51 PM: No stress data found for monitoring.
+3/17/2025 8:34:52 PM: No posture data found for monitoring.
+3/17/2025 8:34:52 PM: No blink data found for monitoring.
+3/17/2025 8:34:52 PM: No stress data found for monitoring.
+3/17/2025 8:34:54 PM: No posture data found for monitoring.
+3/17/2025 8:34:54 PM: No blink data found for monitoring.
+3/17/2025 8:34:54 PM: No stress data found for monitoring.
+3/17/2025 8:36:28 PM: No posture data found for monitoring.
+3/17/2025 8:36:28 PM: No blink data found for monitoring.
+3/17/2025 8:36:28 PM: No stress data found for monitoring.
+3/17/2025 8:36:30 PM: No posture data found for monitoring.
+3/17/2025 8:36:30 PM: No blink data found for monitoring.
+3/17/2025 8:36:30 PM: No stress data found for monitoring.
+3/17/2025 8:36:51 PM: No posture data found for monitoring.
+3/17/2025 8:36:51 PM: No blink data found for monitoring.
+3/17/2025 8:36:51 PM: No stress data found for monitoring.
+3/17/2025 8:36:53 PM: No posture data found for monitoring.
+3/17/2025 8:36:53 PM: No blink data found for monitoring.
+3/17/2025 8:36:53 PM: No stress data found for monitoring.
+3/17/2025 8:36:54 PM: No posture data found for monitoring.
+3/17/2025 8:36:54 PM: No blink data found for monitoring.
+3/17/2025 8:36:54 PM: No stress data found for monitoring.
+3/17/2025 8:38:28 PM: No posture data found for monitoring.
+3/17/2025 8:38:28 PM: No blink data found for monitoring.
+3/17/2025 8:38:28 PM: No stress data found for monitoring.
+3/17/2025 8:38:30 PM: No posture data found for monitoring.
+3/17/2025 8:38:30 PM: No blink data found for monitoring.
+3/17/2025 8:38:30 PM: No stress data found for monitoring.
+3/17/2025 8:38:51 PM: No blink data found for monitoring.
+3/17/2025 8:38:51 PM: No posture data found for monitoring.
+3/17/2025 8:38:51 PM: No stress data found for monitoring.
+3/17/2025 8:38:52 PM: No posture data found for monitoring.
+3/17/2025 8:38:52 PM: No blink data found for monitoring.
+3/17/2025 8:38:52 PM: No stress data found for monitoring.
+3/17/2025 8:38:54 PM: No posture data found for monitoring.
+3/17/2025 8:38:54 PM: No blink data found for monitoring.
+3/17/2025 8:38:54 PM: No stress data found for monitoring.
+3/17/2025 8:40:28 PM: No posture data found for monitoring.
+3/17/2025 8:40:28 PM: No blink data found for monitoring.
+3/17/2025 8:40:28 PM: No stress data found for monitoring.
+3/17/2025 8:40:30 PM: No posture data found for monitoring.
+3/17/2025 8:40:30 PM: No blink data found for monitoring.
+3/17/2025 8:40:30 PM: No stress data found for monitoring.
+3/17/2025 8:40:51 PM: No posture data found for monitoring.
+3/17/2025 8:40:51 PM: No blink data found for monitoring.
+3/17/2025 8:40:51 PM: No stress data found for monitoring.
+3/17/2025 8:40:52 PM: No posture data found for monitoring.
+3/17/2025 8:40:53 PM: No blink data found for monitoring.
+3/17/2025 8:40:53 PM: No stress data found for monitoring.
+3/17/2025 8:40:54 PM: No posture data found for monitoring.
+3/17/2025 8:40:54 PM: No blink data found for monitoring.
+3/17/2025 8:40:54 PM: No stress data found for monitoring.
+3/17/2025 8:42:28 PM: No posture data found for monitoring.
+3/17/2025 8:42:28 PM: No stress data found for monitoring.
+3/17/2025 8:42:30 PM: No posture data found for monitoring.
+3/17/2025 8:42:30 PM: No blink data found for monitoring.
+3/17/2025 8:42:30 PM: No stress data found for monitoring.
+3/17/2025 8:42:51 PM: No posture data found for monitoring.
+3/17/2025 8:42:51 PM: No blink data found for monitoring.
+3/17/2025 8:42:51 PM: No stress data found for monitoring.
+3/17/2025 8:42:53 PM: No posture data found for monitoring.
+3/17/2025 8:42:53 PM: No blink data found for monitoring.
+3/17/2025 8:42:53 PM: No stress data found for monitoring.
+3/17/2025 8:42:54 PM: No posture data found for monitoring.
+3/17/2025 8:42:54 PM: No blink data found for monitoring.
+3/17/2025 8:42:54 PM: No stress data found for monitoring.
+3/17/2025 8:44:28 PM: No posture data found for monitoring.
+3/17/2025 8:44:28 PM: No blink data found for monitoring.
+3/17/2025 8:44:28 PM: No stress data found for monitoring.
+3/17/2025 8:44:30 PM: No posture data found for monitoring.
+3/17/2025 8:44:30 PM: No blink data found for monitoring.
+3/17/2025 8:44:30 PM: No stress data found for monitoring.
+3/17/2025 8:44:51 PM: No posture data found for monitoring.
+3/17/2025 8:44:51 PM: No blink data found for monitoring.
+3/17/2025 8:44:51 PM: No stress data found for monitoring.
+3/17/2025 8:44:53 PM: No posture data found for monitoring.
+3/17/2025 8:44:53 PM: No blink data found for monitoring.
+3/17/2025 8:44:53 PM: No stress data found for monitoring.
+3/17/2025 8:44:54 PM: No posture data found for monitoring.
+3/17/2025 8:44:54 PM: No blink data found for monitoring.
+3/17/2025 8:44:54 PM: No stress data found for monitoring.
+3/17/2025 8:46:28 PM: No posture data found for monitoring.
+3/17/2025 8:46:28 PM: No blink data found for monitoring.
+3/17/2025 8:46:28 PM: No stress data found for monitoring.
+3/17/2025 8:46:30 PM: No posture data found for monitoring.
+3/17/2025 8:46:30 PM: No blink data found for monitoring.
+3/17/2025 8:46:30 PM: No stress data found for monitoring.
+3/17/2025 8:46:51 PM: No posture data found for monitoring.
+3/17/2025 8:46:51 PM: No blink data found for monitoring.
+3/17/2025 8:46:51 PM: No stress data found for monitoring.
+3/17/2025 8:46:53 PM: No posture data found for monitoring.
+3/17/2025 8:46:53 PM: No blink data found for monitoring.
+3/17/2025 8:46:53 PM: No stress data found for monitoring.
+3/17/2025 8:46:54 PM: No posture data found for monitoring.
+3/17/2025 8:46:54 PM: No blink data found for monitoring.
+3/17/2025 8:46:54 PM: No stress data found for monitoring.
+3/17/2025 8:48:28 PM: No posture data found for monitoring.
+3/17/2025 8:48:28 PM: No blink data found for monitoring.
+3/17/2025 8:48:28 PM: No stress data found for monitoring.
+3/17/2025 8:48:30 PM: No posture data found for monitoring.
+3/17/2025 8:48:30 PM: No blink data found for monitoring.
+3/17/2025 8:48:30 PM: No stress data found for monitoring.
+3/17/2025 8:48:51 PM: No posture data found for monitoring.
+3/17/2025 8:48:51 PM: No blink data found for monitoring.
+3/17/2025 8:48:51 PM: No stress data found for monitoring.
+3/17/2025 8:48:53 PM: No posture data found for monitoring.
+3/17/2025 8:48:53 PM: No blink data found for monitoring.
+3/17/2025 8:48:53 PM: No stress data found for monitoring.
+3/17/2025 8:48:54 PM: No posture data found for monitoring.
+3/17/2025 8:48:54 PM: No blink data found for monitoring.
+3/17/2025 8:48:54 PM: No stress data found for monitoring.
