@@ -331,7 +331,7 @@ namespace EDUGuard_DesktopApp.Views
             //_monitorTimer.Start();
 
             _processedArraysCount = 0; // Reset count when model starts
-            _monitorTimer = new System.Timers.Timer(10000); // Runs every 2 minutes (120000 ms) 
+            _monitorTimer = new System.Timers.Timer(128000); 
             _monitorTimer.Elapsed += async (sender, e) =>
             {
                 _processedArraysCount = 0; // Reset so alerts do not get stuck
@@ -345,9 +345,58 @@ namespace EDUGuard_DesktopApp.Views
         }
 
         //Check posture
+        //private async Task CheckPostureAlerts(string progressReportId)
+        //{
+
+        //    try
+        //    {
+        //        // Fetch latest progress report
+        //        var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+        //        var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+        //        if (report == null || report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
+        //        {
+        //            Logger.LogError("No posture data found for monitoring.");
+        //            return;
+        //        }
+
+        //        // Process only new arrays (ignore already processed ones)
+        //        for (int i = _processedArraysCount; i < report.PostureData.Outputs.Count; i++)
+        //        {
+        //            var batch = report.PostureData.Outputs[i];
+        //            Logger.LogError($"PostureData.Outputs {batch}");
+
+
+        //            if (batch.Count == 0)
+        //            {
+        //                Logger.LogError($"Batch empty {batch}");
+        //                continue;
+        //            } // Skip empty batches
+
+        //            // Calculate the percentage of "Bad Posture" occurrences in the batch
+        //            int badPostureCount = batch.Count(p => p == "Bad Posture");
+        //            double badPosturePercentage = (double)badPostureCount / batch.Count * 100;
+
+        //            // Trigger notification only if "Bad Posture" exceeds 60%
+        //            if (badPosturePercentage > 60)
+        //            {
+        //                Logger.LogError($"badposture Notify: {DateTime.Now}");
+        //                ShowNotification($"Alert: Your posture quality is poor! Currect it immediately ");
+        //            }
+
+        //            // Mark this batch as processed
+        //            _processedArraysCount++;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.LogError($"Error checking posture alerts: {ex.Message}");
+        //    }
+        //}
+
+        //new pooooooooooooooooooooooo
         private async Task CheckPostureAlerts(string progressReportId)
         {
-
             try
             {
                 // Fetch latest progress report
@@ -360,39 +409,45 @@ namespace EDUGuard_DesktopApp.Views
                     return;
                 }
 
-                // Process only new arrays (ignore already processed ones)
-                for (int i = _processedArraysCount; i < report.PostureData.Outputs.Count; i++)
+                // Get the last (most recent) batch only
+                var latestIndex = report.PostureData.Outputs.Count - 1;
+
+                if (latestIndex < _processedArraysCount)
                 {
-                    var batch = report.PostureData.Outputs[i];
-                    Logger.LogError($"PostureData.Outputs {batch}");
-
-
-                    if (batch.Count == 0)
-                    {
-                        Logger.LogError($"Batch empty {batch}");
-                        continue;
-                    } // Skip empty batches
-
-                    // Calculate the percentage of "Bad Posture" occurrences in the batch
-                    int badPostureCount = batch.Count(p => p == "Bad Posture");
-                    double badPosturePercentage = (double)badPostureCount / batch.Count * 100;
-
-                    // Trigger notification only if "Bad Posture" exceeds 60%
-                    if (badPosturePercentage > 60)
-                    {
-                        Logger.LogError($"badposture Notify: {DateTime.Now}");
-                        ShowNotification($"Alert: Your posture quality is poor! Currect it immediately ");
-                    }
-
-                    // Mark this batch as processed
-                    _processedArraysCount++;
+                    Logger.LogError("No new posture data to process.");
+                    return;
                 }
+
+                var latestBatch = report.PostureData.Outputs[latestIndex]; // Get the latest batch
+
+                Logger.LogError($"Latest PostureData.Outputs: {latestBatch}");
+
+                if (latestBatch.Count == 0)
+                {
+                    Logger.LogError("Latest batch is empty, skipping.");
+                    return;
+                }
+
+                // Calculate the percentage of "Bad Posture" occurrences in the batch
+                int badPostureCount = latestBatch.Count(p => p == "Bad Posture");
+                double badPosturePercentage = (double)badPostureCount / latestBatch.Count * 100;
+
+                // Trigger notification only if "Bad Posture" exceeds 60%
+                if (badPosturePercentage > 60)
+                {
+                    Logger.LogError($"badposture Notify: {DateTime.Now},{badPosturePercentage}");
+                    ShowNotification($"Alert: Your posture quality is poor! Correct it immediately.");
+                }
+
+                // Update processed count to avoid rechecking the same batch
+                _processedArraysCount = latestIndex + 1;
             }
             catch (Exception ex)
             {
                 Logger.LogError($"Error checking posture alerts: {ex.Message}");
             }
         }
+
 
         //Check blink count
         private async Task CheckBlinkAlerts(string progressReportId)
@@ -428,16 +483,18 @@ namespace EDUGuard_DesktopApp.Views
                     // Alert for eye strain (15-17 blinks)
                     if (!(blinkCount >= 15 && blinkCount <= 17))
                     {
-                        Logger.LogError($"Eye strain detected: {DateTime.Now}");
-                        ShowNotification("Alert: You have eye strain. Take a break!");
+                        // Alert for vision strain or dry eyes (above 17 blinks)
+                        if (blinkCount > 17)
+                        {
+                            Logger.LogError($"High blink rate detected: {DateTime.Now}");
+                            ShowNotification("Warning: High blink rate detected. Look at a long-distance object!");
+                        }
+                        else {
+                            Logger.LogError($"Eye strain detected: {DateTime.Now}");
+                            ShowNotification("Alert: You have eye strain. Take a break!");
+                        }
+                        
                     }
-                    // Alert for vision strain or dry eyes (above 17 blinks)
-                    else if (blinkCount > 17)
-                    {
-                        Logger.LogError($"High blink rate detected: {DateTime.Now}");
-                        ShowNotification("Warning: High blink rate detected. Look at a long-distance object!");
-                    }
-
                     // Mark this batch as processed
                     _processedArraysCount++;
                 }

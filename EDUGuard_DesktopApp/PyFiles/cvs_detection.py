@@ -44,8 +44,8 @@ EYE_LOSS_RESET_TIME = 2  # Time in seconds to reset blink count if eyes are lost
 # Timer setup
 last_saved_time = time.time()
 last_batch_time = time.time()
-save_interval = 2  # Save every 6 seconds
-batch_interval = 30  # Save batch every 30 seconds
+save_interval = 120  # Save every 6 seconds
+batch_interval = 120  # Save batch every 30 seconds
 current_batch = []  # Store batch data
 
 blink_count = 0

@@ -136,7 +136,7 @@ def refresh_progress_reports():
         except Exception as e:
             print(f"Error refreshing ProgressReports: {e}")
 
-        time.sleep(120)  # Wait for 2 minutes before refreshing again
+        time.sleep(5)  # Wait for 2 minutes before refreshing again
 
 # Start the auto-refresh in a background thread
 refresh_thread = threading.Thread(target=refresh_progress_reports, daemon=True)

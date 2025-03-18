@@ -37,8 +37,8 @@ pose = mp_pose.Pose()
 # Timer setup
 last_saved_time = time.time()
 last_batch_time = time.time()
-save_interval = 6  # Save data every 6 seconds
-batch_interval = 30  # Save the batch to the database every 30 seconds
+save_interval = 1  # Save data every 6 seconds
+batch_interval = 120  # Save the batch to the database every 30 seconds
 current_batch = []  # Temporary list to store data for the current batch
 
 # Function to calculate angles
