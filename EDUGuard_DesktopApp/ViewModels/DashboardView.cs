@@ -320,29 +320,62 @@ namespace EDUGuard_DesktopApp.Views
             });
         }
 
+        //private void StartMonitoring(string progressReportId)
+        //{
+        //    //_processedArraysCount = 0; // Reset count when model starts
+        //    //_monitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms) 
+        //    //_monitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
+        //    //_monitorTimer.Elapsed += async (sender, e) => await CheckBlinkAlerts(progressReportId);
+        //    //_monitorTimer.Elapsed += async (sender, e) => await CheckStressAlerts(progressReportId);
+        //    //_monitorTimer.AutoReset = true;
+        //    //_monitorTimer.Start();
+
+        //    _processedArraysCount = 0; // Reset count when model starts
+        //    _monitorTimer = new System.Timers.Timer(38000); 
+        //    _monitorTimer.Elapsed += async (sender, e) =>
+        //    {
+        //        _processedArraysCount = 0; // Reset so alerts do not get stuck
+        //        await CheckPostureAlerts(progressReportId);
+        //        await CheckBlinkAlerts(progressReportId);
+        //        await CheckStressAlerts(progressReportId);
+        //    };
+        //    _monitorTimer.AutoReset = true;
+        //    _monitorTimer.Start();
+
+        //}
+
         private void StartMonitoring(string progressReportId)
         {
-            //_processedArraysCount = 0; // Reset count when model starts
-            //_monitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms) 
-            //_monitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
-            //_monitorTimer.Elapsed += async (sender, e) => await CheckBlinkAlerts(progressReportId);
-            //_monitorTimer.Elapsed += async (sender, e) => await CheckStressAlerts(progressReportId);
-            //_monitorTimer.AutoReset = true;
-            //_monitorTimer.Start();
-
             _processedArraysCount = 0; // Reset count when model starts
-            _monitorTimer = new System.Timers.Timer(38000); 
+            _monitorTimer = new System.Timers.Timer(38000);
+
             _monitorTimer.Elapsed += async (sender, e) =>
             {
-                _processedArraysCount = 0; // Reset so alerts do not get stuck
-                await CheckPostureAlerts(progressReportId);
-                await CheckBlinkAlerts(progressReportId);
-                await CheckStressAlerts(progressReportId);
+                bool hasNewData = false; // Flag to check if new data was processed
+
+                int postureProcessed = await CheckPostureAlerts(progressReportId);
+                int blinkProcessed = await CheckBlinkAlerts(progressReportId);
+                int stressProcessed = await CheckStressAlerts(progressReportId);
+
+                // If at least one model has new data, keep monitoring
+                if (postureProcessed > 0 || blinkProcessed > 0 || stressProcessed > 0)
+                {
+                    hasNewData = true;
+                }
+
+                // Stop monitoring if no new data is found
+                if (!hasNewData)
+                {
+                    _monitorTimer.Stop();
+                    _monitorTimer.Dispose();
+                    Logger.LogError("Monitoring stopped: No new data available.");
+                }
             };
+
             _monitorTimer.AutoReset = true;
             _monitorTimer.Start();
-
         }
+
 
         //Check posture
         //private async Task CheckPostureAlerts(string progressReportId)
@@ -395,188 +428,361 @@ namespace EDUGuard_DesktopApp.Views
         //}
 
         //new pooooooooooooooooooooooo
-        private async Task CheckPostureAlerts(string progressReportId)
+        //private async Task CheckPostureAlerts(string progressReportId)
+        //{
+        //    try
+        //    {
+        //        // Fetch latest progress report
+        //        var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+        //        var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+        //        if (report == null || report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
+        //        {
+        //            Logger.LogError("No posture data found for monitoring.");
+        //            return;
+        //        }
+
+        //        // Get the last (most recent) batch only
+        //        var latestIndex = report.PostureData.Outputs.Count - 1;
+
+        //        if (latestIndex < _processedArraysCount)
+        //        {
+        //            Logger.LogError("No new posture data to process.");
+        //            return;
+        //        }
+
+        //        var latestBatch = report.PostureData.Outputs[latestIndex]; // Get the latest batch
+
+        //        Logger.LogError($"Latest PostureData.Outputs: {latestBatch}");
+
+        //        if (latestBatch.Count == 0)
+        //        {
+        //            Logger.LogError("Latest batch is empty, skipping.");
+        //            return;
+        //        }
+
+        //        // Calculate the percentage of "Bad Posture" occurrences in the batch
+        //        int badPostureCount = latestBatch.Count(p => p == "Bad Posture");
+        //        double badPosturePercentage = (double)badPostureCount / latestBatch.Count * 100;
+
+        //        // Trigger notification only if "Bad Posture" exceeds 60%
+        //        if (badPosturePercentage > 60)
+        //        {
+        //            Logger.LogError($"badposture Notify: {DateTime.Now},{badPosturePercentage}");
+        //            ShowNotification($"Alert: Your posture quality is poor ({badPosturePercentage})! Correct it immediately.");
+        //        }
+
+        //        // Update processed count to avoid rechecking the same batch
+        //        _processedArraysCount = latestIndex + 1;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.LogError($"Error checking posture alerts: {ex.Message}");
+        //    }
+        //}
+
+
+        ////Check blink count
+        //private async Task CheckBlinkAlerts(string progressReportId)
+        //{
+        //    try
+        //    {
+        //        // Fetch latest progress report
+        //        var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+        //        var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+        //        if (report == null || report.CVSData?.Outputs == null || report.CVSData.Outputs.Count == 0)
+        //        {
+        //            Logger.LogError("No blink data found for monitoring.");
+        //            return;
+        //        }
+
+        //        // Process only new arrays (ignore already processed ones)
+        //        for (int i = _processedArraysCount; i < report.CVSData.Outputs.Count; i++)
+        //        {
+        //            var batch = report.CVSData.Outputs[i];
+        //            Logger.LogError($"BlinkData.Outputs {batch}");
+
+        //            if (batch.Count == 0)
+        //            {
+        //                Logger.LogError($"Batch empty {batch}");
+        //                continue;
+        //            } // Skip empty batches
+
+        //            // Extract latest blink count from the batch
+        //            int blinkCount = ExtractBlinkCount(batch);
+        //            Logger.LogError($"Processed Blink Count: {blinkCount}");
+
+        //            // Alert for eye strain (15-17 blinks)
+        //            if (!(blinkCount >= 15 && blinkCount <= 17))
+        //            {
+        //                // Alert for vision strain or dry eyes (above 17 blinks)
+        //                if (blinkCount > 17)
+        //                {
+        //                    Logger.LogError($"High blink rate detected: {DateTime.Now}");
+        //                    ShowNotification($"Alert: High blink rate detected ({blinkCount}). Look at a long-distance object!");
+        //                }
+        //                else {
+        //                    Logger.LogError($"Eye strain detected: {DateTime.Now}");
+        //                    ShowNotification($"Alert: You have eye strain({blinkCount}). Take a break!");
+        //                }
+
+        //            }
+        //            // Mark this batch as processed
+        //            _processedArraysCount++;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.LogError($"Error checking blink alerts: {ex.Message}");
+        //    }
+        //}
+
+        ////Check Stress
+        //private async Task CheckStressAlerts(string progressReportId)
+        //{
+        //    try
+        //    {
+        //        // Fetch latest progress report
+        //        var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
+        //        var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
+
+        //        if (report == null || report.StressData?.Outputs == null || report.StressData.Outputs.Count == 0)
+        //        {
+        //            Logger.LogError("No stress data found for monitoring.");
+        //            return;
+        //        }
+
+        //        // Process only new batches (ignore already processed ones)
+        //        for (int i = _processedArraysCount; i < report.StressData.Outputs.Count; i++)
+        //        {
+        //            var batch = report.StressData.Outputs[i];
+        //            Logger.LogError($"StressData.Outputs {batch}");
+
+        //            if (batch.Count == 0)
+        //            {
+        //                Logger.LogError($"Batch empty {batch}");
+        //                continue;
+        //            } // Skip empty batches
+
+        //            // Count occurrences of each emotion in the batch
+        //            int angerCount = batch.Count(e => e == "angry");
+        //            int fearCount = batch.Count(e => e == "fear");
+        //            int disgustCount = batch.Count(e => e == "disgust");
+        //            int sadnessCount = batch.Count(e => e == "sad");
+        //            int neutralCount = batch.Count(e => e == "neutral");
+        //            int surpriseCount = batch.Count(e => e == "surprise");
+        //            int happinessCount = batch.Count(e => e == "happy");
+
+        //            int totalEmotions = batch.Count;
+
+        //            // Calculate stress levels
+        //            int negativeEmotions = angerCount + fearCount + disgustCount + sadnessCount;
+        //            double negativePercentage = (double)negativeEmotions / totalEmotions * 100;
+
+        //            Logger.LogError($"Stress Calculation - Negative: {negativePercentage:F1}%, Happy: {happinessCount}, Neutral: {neutralCount}");
+
+        //            string stressLevel = "Unknown";
+
+        //            if (negativePercentage > 60)
+        //            {
+        //                stressLevel = "High Stress";
+        //                ShowNotification($"High Stress Detected({stressLevel})! Try relaxation techniques.");
+        //            }
+        //            else if (neutralCount >= happinessCount && neutralCount >= surpriseCount)
+        //            {
+        //                stressLevel = "Medium Stress";
+        //                ShowNotification($"Medium Stress Level({stressLevel})!. Consider taking a short break.");
+        //            }
+        //            else if (happinessCount > neutralCount)
+        //            {
+        //                stressLevel = "Low Stress";
+        //            }
+
+        //            Logger.LogError($"Determined Stress Level: {stressLevel}");
+
+        //            // Mark this batch as processed
+        //            _processedArraysCount++;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.LogError($"Error checking stress alerts: {ex.Message}");
+        //    }
+        //}
+
+
+        //1
+        private async Task<int> CheckPostureAlerts(string progressReportId)
         {
             try
             {
-                // Fetch latest progress report
                 var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
                 var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
 
                 if (report == null || report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
                 {
                     Logger.LogError("No posture data found for monitoring.");
-                    return;
+                    return 0;
                 }
 
-                // Get the last (most recent) batch only
-                var latestIndex = report.PostureData.Outputs.Count - 1;
+                int latestIndex = report.PostureData.Outputs.Count - 1;
 
                 if (latestIndex < _processedArraysCount)
                 {
                     Logger.LogError("No new posture data to process.");
-                    return;
+                    return 0;
                 }
 
-                var latestBatch = report.PostureData.Outputs[latestIndex]; // Get the latest batch
-
-                Logger.LogError($"Latest PostureData.Outputs: {latestBatch}");
+                var latestBatch = report.PostureData.Outputs[latestIndex];
 
                 if (latestBatch.Count == 0)
                 {
                     Logger.LogError("Latest batch is empty, skipping.");
-                    return;
+                    return 0;
                 }
 
-                // Calculate the percentage of "Bad Posture" occurrences in the batch
                 int badPostureCount = latestBatch.Count(p => p == "Bad Posture");
                 double badPosturePercentage = (double)badPostureCount / latestBatch.Count * 100;
 
-                // Trigger notification only if "Bad Posture" exceeds 60%
                 if (badPosturePercentage > 60)
                 {
-                    Logger.LogError($"badposture Notify: {DateTime.Now},{badPosturePercentage}");
-                    ShowNotification($"Alert: Your posture quality is poor ({badPosturePercentage})! Correct it immediately.");
+                    Console.WriteLine($"cheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeek{badPosturePercentage}");
+                    ShowNotification($"Alert: Your posture quality is poor ({badPosturePercentage}%)! Correct it immediately.");
                 }
 
-                // Update processed count to avoid rechecking the same batch
                 _processedArraysCount = latestIndex + 1;
+                return 1; // Indicates that new data was processed
             }
             catch (Exception ex)
             {
                 Logger.LogError($"Error checking posture alerts: {ex.Message}");
+                return 0;
             }
         }
 
-
-        //Check blink count
-        private async Task CheckBlinkAlerts(string progressReportId)
+        //2
+        private async Task<int> CheckBlinkAlerts(string progressReportId)
         {
             try
             {
-                // Fetch latest progress report
                 var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
                 var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
 
                 if (report == null || report.CVSData?.Outputs == null || report.CVSData.Outputs.Count == 0)
                 {
                     Logger.LogError("No blink data found for monitoring.");
-                    return;
+                    return 0;
                 }
 
-                // Process only new arrays (ignore already processed ones)
-                for (int i = _processedArraysCount; i < report.CVSData.Outputs.Count; i++)
+                int latestIndex = report.CVSData.Outputs.Count - 1;
+
+                if (latestIndex < _processedArraysCount)
                 {
-                    var batch = report.CVSData.Outputs[i];
-                    Logger.LogError($"BlinkData.Outputs {batch}");
-
-                    if (batch.Count == 0)
-                    {
-                        Logger.LogError($"Batch empty {batch}");
-                        continue;
-                    } // Skip empty batches
-
-                    // Extract latest blink count from the batch
-                    int blinkCount = ExtractBlinkCount(batch);
-                    Logger.LogError($"Processed Blink Count: {blinkCount}");
-
-                    // Alert for eye strain (15-17 blinks)
-                    if (!(blinkCount >= 15 && blinkCount <= 17))
-                    {
-                        // Alert for vision strain or dry eyes (above 17 blinks)
-                        if (blinkCount > 17)
-                        {
-                            Logger.LogError($"High blink rate detected: {DateTime.Now}");
-                            ShowNotification($"Alert: High blink rate detected ({blinkCount}). Look at a long-distance object!");
-                        }
-                        else {
-                            Logger.LogError($"Eye strain detected: {DateTime.Now}");
-                            ShowNotification($"Alert: You have eye strain({blinkCount}). Take a break!");
-                        }
-                        
-                    }
-                    // Mark this batch as processed
-                    _processedArraysCount++;
+                    Logger.LogError("No new blink data to process.");
+                    return 0;
                 }
+
+                var latestBatch = report.CVSData.Outputs[latestIndex];
+
+                if (latestBatch.Count == 0)
+                {
+                    Logger.LogError("Latest blink batch is empty, skipping.");
+                    return 0;
+                }
+
+                int blinkCount = ExtractBlinkCount(latestBatch);
+
+                if (!(blinkCount >= 15 && blinkCount <= 17))
+                {
+                    if (blinkCount > 17)
+                    {
+                        ShowNotification($"Alert: High blink rate detected ({blinkCount}). Look at a long-distance object!");
+                    }
+                    else
+                    {
+                        ShowNotification($"Alert: You have eye strain ({blinkCount}). Take a break!");
+                    }
+                }
+
+                _processedArraysCount = latestIndex + 1;
+                return 1; // Indicates that new data was processed
             }
             catch (Exception ex)
             {
                 Logger.LogError($"Error checking blink alerts: {ex.Message}");
+                return 0;
             }
         }
 
-        //Check Stress
-        private async Task CheckStressAlerts(string progressReportId)
+        //3
+        private async Task<int> CheckStressAlerts(string progressReportId)
         {
             try
             {
-                // Fetch latest progress report
                 var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
                 var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
 
                 if (report == null || report.StressData?.Outputs == null || report.StressData.Outputs.Count == 0)
                 {
                     Logger.LogError("No stress data found for monitoring.");
-                    return;
+                    return 0;
                 }
 
-                // Process only new batches (ignore already processed ones)
-                for (int i = _processedArraysCount; i < report.StressData.Outputs.Count; i++)
+                int latestIndex = report.StressData.Outputs.Count - 1;
+
+                if (latestIndex < _processedArraysCount)
                 {
-                    var batch = report.StressData.Outputs[i];
-                    Logger.LogError($"StressData.Outputs {batch}");
-
-                    if (batch.Count == 0)
-                    {
-                        Logger.LogError($"Batch empty {batch}");
-                        continue;
-                    } // Skip empty batches
-
-                    // Count occurrences of each emotion in the batch
-                    int angerCount = batch.Count(e => e == "angry");
-                    int fearCount = batch.Count(e => e == "fear");
-                    int disgustCount = batch.Count(e => e == "disgust");
-                    int sadnessCount = batch.Count(e => e == "sad");
-                    int neutralCount = batch.Count(e => e == "neutral");
-                    int surpriseCount = batch.Count(e => e == "surprise");
-                    int happinessCount = batch.Count(e => e == "happy");
-
-                    int totalEmotions = batch.Count;
-
-                    // Calculate stress levels
-                    int negativeEmotions = angerCount + fearCount + disgustCount + sadnessCount;
-                    double negativePercentage = (double)negativeEmotions / totalEmotions * 100;
-
-                    Logger.LogError($"Stress Calculation - Negative: {negativePercentage:F1}%, Happy: {happinessCount}, Neutral: {neutralCount}");
-
-                    string stressLevel = "Unknown";
-
-                    if (negativePercentage > 60)
-                    {
-                        stressLevel = "High Stress";
-                        ShowNotification($"High Stress Detected({stressLevel})! Try relaxation techniques.");
-                    }
-                    else if (neutralCount >= happinessCount && neutralCount >= surpriseCount)
-                    {
-                        stressLevel = "Medium Stress";
-                        ShowNotification($"Medium Stress Level({stressLevel})!. Consider taking a short break.");
-                    }
-                    else if (happinessCount > neutralCount)
-                    {
-                        stressLevel = "Low Stress";
-                    }
-
-                    Logger.LogError($"Determined Stress Level: {stressLevel}");
-
-                    // Mark this batch as processed
-                    _processedArraysCount++;
+                    Logger.LogError("No new stress data to process.");
+                    return 0;
                 }
+
+                var latestBatch = report.StressData.Outputs[latestIndex];
+
+                if (latestBatch.Count == 0)
+                {
+                    Logger.LogError("Latest stress batch is empty, skipping.");
+                    return 0;
+                }
+
+                int angerCount = latestBatch.Count(e => e == "angry");
+                int fearCount = latestBatch.Count(e => e == "fear");
+                int disgustCount = latestBatch.Count(e => e == "disgust");
+                int sadnessCount = latestBatch.Count(e => e == "sad");
+
+                int totalEmotions = latestBatch.Count;
+                int negativeEmotions = angerCount + fearCount + disgustCount + sadnessCount;
+                double negativePercentage = (double)negativeEmotions / totalEmotions * 100;
+
+                string stressLevel = "Unknown";
+
+                if (negativePercentage > 60)
+                {
+                    stressLevel = "High Stress";
+                    ShowNotification($"High Stress Detected ({stressLevel})! Try relaxation techniques.");
+                }
+                else if (negativePercentage > 30)
+                {
+                    stressLevel = "Medium Stress";
+                    ShowNotification($"Medium Stress Level ({stressLevel}). Consider taking a short break.");
+                }
+                else
+                {
+                    stressLevel = "Low Stress";
+                }
+
+                Logger.LogError($"Determined Stress Level: {stressLevel}");
+
+                _processedArraysCount = latestIndex + 1;
+                return 1; // Indicates that new data was processed
             }
             catch (Exception ex)
             {
                 Logger.LogError($"Error checking stress alerts: {ex.Message}");
+                return 0;
             }
         }
+
 
 
         private int ExtractBlinkCount(List<string> batchData)
@@ -664,7 +870,7 @@ namespace EDUGuard_DesktopApp.Views
 
         private void Model4Button_Click(object sender, RoutedEventArgs e)
         {
-            ToggleModel("hydration", ref _isModel4Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\hydration_detection.py");
+            ToggleModel("hydration", ref _isModel4Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\hydration_detection1.py");
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)

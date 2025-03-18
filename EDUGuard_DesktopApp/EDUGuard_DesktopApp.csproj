@@ -304,6 +304,7 @@
     <Content Include="PyFiles\hydration_detection.py" />
     <Resource Include="PyFiles\models\haarcascade_frontalface_default.xml" />
     <Resource Include="PyFiles\models\haarcascade_mcs_mouth.xml" />
+    <Content Include="PyFiles\hydration_detection1.py" />
     <Content Include="PyFiles\posture_detection.py" />
     <Content Include="PyFiles\posture_detection1.py" />
     <Content Include="PyFiles\stress_detection.py" />
