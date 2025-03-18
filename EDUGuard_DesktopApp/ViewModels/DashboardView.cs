@@ -40,10 +40,11 @@ namespace EDUGuard_DesktopApp.Views
                 return;
             }
         
-
+            
             InitializeComponent();
             StartWebcamServer();
             LoadUserProfile();
+            
             // Set ViewModel for Data Binding
             _reportViewModel = new ReportViewModel();
             DataContext = _reportViewModel;
@@ -96,6 +97,7 @@ namespace EDUGuard_DesktopApp.Views
             {
                 Logger.LogError($"Error starting the webcam server: {ex.Message}");
             }
+
         }
 
         //private void ClearPostureDataInDatabase()
@@ -320,11 +322,23 @@ namespace EDUGuard_DesktopApp.Views
 
         private void StartMonitoring(string progressReportId)
         {
+            //_processedArraysCount = 0; // Reset count when model starts
+            //_monitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms) 
+            //_monitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
+            //_monitorTimer.Elapsed += async (sender, e) => await CheckBlinkAlerts(progressReportId);
+            //_monitorTimer.Elapsed += async (sender, e) => await CheckStressAlerts(progressReportId);
+            //_monitorTimer.AutoReset = true;
+            //_monitorTimer.Start();
+
             _processedArraysCount = 0; // Reset count when model starts
-            _monitorTimer = new System.Timers.Timer(120000); // Runs every 2 minutes (120000 ms) 
-            _monitorTimer.Elapsed += async (sender, e) => await CheckPostureAlerts(progressReportId);
-            _monitorTimer.Elapsed += async (sender, e) => await CheckBlinkAlerts(progressReportId);
-            _monitorTimer.Elapsed += async (sender, e) => await CheckStressAlerts(progressReportId);
+            _monitorTimer = new System.Timers.Timer(10000); // Runs every 2 minutes (120000 ms) 
+            _monitorTimer.Elapsed += async (sender, e) =>
+            {
+                _processedArraysCount = 0; // Reset so alerts do not get stuck
+                await CheckPostureAlerts(progressReportId);
+                await CheckBlinkAlerts(progressReportId);
+                await CheckStressAlerts(progressReportId);
+            };
             _monitorTimer.AutoReset = true;
             _monitorTimer.Start();
 
@@ -333,6 +347,7 @@ namespace EDUGuard_DesktopApp.Views
         //Check posture
         private async Task CheckPostureAlerts(string progressReportId)
         {
+
             try
             {
                 // Fetch latest progress report
@@ -366,7 +381,7 @@ namespace EDUGuard_DesktopApp.Views
                     if (badPosturePercentage > 60)
                     {
                         Logger.LogError($"badposture Notify: {DateTime.Now}");
-                        ShowNotification($"Alert: Your posture quality is poor! {badPosturePercentage:F1}% bad posture detected.");
+                        ShowNotification($"Alert: Your posture quality is poor! Currect it immediately ");
                     }
 
                     // Mark this batch as processed
@@ -382,7 +397,6 @@ namespace EDUGuard_DesktopApp.Views
         //Check blink count
         private async Task CheckBlinkAlerts(string progressReportId)
         {
-            
             try
             {
                 // Fetch latest progress report
@@ -554,18 +568,25 @@ namespace EDUGuard_DesktopApp.Views
         private void ShowNotification(string message)
         {
             // Example: Windows Toast Notification (you can modify based on your UI)
-            
-            Thread notificationThread = new Thread(() =>
+
+            //Thread notificationThread = new Thread(() =>
+            //{
+            //    // Create and show the custom message box on the new thread
+            //    CustomMessageBox msgBox = new CustomMessageBox(message);
+            //    msgBox.ShowDialog();
+            //});
+
+
+            //// Set the thread to STA before starting it
+            //notificationThread.SetApartmentState(ApartmentState.STA);
+            //notificationThread.Start();
+
+            Application.Current.Dispatcher.Invoke(() =>
             {
-                // Create and show the custom message box on the new thread
+                // Create and show the custom message box
                 CustomMessageBox msgBox = new CustomMessageBox(message);
                 msgBox.ShowDialog();
             });
-
-
-            // Set the thread to STA before starting it
-            notificationThread.SetApartmentState(ApartmentState.STA);
-            notificationThread.Start();
         }
         
 

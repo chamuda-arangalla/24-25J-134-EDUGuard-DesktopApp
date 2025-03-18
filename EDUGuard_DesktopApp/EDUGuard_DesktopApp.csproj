@@ -203,6 +203,7 @@
     <Compile Include="Utilities\CustomMessageBox.cs" />
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Utilities\PasswordHelper.cs" />
+    <Compile Include="Utilities\Receiver.cs" />
     <Compile Include="Utilities\SessionManager.cs" />
     <Compile Include="ViewModels\DashboardView.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -271,7 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -298,6 +298,7 @@
     <Resource Include="Assets\warning.png" />
     <Content Include="Assets\notification.wav" />
     <Content Include="PyFiles\cvs_detection.py" />
+    <Content Include="PyFiles\posture_detection.py" />
     <Content Include="PyFiles\posture_detection1.py" />
     <Content Include="PyFiles\stress_detection.py" />
     <Content Include="PyFiles\utils\mongodb_util.py" />

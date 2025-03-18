@@ -1,267 +1,1247 @@
-3/17/2025 8:19:49 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:19:50 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:19:52 PM: [posture Error]: 2025-03-17 20:19:52.309661: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:19:52 PM: [stress Error]: 2025-03-17 20:19:52.309646: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:19:52 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:19:53 PM: [cvs Error]: 2025-03-17 20:19:53.401978: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:19:55 PM: [cvs Error]: 2025-03-17 20:19:55.576183: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:20:11 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/17/2025 8:20:11 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/17/2025 8:20:11 PM: [stress Error]: 2025-03-17 20:20:11.947079: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/17/2025 8:20:11 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/17/2025 8:20:12 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/17/2025 8:20:12 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/17/2025 8:20:13 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/17/2025 8:20:13 PM: [stress Error]:   warnings.warn(
-3/17/2025 8:20:13 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/17/2025 8:20:13 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/17/2025 8:20:13 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/17/2025 8:20:14 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/17/2025 8:20:14 PM: [posture Error]: W0000 00:00:1742223014.067819    8576 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/17/2025 8:20:14 PM: [posture Error]: W0000 00:00:1742223014.227092    8576 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/17/2025 8:20:14 PM: [posture Error]: W0000 00:00:1742223014.395547   14448 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/17/2025 8:24:28 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:24:29 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:24:30 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:24:31 PM: [stress Error]: 2025-03-17 20:24:31.236894: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:24:31 PM: [posture Error]: 2025-03-17 20:24:31.236902: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:24:31 PM: [cvs Error]: 2025-03-17 20:24:31.595277: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:24:34 PM: [cvs Error]: 2025-03-17 20:24:34.189845: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:24:34 PM: [posture Error]: 2025-03-17 20:24:34.189800: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:24:44 PM: [cvs Error]: 2025-03-17 20:24:44.377667: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/17/2025 8:24:44 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/17/2025 8:24:44 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/17/2025 8:24:44 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/17/2025 8:24:44 PM: [stress Error]: 2025-03-17 20:24:44.424464: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/17/2025 8:24:44 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/17/2025 8:24:44 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/17/2025 8:24:44 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/17/2025 8:24:44 PM: [stress Error]:   warnings.warn(
-3/17/2025 8:24:44 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/17/2025 8:24:44 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/17/2025 8:24:45 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/17/2025 8:24:46 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/17/2025 8:24:46 PM: [posture Error]: W0000 00:00:1742223286.008283    4492 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/17/2025 8:24:46 PM: [posture Error]: W0000 00:00:1742223286.064141    4492 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/17/2025 8:24:46 PM: [posture Error]: W0000 00:00:1742223286.096753    6088 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/17/2025 8:25:09 PM: [stress Error]: Traceback (most recent call last):
-3/17/2025 8:25:09 PM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 54, in <module>
-3/17/2025 8:25:09 PM: [stress Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/17/2025 8:25:09 PM: [stress Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/17/2025 8:25:09 PM: [stress Error]: struct.error: unpack requires a buffer of 8 bytes
-3/17/2025 8:25:09 PM: [cvs Error]: Traceback (most recent call last):
-3/17/2025 8:25:09 PM: [cvs Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\cvs_detection.py", line 84, in <module>
-3/17/2025 8:25:09 PM: [cvs Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/17/2025 8:25:09 PM: [cvs Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/17/2025 8:25:09 PM: [cvs Error]: struct.error: unpack requires a buffer of 8 bytes
-3/17/2025 8:25:09 PM: [posture Error]: Traceback (most recent call last):
-3/17/2025 8:25:09 PM: [posture Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\posture_detection1.py", line 62, in <module>
-3/17/2025 8:25:09 PM: [posture Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/17/2025 8:25:09 PM: [posture Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/17/2025 8:25:09 PM: [posture Error]: struct.error: unpack requires a buffer of 8 bytes
-3/17/2025 8:26:28 PM: No posture data found for monitoring.
-3/17/2025 8:26:28 PM: No blink data found for monitoring.
-3/17/2025 8:26:28 PM: No stress data found for monitoring.
-3/17/2025 8:26:29 PM: No posture data found for monitoring.
-3/17/2025 8:26:30 PM: No blink data found for monitoring.
-3/17/2025 8:26:30 PM: No stress data found for monitoring.
-3/17/2025 8:26:50 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:26:52 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:26:53 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:26:54 PM: [stress Error]: 2025-03-17 20:26:54.099541: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:26:54 PM: [cvs Error]: 2025-03-17 20:26:54.764070: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:26:57 PM: [cvs Error]: 2025-03-17 20:26:57.191016: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/17/2025 8:27:11 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/17/2025 8:27:11 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/17/2025 8:27:12 PM: [stress Error]: 2025-03-17 20:27:12.012684: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/17/2025 8:27:12 PM: [cvs Error]: 2025-03-17 20:27:12.012781: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/17/2025 8:27:12 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/17/2025 8:27:12 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/17/2025 8:27:12 PM: [cvs Error]: Traceback (most recent call last):
-3/17/2025 8:27:12 PM: [cvs Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\cvs_detection.py", line 84, in <module>
-3/17/2025 8:27:12 PM: [cvs Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/17/2025 8:27:12 PM: [cvs Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/17/2025 8:27:12 PM: [cvs Error]: struct.error: unpack requires a buffer of 8 bytes
-3/17/2025 8:27:12 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/17/2025 8:27:12 PM: [stress Error]:   warnings.warn(
-3/17/2025 8:27:12 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/17/2025 8:27:12 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/17/2025 8:27:12 PM: [stress Error]: Traceback (most recent call last):
-3/17/2025 8:27:12 PM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 54, in <module>
-3/17/2025 8:27:12 PM: [stress Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/17/2025 8:27:12 PM: [stress Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/17/2025 8:27:12 PM: [stress Error]: struct.error: unpack requires a buffer of 8 bytes
-3/17/2025 8:27:13 PM: [posture Error]: Traceback (most recent call last):
-3/17/2025 8:27:13 PM: [posture Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\posture_detection1.py", line 62, in <module>
-3/17/2025 8:27:13 PM: [posture Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/17/2025 8:27:13 PM: [posture Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/17/2025 8:27:13 PM: [posture Error]: struct.error: unpack requires a buffer of 8 bytes
-3/17/2025 8:27:13 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/17/2025 8:27:13 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/17/2025 8:27:13 PM: [posture Error]: W0000 00:00:1742223433.560880   10632 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/17/2025 8:27:13 PM: [posture Error]: W0000 00:00:1742223433.741460   22720 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/17/2025 8:28:28 PM: No posture data found for monitoring.
-3/17/2025 8:28:28 PM: No blink data found for monitoring.
-3/17/2025 8:28:28 PM: No stress data found for monitoring.
-3/17/2025 8:28:30 PM: No posture data found for monitoring.
-3/17/2025 8:28:30 PM: No blink data found for monitoring.
-3/17/2025 8:28:30 PM: No stress data found for monitoring.
-3/17/2025 8:28:51 PM: No posture data found for monitoring.
-3/17/2025 8:28:51 PM: No blink data found for monitoring.
-3/17/2025 8:28:51 PM: No stress data found for monitoring.
-3/17/2025 8:28:52 PM: No posture data found for monitoring.
-3/17/2025 8:28:52 PM: No blink data found for monitoring.
-3/17/2025 8:28:52 PM: No stress data found for monitoring.
-3/17/2025 8:28:54 PM: No posture data found for monitoring.
-3/17/2025 8:28:54 PM: No blink data found for monitoring.
-3/17/2025 8:28:54 PM: No stress data found for monitoring.
-3/17/2025 8:30:28 PM: No posture data found for monitoring.
-3/17/2025 8:30:28 PM: No blink data found for monitoring.
-3/17/2025 8:30:28 PM: No stress data found for monitoring.
-3/17/2025 8:30:30 PM: No posture data found for monitoring.
-3/17/2025 8:30:30 PM: No blink data found for monitoring.
-3/17/2025 8:30:30 PM: No stress data found for monitoring.
-3/17/2025 8:30:51 PM: No posture data found for monitoring.
-3/17/2025 8:30:51 PM: No blink data found for monitoring.
-3/17/2025 8:30:51 PM: No stress data found for monitoring.
-3/17/2025 8:30:52 PM: No posture data found for monitoring.
-3/17/2025 8:30:52 PM: No blink data found for monitoring.
-3/17/2025 8:30:52 PM: No stress data found for monitoring.
-3/17/2025 8:30:54 PM: No posture data found for monitoring.
-3/17/2025 8:30:54 PM: No blink data found for monitoring.
-3/17/2025 8:30:54 PM: No stress data found for monitoring.
-3/17/2025 8:31:35 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/17/2025 8:32:28 PM: No posture data found for monitoring.
-3/17/2025 8:32:28 PM: No blink data found for monitoring.
-3/17/2025 8:32:28 PM: No stress data found for monitoring.
-3/17/2025 8:32:30 PM: No posture data found for monitoring.
-3/17/2025 8:32:30 PM: No blink data found for monitoring.
-3/17/2025 8:32:30 PM: No stress data found for monitoring.
-3/17/2025 8:32:51 PM: No posture data found for monitoring.
-3/17/2025 8:32:51 PM: No blink data found for monitoring.
-3/17/2025 8:32:51 PM: No stress data found for monitoring.
-3/17/2025 8:32:52 PM: No posture data found for monitoring.
-3/17/2025 8:32:52 PM: No blink data found for monitoring.
-3/17/2025 8:32:52 PM: No stress data found for monitoring.
-3/17/2025 8:32:54 PM: No posture data found for monitoring.
-3/17/2025 8:32:54 PM: No blink data found for monitoring.
-3/17/2025 8:32:54 PM: No stress data found for monitoring.
-3/17/2025 8:34:28 PM: No posture data found for monitoring.
-3/17/2025 8:34:28 PM: No blink data found for monitoring.
-3/17/2025 8:34:28 PM: No stress data found for monitoring.
-3/17/2025 8:34:30 PM: No posture data found for monitoring.
-3/17/2025 8:34:30 PM: No blink data found for monitoring.
-3/17/2025 8:34:30 PM: No stress data found for monitoring.
-3/17/2025 8:34:51 PM: No posture data found for monitoring.
-3/17/2025 8:34:51 PM: No blink data found for monitoring.
-3/17/2025 8:34:51 PM: No stress data found for monitoring.
-3/17/2025 8:34:52 PM: No posture data found for monitoring.
-3/17/2025 8:34:52 PM: No blink data found for monitoring.
-3/17/2025 8:34:52 PM: No stress data found for monitoring.
-3/17/2025 8:34:54 PM: No posture data found for monitoring.
-3/17/2025 8:34:54 PM: No blink data found for monitoring.
-3/17/2025 8:34:54 PM: No stress data found for monitoring.
-3/17/2025 8:36:28 PM: No posture data found for monitoring.
-3/17/2025 8:36:28 PM: No blink data found for monitoring.
-3/17/2025 8:36:28 PM: No stress data found for monitoring.
-3/17/2025 8:36:30 PM: No posture data found for monitoring.
-3/17/2025 8:36:30 PM: No blink data found for monitoring.
-3/17/2025 8:36:30 PM: No stress data found for monitoring.
-3/17/2025 8:36:51 PM: No posture data found for monitoring.
-3/17/2025 8:36:51 PM: No blink data found for monitoring.
-3/17/2025 8:36:51 PM: No stress data found for monitoring.
-3/17/2025 8:36:53 PM: No posture data found for monitoring.
-3/17/2025 8:36:53 PM: No blink data found for monitoring.
-3/17/2025 8:36:53 PM: No stress data found for monitoring.
-3/17/2025 8:36:54 PM: No posture data found for monitoring.
-3/17/2025 8:36:54 PM: No blink data found for monitoring.
-3/17/2025 8:36:54 PM: No stress data found for monitoring.
-3/17/2025 8:38:28 PM: No posture data found for monitoring.
-3/17/2025 8:38:28 PM: No blink data found for monitoring.
-3/17/2025 8:38:28 PM: No stress data found for monitoring.
-3/17/2025 8:38:30 PM: No posture data found for monitoring.
-3/17/2025 8:38:30 PM: No blink data found for monitoring.
-3/17/2025 8:38:30 PM: No stress data found for monitoring.
-3/17/2025 8:38:51 PM: No blink data found for monitoring.
-3/17/2025 8:38:51 PM: No posture data found for monitoring.
-3/17/2025 8:38:51 PM: No stress data found for monitoring.
-3/17/2025 8:38:52 PM: No posture data found for monitoring.
-3/17/2025 8:38:52 PM: No blink data found for monitoring.
-3/17/2025 8:38:52 PM: No stress data found for monitoring.
-3/17/2025 8:38:54 PM: No posture data found for monitoring.
-3/17/2025 8:38:54 PM: No blink data found for monitoring.
-3/17/2025 8:38:54 PM: No stress data found for monitoring.
-3/17/2025 8:40:28 PM: No posture data found for monitoring.
-3/17/2025 8:40:28 PM: No blink data found for monitoring.
-3/17/2025 8:40:28 PM: No stress data found for monitoring.
-3/17/2025 8:40:30 PM: No posture data found for monitoring.
-3/17/2025 8:40:30 PM: No blink data found for monitoring.
-3/17/2025 8:40:30 PM: No stress data found for monitoring.
-3/17/2025 8:40:51 PM: No posture data found for monitoring.
-3/17/2025 8:40:51 PM: No blink data found for monitoring.
-3/17/2025 8:40:51 PM: No stress data found for monitoring.
-3/17/2025 8:40:52 PM: No posture data found for monitoring.
-3/17/2025 8:40:53 PM: No blink data found for monitoring.
-3/17/2025 8:40:53 PM: No stress data found for monitoring.
-3/17/2025 8:40:54 PM: No posture data found for monitoring.
-3/17/2025 8:40:54 PM: No blink data found for monitoring.
-3/17/2025 8:40:54 PM: No stress data found for monitoring.
-3/17/2025 8:42:28 PM: No posture data found for monitoring.
-3/17/2025 8:42:28 PM: No stress data found for monitoring.
-3/17/2025 8:42:30 PM: No posture data found for monitoring.
-3/17/2025 8:42:30 PM: No blink data found for monitoring.
-3/17/2025 8:42:30 PM: No stress data found for monitoring.
-3/17/2025 8:42:51 PM: No posture data found for monitoring.
-3/17/2025 8:42:51 PM: No blink data found for monitoring.
-3/17/2025 8:42:51 PM: No stress data found for monitoring.
-3/17/2025 8:42:53 PM: No posture data found for monitoring.
-3/17/2025 8:42:53 PM: No blink data found for monitoring.
-3/17/2025 8:42:53 PM: No stress data found for monitoring.
-3/17/2025 8:42:54 PM: No posture data found for monitoring.
-3/17/2025 8:42:54 PM: No blink data found for monitoring.
-3/17/2025 8:42:54 PM: No stress data found for monitoring.
-3/17/2025 8:44:28 PM: No posture data found for monitoring.
-3/17/2025 8:44:28 PM: No blink data found for monitoring.
-3/17/2025 8:44:28 PM: No stress data found for monitoring.
-3/17/2025 8:44:30 PM: No posture data found for monitoring.
-3/17/2025 8:44:30 PM: No blink data found for monitoring.
-3/17/2025 8:44:30 PM: No stress data found for monitoring.
-3/17/2025 8:44:51 PM: No posture data found for monitoring.
-3/17/2025 8:44:51 PM: No blink data found for monitoring.
-3/17/2025 8:44:51 PM: No stress data found for monitoring.
-3/17/2025 8:44:53 PM: No posture data found for monitoring.
-3/17/2025 8:44:53 PM: No blink data found for monitoring.
-3/17/2025 8:44:53 PM: No stress data found for monitoring.
-3/17/2025 8:44:54 PM: No posture data found for monitoring.
-3/17/2025 8:44:54 PM: No blink data found for monitoring.
-3/17/2025 8:44:54 PM: No stress data found for monitoring.
-3/17/2025 8:46:28 PM: No posture data found for monitoring.
-3/17/2025 8:46:28 PM: No blink data found for monitoring.
-3/17/2025 8:46:28 PM: No stress data found for monitoring.
-3/17/2025 8:46:30 PM: No posture data found for monitoring.
-3/17/2025 8:46:30 PM: No blink data found for monitoring.
-3/17/2025 8:46:30 PM: No stress data found for monitoring.
-3/17/2025 8:46:51 PM: No posture data found for monitoring.
-3/17/2025 8:46:51 PM: No blink data found for monitoring.
-3/17/2025 8:46:51 PM: No stress data found for monitoring.
-3/17/2025 8:46:53 PM: No posture data found for monitoring.
-3/17/2025 8:46:53 PM: No blink data found for monitoring.
-3/17/2025 8:46:53 PM: No stress data found for monitoring.
-3/17/2025 8:46:54 PM: No posture data found for monitoring.
-3/17/2025 8:46:54 PM: No blink data found for monitoring.
-3/17/2025 8:46:54 PM: No stress data found for monitoring.
-3/17/2025 8:48:28 PM: No posture data found for monitoring.
-3/17/2025 8:48:28 PM: No blink data found for monitoring.
-3/17/2025 8:48:28 PM: No stress data found for monitoring.
-3/17/2025 8:48:30 PM: No posture data found for monitoring.
-3/17/2025 8:48:30 PM: No blink data found for monitoring.
-3/17/2025 8:48:30 PM: No stress data found for monitoring.
-3/17/2025 8:48:51 PM: No posture data found for monitoring.
-3/17/2025 8:48:51 PM: No blink data found for monitoring.
-3/17/2025 8:48:51 PM: No stress data found for monitoring.
-3/17/2025 8:48:53 PM: No posture data found for monitoring.
-3/17/2025 8:48:53 PM: No blink data found for monitoring.
-3/17/2025 8:48:53 PM: No stress data found for monitoring.
-3/17/2025 8:48:54 PM: No posture data found for monitoring.
-3/17/2025 8:48:54 PM: No blink data found for monitoring.
-3/17/2025 8:48:54 PM: No stress data found for monitoring.
+3/18/2025 12:37:53 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 12:37:57 AM: [posture Error]: 2025-03-18 00:37:57.350063: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 12:38:01 AM: [posture Error]: 2025-03-18 00:38:01.572940: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 12:38:06 AM: No blink data found for monitoring.
+3/18/2025 12:38:06 AM: No stress data found for monitoring.
+3/18/2025 12:38:16 AM: No blink data found for monitoring.
+3/18/2025 12:38:16 AM: No stress data found for monitoring.
+3/18/2025 12:38:26 AM: No blink data found for monitoring.
+3/18/2025 12:38:26 AM: No stress data found for monitoring.
+3/18/2025 12:38:36 AM: No blink data found for monitoring.
+3/18/2025 12:38:36 AM: No stress data found for monitoring.
+3/18/2025 12:38:46 AM: No blink data found for monitoring.
+3/18/2025 12:38:46 AM: No stress data found for monitoring.
+3/18/2025 12:38:56 AM: No blink data found for monitoring.
+3/18/2025 12:38:56 AM: No stress data found for monitoring.
+3/18/2025 12:39:06 AM: No blink data found for monitoring.
+3/18/2025 12:39:06 AM: No stress data found for monitoring.
+3/18/2025 12:39:17 AM: No blink data found for monitoring.
+3/18/2025 12:39:17 AM: No stress data found for monitoring.
+3/18/2025 12:45:10 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 12:45:14 AM: [posture Error]: 2025-03-18 00:45:14.179512: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 12:45:17 AM: [posture Error]: 2025-03-18 00:45:17.639958: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 12:46:31 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 1:00:13 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 1:00:17 AM: [posture Error]: 2025-03-18 01:00:17.129201: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 1:00:19 AM: [posture Error]: 2025-03-18 01:00:19.991064: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 1:04:48 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 1:04:52 AM: [posture Error]: 2025-03-18 01:04:52.599812: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 1:04:55 AM: [posture Error]: 2025-03-18 01:04:55.088386: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:14:14 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:14:17 AM: [posture Error]: 2025-03-18 07:14:17.268445: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:14:20 AM: [posture Error]: 2025-03-18 07:14:20.274499: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:20:08 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:20:10 AM: [posture Error]: 2025-03-18 07:20:10.702089: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:20:12 AM: No blink data found for monitoring.
+3/18/2025 7:20:12 AM: No stress data found for monitoring.
+3/18/2025 7:20:13 AM: No blink data found for monitoring.
+3/18/2025 7:20:13 AM: No stress data found for monitoring.
+3/18/2025 7:20:13 AM: [posture Error]: 2025-03-18 07:20:13.564162: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:20:13 AM: No blink data found for monitoring.
+3/18/2025 7:20:14 AM: No stress data found for monitoring.
+3/18/2025 7:20:14 AM: No blink data found for monitoring.
+3/18/2025 7:20:14 AM: No stress data found for monitoring.
+3/18/2025 7:20:15 AM: No blink data found for monitoring.
+3/18/2025 7:20:15 AM: No stress data found for monitoring.
+3/18/2025 7:20:16 AM: No blink data found for monitoring.
+3/18/2025 7:20:17 AM: No stress data found for monitoring.
+3/18/2025 7:20:17 AM: No blink data found for monitoring.
+3/18/2025 7:20:17 AM: No stress data found for monitoring.
+3/18/2025 7:20:18 AM: No blink data found for monitoring.
+3/18/2025 7:20:19 AM: No stress data found for monitoring.
+3/18/2025 7:20:19 AM: No blink data found for monitoring.
+3/18/2025 7:20:19 AM: No stress data found for monitoring.
+3/18/2025 7:20:21 AM: No blink data found for monitoring.
+3/18/2025 7:20:21 AM: No stress data found for monitoring.
+3/18/2025 7:20:21 AM: No blink data found for monitoring.
+3/18/2025 7:20:21 AM: No stress data found for monitoring.
+3/18/2025 7:20:22 AM: No blink data found for monitoring.
+3/18/2025 7:20:23 AM: No stress data found for monitoring.
+3/18/2025 7:20:24 AM: No blink data found for monitoring.
+3/18/2025 7:20:24 AM: No stress data found for monitoring.
+3/18/2025 7:20:25 AM: No blink data found for monitoring.
+3/18/2025 7:20:25 AM: No stress data found for monitoring.
+3/18/2025 7:20:26 AM: No blink data found for monitoring.
+3/18/2025 7:20:26 AM: No stress data found for monitoring.
+3/18/2025 7:20:26 AM: No blink data found for monitoring.
+3/18/2025 7:20:27 AM: No stress data found for monitoring.
+3/18/2025 7:20:28 AM: No blink data found for monitoring.
+3/18/2025 7:20:28 AM: No stress data found for monitoring.
+3/18/2025 7:20:29 AM: No blink data found for monitoring.
+3/18/2025 7:20:29 AM: No stress data found for monitoring.
+3/18/2025 7:20:30 AM: No blink data found for monitoring.
+3/18/2025 7:20:30 AM: No stress data found for monitoring.
+3/18/2025 7:20:31 AM: No blink data found for monitoring.
+3/18/2025 7:20:31 AM: No stress data found for monitoring.
+3/18/2025 7:20:32 AM: No blink data found for monitoring.
+3/18/2025 7:20:32 AM: No stress data found for monitoring.
+3/18/2025 7:20:33 AM: No blink data found for monitoring.
+3/18/2025 7:20:33 AM: No stress data found for monitoring.
+3/18/2025 7:20:34 AM: No blink data found for monitoring.
+3/18/2025 7:20:34 AM: No stress data found for monitoring.
+3/18/2025 7:20:35 AM: No blink data found for monitoring.
+3/18/2025 7:20:35 AM: No stress data found for monitoring.
+3/18/2025 7:20:36 AM: No blink data found for monitoring.
+3/18/2025 7:20:36 AM: No stress data found for monitoring.
+3/18/2025 7:20:37 AM: No blink data found for monitoring.
+3/18/2025 7:20:37 AM: No stress data found for monitoring.
+3/18/2025 7:20:38 AM: No blink data found for monitoring.
+3/18/2025 7:20:38 AM: No stress data found for monitoring.
+3/18/2025 7:20:39 AM: No blink data found for monitoring.
+3/18/2025 7:20:39 AM: No stress data found for monitoring.
+3/18/2025 7:20:40 AM: No blink data found for monitoring.
+3/18/2025 7:20:40 AM: No stress data found for monitoring.
+3/18/2025 7:20:41 AM: No blink data found for monitoring.
+3/18/2025 7:20:42 AM: No stress data found for monitoring.
+3/18/2025 7:20:42 AM: No blink data found for monitoring.
+3/18/2025 7:20:42 AM: No stress data found for monitoring.
+3/18/2025 7:20:43 AM: No blink data found for monitoring.
+3/18/2025 7:20:43 AM: No stress data found for monitoring.
+3/18/2025 7:20:44 AM: No blink data found for monitoring.
+3/18/2025 7:20:44 AM: No stress data found for monitoring.
+3/18/2025 7:20:45 AM: No blink data found for monitoring.
+3/18/2025 7:20:45 AM: No stress data found for monitoring.
+3/18/2025 7:20:46 AM: No blink data found for monitoring.
+3/18/2025 7:20:46 AM: No stress data found for monitoring.
+3/18/2025 7:20:47 AM: No blink data found for monitoring.
+3/18/2025 7:20:47 AM: No stress data found for monitoring.
+3/18/2025 7:20:48 AM: No blink data found for monitoring.
+3/18/2025 7:20:48 AM: No stress data found for monitoring.
+3/18/2025 7:20:49 AM: No blink data found for monitoring.
+3/18/2025 7:20:49 AM: No stress data found for monitoring.
+3/18/2025 7:20:50 AM: No blink data found for monitoring.
+3/18/2025 7:20:50 AM: No stress data found for monitoring.
+3/18/2025 7:20:51 AM: No blink data found for monitoring.
+3/18/2025 7:20:52 AM: No stress data found for monitoring.
+3/18/2025 7:20:53 AM: No blink data found for monitoring.
+3/18/2025 7:20:53 AM: No blink data found for monitoring.
+3/18/2025 7:20:53 AM: No stress data found for monitoring.
+3/18/2025 7:20:54 AM: No stress data found for monitoring.
+3/18/2025 7:20:54 AM: No blink data found for monitoring.
+3/18/2025 7:20:55 AM: No stress data found for monitoring.
+3/18/2025 7:20:55 AM: No blink data found for monitoring.
+3/18/2025 7:20:56 AM: No blink data found for monitoring.
+3/18/2025 7:20:56 AM: No stress data found for monitoring.
+3/18/2025 7:20:56 AM: No stress data found for monitoring.
+3/18/2025 7:20:58 AM: No blink data found for monitoring.
+3/18/2025 7:20:59 AM: No stress data found for monitoring.
+3/18/2025 7:21:00 AM: No blink data found for monitoring.
+3/18/2025 7:21:01 AM: No blink data found for monitoring.
+3/18/2025 7:21:01 AM: No stress data found for monitoring.
+3/18/2025 7:21:01 AM: No blink data found for monitoring.
+3/18/2025 7:21:02 AM: No stress data found for monitoring.
+3/18/2025 7:21:02 AM: No blink data found for monitoring.
+3/18/2025 7:21:02 AM: No blink data found for monitoring.
+3/18/2025 7:21:02 AM: No stress data found for monitoring.
+3/18/2025 7:21:02 AM: No stress data found for monitoring.
+3/18/2025 7:21:52 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:21:54 AM: [posture Error]: 2025-03-18 07:21:54.909381: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:21:57 AM: [posture Error]: 2025-03-18 07:21:57.007872: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:22:05 AM: No blink data found for monitoring.
+3/18/2025 7:22:05 AM: No stress data found for monitoring.
+3/18/2025 7:22:15 AM: No blink data found for monitoring.
+3/18/2025 7:22:15 AM: No stress data found for monitoring.
+3/18/2025 7:22:24 AM: No blink data found for monitoring.
+3/18/2025 7:22:24 AM: No stress data found for monitoring.
+3/18/2025 7:22:35 AM: No blink data found for monitoring.
+3/18/2025 7:22:35 AM: No stress data found for monitoring.
+3/18/2025 7:22:44 AM: No blink data found for monitoring.
+3/18/2025 7:22:45 AM: No stress data found for monitoring.
+3/18/2025 7:24:55 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:24:59 AM: [posture Error]: 2025-03-18 07:24:59.176277: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:25:01 AM: [posture Error]: 2025-03-18 07:25:01.991249: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:25:08 AM: No stress data found for monitoring.
+3/18/2025 7:25:13 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:25:14 AM: [stress Error]: 2025-03-18 07:25:14.047675: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:25:15 AM: [stress Error]: 2025-03-18 07:25:15.273365: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:25:17 AM: No stress data found for monitoring.
+3/18/2025 7:25:20 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/18/2025 7:25:20 AM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/18/2025 7:25:20 AM: [stress Error]: 2025-03-18 07:25:21.000473: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 7:25:21 AM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 7:25:21 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/18/2025 7:25:21 AM: [stress Error]:   warnings.warn(
+3/18/2025 7:25:21 AM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 7:25:21 AM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/18/2025 7:25:25 AM: No stress data found for monitoring.
+3/18/2025 7:25:27 AM: No stress data found for monitoring.
+3/18/2025 7:25:35 AM: No stress data found for monitoring.
+3/18/2025 7:25:37 AM: No stress data found for monitoring.
+3/18/2025 7:25:43 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:25:44 AM: [cvs Error]: 2025-03-18 07:25:44.674143: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:25:45 AM: No stress data found for monitoring.
+3/18/2025 7:25:46 AM: [cvs Error]: 2025-03-18 07:25:46.079964: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:25:47 AM: No stress data found for monitoring.
+3/18/2025 7:25:53 AM: [cvs Error]: 2025-03-18 07:25:53.121903: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 7:25:53 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 7:25:53 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 7:25:55 AM: No stress data found for monitoring.
+3/18/2025 7:25:55 AM: No stress data found for monitoring.
+3/18/2025 7:25:57 AM: No stress data found for monitoring.
+3/18/2025 7:26:05 AM: No stress data found for monitoring.
+3/18/2025 7:26:05 AM: No stress data found for monitoring.
+3/18/2025 7:26:07 AM: No stress data found for monitoring.
+3/18/2025 7:26:15 AM: No stress data found for monitoring.
+3/18/2025 7:26:16 AM: No stress data found for monitoring.
+3/18/2025 7:26:17 AM: No stress data found for monitoring.
+3/18/2025 7:26:25 AM: No stress data found for monitoring.
+3/18/2025 7:26:26 AM: No stress data found for monitoring.
+3/18/2025 7:26:27 AM: No stress data found for monitoring.
+3/18/2025 7:26:35 AM: No stress data found for monitoring.
+3/18/2025 7:26:36 AM: No stress data found for monitoring.
+3/18/2025 7:26:37 AM: No stress data found for monitoring.
+3/18/2025 7:26:45 AM: No stress data found for monitoring.
+3/18/2025 7:26:45 AM: No stress data found for monitoring.
+3/18/2025 7:26:47 AM: No stress data found for monitoring.
+3/18/2025 7:26:55 AM: No stress data found for monitoring.
+3/18/2025 7:26:56 AM: No stress data found for monitoring.
+3/18/2025 7:26:57 AM: No stress data found for monitoring.
+3/18/2025 7:27:05 AM: No stress data found for monitoring.
+3/18/2025 7:27:06 AM: No stress data found for monitoring.
+3/18/2025 7:27:07 AM: No stress data found for monitoring.
+3/18/2025 7:27:15 AM: No stress data found for monitoring.
+3/18/2025 7:27:16 AM: No stress data found for monitoring.
+3/18/2025 7:27:17 AM: No stress data found for monitoring.
+3/18/2025 7:30:25 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:30:38 AM: No stress data found for monitoring.
+3/18/2025 7:30:40 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:30:43 AM: [cvs Error]: 2025-03-18 07:30:43.601451: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:30:43 AM: [posture Error]: 2025-03-18 07:30:43.601475: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:30:48 AM: No stress data found for monitoring.
+3/18/2025 7:30:53 AM: No stress data found for monitoring.
+3/18/2025 7:30:58 AM: No stress data found for monitoring.
+3/18/2025 7:31:02 AM: No stress data found for monitoring.
+3/18/2025 7:31:08 AM: No stress data found for monitoring.
+3/18/2025 7:31:12 AM: No stress data found for monitoring.
+3/18/2025 7:31:12 AM: [posture Error]: 2025-03-18 07:31:12.911437: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:31:18 AM: No stress data found for monitoring.
+3/18/2025 7:31:23 AM: No stress data found for monitoring.
+3/18/2025 7:31:28 AM: No stress data found for monitoring.
+3/18/2025 7:31:32 AM: No stress data found for monitoring.
+3/18/2025 7:31:38 AM: No stress data found for monitoring.
+3/18/2025 7:31:43 AM: No stress data found for monitoring.
+3/18/2025 7:31:48 AM: No stress data found for monitoring.
+3/18/2025 7:31:53 AM: No stress data found for monitoring.
+3/18/2025 7:31:58 AM: No stress data found for monitoring.
+3/18/2025 7:32:03 AM: No stress data found for monitoring.
+3/18/2025 7:32:08 AM: No stress data found for monitoring.
+3/18/2025 7:32:13 AM: No stress data found for monitoring.
+3/18/2025 7:32:18 AM: No stress data found for monitoring.
+3/18/2025 7:32:28 AM: No stress data found for monitoring.
+3/18/2025 7:32:38 AM: No stress data found for monitoring.
+3/18/2025 7:32:48 AM: No stress data found for monitoring.
+3/18/2025 7:32:58 AM: No stress data found for monitoring.
+3/18/2025 7:33:08 AM: No stress data found for monitoring.
+3/18/2025 7:33:18 AM: No stress data found for monitoring.
+3/18/2025 7:33:28 AM: No stress data found for monitoring.
+3/18/2025 7:33:39 AM: No stress data found for monitoring.
+3/18/2025 7:33:48 AM: No stress data found for monitoring.
+3/18/2025 7:33:58 AM: No stress data found for monitoring.
+3/18/2025 7:34:08 AM: No stress data found for monitoring.
+3/18/2025 7:34:18 AM: No stress data found for monitoring.
+3/18/2025 7:34:28 AM: No stress data found for monitoring.
+3/18/2025 7:34:38 AM: No stress data found for monitoring.
+3/18/2025 7:34:48 AM: No stress data found for monitoring.
+3/18/2025 7:34:58 AM: No stress data found for monitoring.
+3/18/2025 7:35:08 AM: No stress data found for monitoring.
+3/18/2025 7:35:18 AM: No stress data found for monitoring.
+3/18/2025 7:35:28 AM: No stress data found for monitoring.
+3/18/2025 7:35:38 AM: No stress data found for monitoring.
+3/18/2025 7:35:48 AM: No stress data found for monitoring.
+3/18/2025 7:36:17 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:36:20 AM: [posture Error]: 2025-03-18 07:36:20.475531: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:36:22 AM: [posture Error]: 2025-03-18 07:36:22.459361: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:36:30 AM: No stress data found for monitoring.
+3/18/2025 7:36:40 AM: No stress data found for monitoring.
+3/18/2025 7:36:50 AM: No stress data found for monitoring.
+3/18/2025 7:36:50 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:36:51 AM: [cvs Error]: 2025-03-18 07:36:51.451832: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:36:52 AM: [cvs Error]: 2025-03-18 07:36:52.783857: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:36:57 AM: No stress data found for monitoring.
+3/18/2025 7:36:58 AM: [cvs Error]: 2025-03-18 07:36:58.136308: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 7:36:58 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 7:36:58 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 7:37:00 AM: No stress data found for monitoring.
+3/18/2025 7:37:07 AM: No stress data found for monitoring.
+3/18/2025 7:37:10 AM: No stress data found for monitoring.
+3/18/2025 7:37:17 AM: No stress data found for monitoring.
+3/18/2025 7:37:20 AM: No stress data found for monitoring.
+3/18/2025 7:37:27 AM: No stress data found for monitoring.
+3/18/2025 7:37:30 AM: No stress data found for monitoring.
+3/18/2025 7:37:37 AM: No stress data found for monitoring.
+3/18/2025 7:37:40 AM: No stress data found for monitoring.
+3/18/2025 7:37:47 AM: No stress data found for monitoring.
+3/18/2025 7:37:50 AM: No stress data found for monitoring.
+3/18/2025 7:37:57 AM: No stress data found for monitoring.
+3/18/2025 7:38:00 AM: No stress data found for monitoring.
+3/18/2025 7:38:07 AM: No stress data found for monitoring.
+3/18/2025 7:38:11 AM: No stress data found for monitoring.
+3/18/2025 7:38:17 AM: No stress data found for monitoring.
+3/18/2025 7:38:21 AM: No stress data found for monitoring.
+3/18/2025 7:38:27 AM: No stress data found for monitoring.
+3/18/2025 7:38:31 AM: No stress data found for monitoring.
+3/18/2025 7:38:37 AM: No stress data found for monitoring.
+3/18/2025 7:38:41 AM: No stress data found for monitoring.
+3/18/2025 7:38:47 AM: No stress data found for monitoring.
+3/18/2025 7:38:51 AM: No stress data found for monitoring.
+3/18/2025 7:38:57 AM: No stress data found for monitoring.
+3/18/2025 7:39:10 AM: No stress data found for monitoring.
+3/18/2025 7:50:02 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:50:05 AM: [posture Error]: 2025-03-18 07:50:05.839931: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:50:07 AM: [posture Error]: 2025-03-18 07:50:07.916086: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:50:15 AM: No stress data found for monitoring.
+3/18/2025 7:50:18 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:50:19 AM: [cvs Error]: 2025-03-18 07:50:19.160398: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:50:20 AM: [cvs Error]: 2025-03-18 07:50:20.564134: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:50:24 AM: No stress data found for monitoring.
+3/18/2025 7:50:26 AM: [cvs Error]: 2025-03-18 07:50:26.081743: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 7:50:26 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 7:50:26 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 7:50:30 AM: No stress data found for monitoring.
+3/18/2025 7:50:35 AM: No stress data found for monitoring.
+3/18/2025 7:50:40 AM: No stress data found for monitoring.
+3/18/2025 7:50:45 AM: No stress data found for monitoring.
+3/18/2025 7:50:50 AM: No stress data found for monitoring.
+3/18/2025 7:50:54 AM: No stress data found for monitoring.
+3/18/2025 7:51:00 AM: No stress data found for monitoring.
+3/18/2025 7:51:05 AM: No stress data found for monitoring.
+3/18/2025 7:51:10 AM: No stress data found for monitoring.
+3/18/2025 7:51:15 AM: No stress data found for monitoring.
+3/18/2025 7:51:20 AM: No stress data found for monitoring.
+3/18/2025 7:51:25 AM: No stress data found for monitoring.
+3/18/2025 7:51:30 AM: No stress data found for monitoring.
+3/18/2025 7:51:35 AM: No stress data found for monitoring.
+3/18/2025 7:51:40 AM: No stress data found for monitoring.
+3/18/2025 7:51:45 AM: No stress data found for monitoring.
+3/18/2025 7:51:51 AM: No stress data found for monitoring.
+3/18/2025 7:51:55 AM: No stress data found for monitoring.
+3/18/2025 7:52:01 AM: No stress data found for monitoring.
+3/18/2025 7:52:05 AM: No stress data found for monitoring.
+3/18/2025 7:52:10 AM: No stress data found for monitoring.
+3/18/2025 7:52:15 AM: No stress data found for monitoring.
+3/18/2025 7:52:20 AM: No stress data found for monitoring.
+3/18/2025 7:52:25 AM: No stress data found for monitoring.
+3/18/2025 7:52:30 AM: No stress data found for monitoring.
+3/18/2025 7:52:35 AM: No stress data found for monitoring.
+3/18/2025 7:52:40 AM: No stress data found for monitoring.
+3/18/2025 7:52:45 AM: No stress data found for monitoring.
+3/18/2025 7:52:51 AM: No stress data found for monitoring.
+3/18/2025 7:52:55 AM: No stress data found for monitoring.
+3/18/2025 7:53:05 AM: No stress data found for monitoring.
+3/18/2025 7:53:15 AM: No stress data found for monitoring.
+3/18/2025 7:53:25 AM: No stress data found for monitoring.
+3/18/2025 7:53:35 AM: No stress data found for monitoring.
+3/18/2025 7:53:45 AM: No stress data found for monitoring.
+3/18/2025 7:53:55 AM: No stress data found for monitoring.
+3/18/2025 7:54:05 AM: No stress data found for monitoring.
+3/18/2025 7:54:15 AM: No stress data found for monitoring.
+3/18/2025 7:54:25 AM: No stress data found for monitoring.
+3/18/2025 7:54:35 AM: No stress data found for monitoring.
+3/18/2025 7:54:45 AM: No stress data found for monitoring.
+3/18/2025 7:54:55 AM: No stress data found for monitoring.
+3/18/2025 7:55:05 AM: No stress data found for monitoring.
+3/18/2025 7:55:15 AM: No stress data found for monitoring.
+3/18/2025 7:55:25 AM: No stress data found for monitoring.
+3/18/2025 7:55:35 AM: No stress data found for monitoring.
+3/18/2025 7:55:45 AM: No stress data found for monitoring.
+3/18/2025 7:55:55 AM: No stress data found for monitoring.
+3/18/2025 7:56:05 AM: No stress data found for monitoring.
+3/18/2025 7:56:15 AM: No stress data found for monitoring.
+3/18/2025 7:56:25 AM: No stress data found for monitoring.
+3/18/2025 7:56:35 AM: No stress data found for monitoring.
+3/18/2025 7:56:45 AM: No stress data found for monitoring.
+3/18/2025 7:56:55 AM: No stress data found for monitoring.
+3/18/2025 7:57:29 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:57:33 AM: [posture Error]: 2025-03-18 07:57:33.195855: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:57:35 AM: [posture Error]: 2025-03-18 07:57:35.908645: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:57:43 AM: No stress data found for monitoring.
+3/18/2025 7:57:47 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 7:57:49 AM: [cvs Error]: 2025-03-18 07:57:49.019255: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:57:50 AM: [cvs Error]: 2025-03-18 07:57:50.760175: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 7:57:52 AM: No stress data found for monitoring.
+3/18/2025 7:58:00 AM: No stress data found for monitoring.
+3/18/2025 7:58:02 AM: No stress data found for monitoring.
+3/18/2025 7:58:06 AM: [cvs Error]: 2025-03-18 07:58:06.188821: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 7:58:06 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 7:58:06 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 7:58:10 AM: No stress data found for monitoring.
+3/18/2025 7:58:12 AM: No stress data found for monitoring.
+3/18/2025 7:58:20 AM: No stress data found for monitoring.
+3/18/2025 7:58:22 AM: No stress data found for monitoring.
+3/18/2025 7:58:30 AM: No stress data found for monitoring.
+3/18/2025 7:58:32 AM: No stress data found for monitoring.
+3/18/2025 7:58:40 AM: No stress data found for monitoring.
+3/18/2025 7:58:42 AM: No stress data found for monitoring.
+3/18/2025 7:58:50 AM: No stress data found for monitoring.
+3/18/2025 7:58:52 AM: No stress data found for monitoring.
+3/18/2025 7:59:00 AM: No stress data found for monitoring.
+3/18/2025 7:59:02 AM: No stress data found for monitoring.
+3/18/2025 7:59:10 AM: No stress data found for monitoring.
+3/18/2025 7:59:12 AM: No stress data found for monitoring.
+3/18/2025 7:59:20 AM: No stress data found for monitoring.
+3/18/2025 7:59:22 AM: No stress data found for monitoring.
+3/18/2025 7:59:30 AM: No stress data found for monitoring.
+3/18/2025 7:59:32 AM: No stress data found for monitoring.
+3/18/2025 7:59:40 AM: No stress data found for monitoring.
+3/18/2025 7:59:42 AM: No stress data found for monitoring.
+3/18/2025 7:59:50 AM: No stress data found for monitoring.
+3/18/2025 7:59:52 AM: No stress data found for monitoring.
+3/18/2025 8:00:00 AM: No stress data found for monitoring.
+3/18/2025 8:00:02 AM: No stress data found for monitoring.
+3/18/2025 8:00:10 AM: No stress data found for monitoring.
+3/18/2025 8:00:12 AM: No stress data found for monitoring.
+3/18/2025 8:00:20 AM: No stress data found for monitoring.
+3/18/2025 8:00:22 AM: No stress data found for monitoring.
+3/18/2025 8:00:30 AM: No stress data found for monitoring.
+3/18/2025 8:00:32 AM: No stress data found for monitoring.
+3/18/2025 8:00:40 AM: No stress data found for monitoring.
+3/18/2025 8:00:42 AM: No stress data found for monitoring.
+3/18/2025 8:00:50 AM: No stress data found for monitoring.
+3/18/2025 8:00:52 AM: No stress data found for monitoring.
+3/18/2025 8:05:11 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 8:05:13 AM: [posture Error]: 2025-03-18 08:05:13.870016: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:05:15 AM: [posture Error]: 2025-03-18 08:05:15.920745: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:05:22 AM: No stress data found for monitoring.
+3/18/2025 8:05:31 AM: No stress data found for monitoring.
+3/18/2025 8:05:31 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 8:05:32 AM: [cvs Error]: 2025-03-18 08:05:32.793990: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:05:33 AM: [cvs Error]: 2025-03-18 08:05:33.917645: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:05:38 AM: [cvs Error]: 2025-03-18 08:05:38.534261: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 8:05:38 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 8:05:38 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 8:05:41 AM: No stress data found for monitoring.
+3/18/2025 8:05:42 AM: No stress data found for monitoring.
+3/18/2025 8:05:51 AM: No stress data found for monitoring.
+3/18/2025 8:05:52 AM: No stress data found for monitoring.
+3/18/2025 8:06:03 AM: No stress data found for monitoring.
+3/18/2025 8:06:13 AM: No stress data found for monitoring.
+3/18/2025 8:06:23 AM: No stress data found for monitoring.
+3/18/2025 8:06:33 AM: No stress data found for monitoring.
+3/18/2025 8:06:43 AM: No stress data found for monitoring.
+3/18/2025 8:06:53 AM: No stress data found for monitoring.
+3/18/2025 8:22:41 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 8:22:44 AM: [posture Error]: 2025-03-18 08:22:44.993138: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:22:47 AM: [posture Error]: 2025-03-18 08:22:47.530346: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:22:51 AM: No posture data found for monitoring.
+3/18/2025 8:22:52 AM: No blink data found for monitoring.
+3/18/2025 8:22:52 AM: No stress data found for monitoring.
+3/18/2025 8:22:57 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/18/2025 8:22:57 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/18/2025 8:22:57 AM: [posture Error]: W0000 00:00:1742266377.733606   16160 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/18/2025 8:22:57 AM: [posture Error]: W0000 00:00:1742266377.847568    3160 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/18/2025 8:22:58 AM: [posture Error]: W0000 00:00:1742266378.317653   19216 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/18/2025 8:23:01 AM: No posture data found for monitoring.
+3/18/2025 8:23:02 AM: No blink data found for monitoring.
+3/18/2025 8:23:02 AM: No stress data found for monitoring.
+3/18/2025 8:23:11 AM: No posture data found for monitoring.
+3/18/2025 8:23:12 AM: No blink data found for monitoring.
+3/18/2025 8:23:12 AM: No stress data found for monitoring.
+3/18/2025 8:23:21 AM: No posture data found for monitoring.
+3/18/2025 8:23:22 AM: No blink data found for monitoring.
+3/18/2025 8:23:22 AM: No stress data found for monitoring.
+3/18/2025 8:23:31 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:23:31 AM: badposture Notify: 3/18/2025 8:23:31 AM
+3/18/2025 8:23:35 AM: No blink data found for monitoring.
+3/18/2025 8:23:36 AM: No stress data found for monitoring.
+3/18/2025 8:23:41 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:23:41 AM: badposture Notify: 3/18/2025 8:23:41 AM
+3/18/2025 8:23:45 AM: No blink data found for monitoring.
+3/18/2025 8:23:45 AM: No stress data found for monitoring.
+3/18/2025 8:23:51 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:23:51 AM: badposture Notify: 3/18/2025 8:23:51 AM
+3/18/2025 8:23:53 AM: No blink data found for monitoring.
+3/18/2025 8:23:54 AM: No stress data found for monitoring.
+3/18/2025 8:24:01 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:24:01 AM: badposture Notify: 3/18/2025 8:24:01 AM
+3/18/2025 8:24:03 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:24:03 AM: badposture Notify: 3/18/2025 8:24:03 AM
+3/18/2025 8:24:05 AM: No blink data found for monitoring.
+3/18/2025 8:24:05 AM: No stress data found for monitoring.
+3/18/2025 8:38:13 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 8:38:16 AM: [posture Error]: 2025-03-18 08:38:16.392322: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:38:18 AM: [posture Error]: 2025-03-18 08:38:18.531349: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:38:23 AM: No posture data found for monitoring.
+3/18/2025 8:38:23 AM: No blink data found for monitoring.
+3/18/2025 8:38:24 AM: No stress data found for monitoring.
+3/18/2025 8:38:26 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/18/2025 8:38:26 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/18/2025 8:38:26 AM: [posture Error]: W0000 00:00:1742267306.682484    4912 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/18/2025 8:38:26 AM: [posture Error]: W0000 00:00:1742267306.732697   11712 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/18/2025 8:38:27 AM: [posture Error]: W0000 00:00:1742267307.454775   23652 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/18/2025 8:38:33 AM: No posture data found for monitoring.
+3/18/2025 8:38:33 AM: No blink data found for monitoring.
+3/18/2025 8:38:34 AM: No stress data found for monitoring.
+3/18/2025 8:38:43 AM: No posture data found for monitoring.
+3/18/2025 8:38:43 AM: No blink data found for monitoring.
+3/18/2025 8:38:44 AM: No stress data found for monitoring.
+3/18/2025 8:38:53 AM: No posture data found for monitoring.
+3/18/2025 8:38:53 AM: No blink data found for monitoring.
+3/18/2025 8:38:54 AM: No stress data found for monitoring.
+3/18/2025 8:39:03 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:03 AM: badposture Notify: 3/18/2025 8:39:03 AM
+3/18/2025 8:39:06 AM: No blink data found for monitoring.
+3/18/2025 8:39:06 AM: No stress data found for monitoring.
+3/18/2025 8:39:13 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:13 AM: badposture Notify: 3/18/2025 8:39:13 AM
+3/18/2025 8:39:15 AM: No blink data found for monitoring.
+3/18/2025 8:39:15 AM: No stress data found for monitoring.
+3/18/2025 8:39:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:23 AM: badposture Notify: 3/18/2025 8:39:23 AM
+3/18/2025 8:39:26 AM: No blink data found for monitoring.
+3/18/2025 8:39:27 AM: No stress data found for monitoring.
+3/18/2025 8:39:28 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 8:39:30 AM: [stress Error]: 2025-03-18 08:39:30.101988: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:39:31 AM: [stress Error]: 2025-03-18 08:39:31.502516: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:39:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:33 AM: badposture Notify: 3/18/2025 8:39:33 AM
+3/18/2025 8:39:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:36 AM: badposture Notify: 3/18/2025 8:39:36 AM
+3/18/2025 8:39:37 AM: No blink data found for monitoring.
+3/18/2025 8:39:37 AM: No stress data found for monitoring.
+3/18/2025 8:39:38 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/18/2025 8:39:38 AM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/18/2025 8:39:38 AM: [stress Error]: 2025-03-18 08:39:38.514937: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 8:39:38 AM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 8:39:38 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/18/2025 8:39:38 AM: [stress Error]:   warnings.warn(
+3/18/2025 8:39:38 AM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 8:39:38 AM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/18/2025 8:39:38 AM: No posture data found for monitoring.
+3/18/2025 8:39:39 AM: No blink data found for monitoring.
+3/18/2025 8:39:39 AM: No stress data found for monitoring.
+3/18/2025 8:39:43 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:43 AM: badposture Notify: 3/18/2025 8:39:43 AM
+3/18/2025 8:39:46 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:46 AM: badposture Notify: 3/18/2025 8:39:46 AM
+3/18/2025 8:39:48 AM: No blink data found for monitoring.
+3/18/2025 8:39:48 AM: No stress data found for monitoring.
+3/18/2025 8:39:49 AM: No posture data found for monitoring.
+3/18/2025 8:39:49 AM: No blink data found for monitoring.
+3/18/2025 8:39:49 AM: No stress data found for monitoring.
+3/18/2025 8:39:53 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:53 AM: badposture Notify: 3/18/2025 8:39:53 AM
+3/18/2025 8:39:55 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:39:55 AM: badposture Notify: 3/18/2025 8:39:55 AM
+3/18/2025 8:39:59 AM: No posture data found for monitoring.
+3/18/2025 8:39:59 AM: No blink data found for monitoring.
+3/18/2025 8:39:59 AM: No stress data found for monitoring.
+3/18/2025 8:40:03 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:03 AM: badposture Notify: 3/18/2025 8:40:03 AM
+3/18/2025 8:40:06 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:06 AM: badposture Notify: 3/18/2025 8:40:06 AM
+3/18/2025 8:40:06 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:07 AM: No blink data found for monitoring.
+3/18/2025 8:40:07 AM: No stress data found for monitoring.
+3/18/2025 8:40:09 AM: No posture data found for monitoring.
+3/18/2025 8:40:09 AM: No blink data found for monitoring.
+3/18/2025 8:40:09 AM: No blink data found for monitoring.
+3/18/2025 8:40:09 AM: No stress data found for monitoring.
+3/18/2025 8:40:09 AM: No stress data found for monitoring.
+3/18/2025 8:40:13 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:13 AM: badposture Notify: 3/18/2025 8:40:13 AM
+3/18/2025 8:40:17 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:17 AM: badposture Notify: 3/18/2025 8:40:17 AM
+3/18/2025 8:40:18 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:18 AM: No blink data found for monitoring.
+3/18/2025 8:40:18 AM: No stress data found for monitoring.
+3/18/2025 8:40:19 AM: No posture data found for monitoring.
+3/18/2025 8:40:19 AM: No blink data found for monitoring.
+3/18/2025 8:40:19 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:19 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:40:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:40:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:23 AM: badposture Notify: 3/18/2025 8:40:23 AM
+3/18/2025 8:40:25 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:25 AM: badposture Notify: 3/18/2025 8:40:25 AM
+3/18/2025 8:40:26 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:27 AM: No blink data found for monitoring.
+3/18/2025 8:40:27 AM: No stress data found for monitoring.
+3/18/2025 8:40:29 AM: No posture data found for monitoring.
+3/18/2025 8:40:29 AM: No blink data found for monitoring.
+3/18/2025 8:40:29 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:29 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:40:31 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:40:33 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
+3/18/2025 8:40:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:33 AM: badposture Notify: 3/18/2025 8:40:33 AM
+3/18/2025 8:40:35 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:35 AM: badposture Notify: 3/18/2025 8:40:35 AM
+3/18/2025 8:40:35 AM: [cvs Error]: 2025-03-18 08:40:35.448613: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:40:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:37 AM: No blink data found for monitoring.
+3/18/2025 8:40:37 AM: No stress data found for monitoring.
+3/18/2025 8:40:38 AM: [cvs Error]: 2025-03-18 08:40:38.590703: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/18/2025 8:40:39 AM: No posture data found for monitoring.
+3/18/2025 8:40:39 AM: No blink data found for monitoring.
+3/18/2025 8:40:39 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:39 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:40:41 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:40:43 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:43 AM: badposture Notify: 3/18/2025 8:40:43 AM
+3/18/2025 8:40:44 AM: No posture data found for monitoring.
+3/18/2025 8:40:44 AM: No blink data found for monitoring.
+3/18/2025 8:40:44 AM: No stress data found for monitoring.
+3/18/2025 8:40:45 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:45 AM: badposture Notify: 3/18/2025 8:40:45 AM
+3/18/2025 8:40:46 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:46 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:46 AM: No blink data found for monitoring.
+3/18/2025 8:40:46 AM: No stress data found for monitoring.
+3/18/2025 8:40:49 AM: No posture data found for monitoring.
+3/18/2025 8:40:49 AM: No blink data found for monitoring.
+3/18/2025 8:40:49 AM: [cvs Error]: 2025-03-18 08:40:49.429853: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/18/2025 8:40:49 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/18/2025 8:40:49 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:49 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:40:49 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/18/2025 8:40:50 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:40:50 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:50 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:40:52 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:40:53 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:53 AM: badposture Notify: 3/18/2025 8:40:53 AM
+3/18/2025 8:40:54 AM: No posture data found for monitoring.
+3/18/2025 8:40:54 AM: No blink data found for monitoring.
+3/18/2025 8:40:54 AM: No stress data found for monitoring.
+3/18/2025 8:40:55 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:55 AM: badposture Notify: 3/18/2025 8:40:55 AM
+3/18/2025 8:40:57 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:57 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:58 AM: No blink data found for monitoring.
+3/18/2025 8:40:58 AM: No stress data found for monitoring.
+3/18/2025 8:40:59 AM: No posture data found for monitoring.
+3/18/2025 8:40:59 AM: No blink data found for monitoring.
+3/18/2025 8:40:59 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:40:59 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:01 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:01 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:02 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:03 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:03 AM: badposture Notify: 3/18/2025 8:41:03 AM
+3/18/2025 8:41:04 AM: No posture data found for monitoring.
+3/18/2025 8:41:04 AM: No blink data found for monitoring.
+3/18/2025 8:41:04 AM: No stress data found for monitoring.
+3/18/2025 8:41:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:07 AM: badposture Notify: 3/18/2025 8:41:07 AM
+3/18/2025 8:41:09 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:09 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:09 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:09 AM: badposture Notify: 3/18/2025 8:41:09 AM
+3/18/2025 8:41:09 AM: No posture data found for monitoring.
+3/18/2025 8:41:09 AM: No blink data found for monitoring.
+3/18/2025 8:41:10 AM: No blink data found for monitoring.
+3/18/2025 8:41:10 AM: No stress data found for monitoring.
+3/18/2025 8:41:13 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:13 AM: badposture Notify: 3/18/2025 8:41:13 AM
+3/18/2025 8:41:14 AM: No posture data found for monitoring.
+3/18/2025 8:41:14 AM: No blink data found for monitoring.
+3/18/2025 8:41:14 AM: No stress data found for monitoring.
+3/18/2025 8:41:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:15 AM: badposture Notify: 3/18/2025 8:41:15 AM
+3/18/2025 8:41:16 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:16 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:16 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:16 AM: badposture Notify: 3/18/2025 8:41:16 AM
+3/18/2025 8:41:16 AM: No blink data found for monitoring.
+3/18/2025 8:41:17 AM: No stress data found for monitoring.
+3/18/2025 8:41:19 AM: No posture data found for monitoring.
+3/18/2025 8:41:19 AM: No blink data found for monitoring.
+3/18/2025 8:41:19 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:19 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:22 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:22 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:23 AM: badposture Notify: 3/18/2025 8:41:23 AM
+3/18/2025 8:41:24 AM: No posture data found for monitoring.
+3/18/2025 8:41:24 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:24 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:41:24 AM: Processed Blink Count: 0
+3/18/2025 8:41:24 AM: Eye strain detected: 3/18/2025 8:41:24 AM
+3/18/2025 8:41:26 AM: No stress data found for monitoring.
+3/18/2025 8:41:27 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:27 AM: badposture Notify: 3/18/2025 8:41:27 AM
+3/18/2025 8:41:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:28 AM: badposture Notify: 3/18/2025 8:41:28 AM
+3/18/2025 8:41:29 AM: No posture data found for monitoring.
+3/18/2025 8:41:29 AM: No blink data found for monitoring.
+3/18/2025 8:41:29 AM: No blink data found for monitoring.
+3/18/2025 8:41:29 AM: No stress data found for monitoring.
+3/18/2025 8:41:29 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:29 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:31 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:31 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:31 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:32 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:33 AM: badposture Notify: 3/18/2025 8:41:33 AM
+3/18/2025 8:41:34 AM: No posture data found for monitoring.
+3/18/2025 8:41:34 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:34 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:41:34 AM: Processed Blink Count: 0
+3/18/2025 8:41:34 AM: Eye strain detected: 3/18/2025 8:41:34 AM
+3/18/2025 8:41:35 AM: No stress data found for monitoring.
+3/18/2025 8:41:35 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:35 AM: badposture Notify: 3/18/2025 8:41:35 AM
+3/18/2025 8:41:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:36 AM: badposture Notify: 3/18/2025 8:41:36 AM
+3/18/2025 8:41:37 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:37 AM: badposture Notify: 3/18/2025 8:41:37 AM
+3/18/2025 8:41:38 AM: No blink data found for monitoring.
+3/18/2025 8:41:38 AM: No stress data found for monitoring.
+3/18/2025 8:41:39 AM: No posture data found for monitoring.
+3/18/2025 8:41:39 AM: No blink data found for monitoring.
+3/18/2025 8:41:39 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:39 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:41 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:41 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:41 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:42 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:42 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:42 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:42 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:43 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:43 AM: badposture Notify: 3/18/2025 8:41:43 AM
+3/18/2025 8:41:44 AM: No posture data found for monitoring.
+3/18/2025 8:41:44 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:44 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:41:44 AM: Processed Blink Count: 0
+3/18/2025 8:41:44 AM: Eye strain detected: 3/18/2025 8:41:44 AM
+3/18/2025 8:41:45 AM: No stress data found for monitoring.
+3/18/2025 8:41:45 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:45 AM: badposture Notify: 3/18/2025 8:41:45 AM
+3/18/2025 8:41:46 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:46 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:46 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:46 AM: badposture Notify: 3/18/2025 8:41:46 AM
+3/18/2025 8:41:47 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:47 AM: badposture Notify: 3/18/2025 8:41:47 AM
+3/18/2025 8:41:48 AM: No blink data found for monitoring.
+3/18/2025 8:41:48 AM: No stress data found for monitoring.
+3/18/2025 8:41:49 AM: No posture data found for monitoring.
+3/18/2025 8:41:49 AM: No blink data found for monitoring.
+3/18/2025 8:41:49 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:49 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:50 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:50 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:50 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:51 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:51 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:51 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:41:51 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:41:53 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:53 AM: badposture Notify: 3/18/2025 8:41:53 AM
+3/18/2025 8:41:54 AM: No posture data found for monitoring.
+3/18/2025 8:41:54 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:54 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:41:54 AM: Processed Blink Count: 0
+3/18/2025 8:41:54 AM: Eye strain detected: 3/18/2025 8:41:54 AM
+3/18/2025 8:41:55 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:55 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 2}
+3/18/2025 8:41:55 AM: Processed Blink Count: 2
+3/18/2025 8:41:55 AM: Eye strain detected: 3/18/2025 8:41:55 AM
+3/18/2025 8:41:55 AM: No stress data found for monitoring.
+3/18/2025 8:41:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:56 AM: badposture Notify: 3/18/2025 8:41:56 AM
+3/18/2025 8:41:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:56 AM: badposture Notify: 3/18/2025 8:41:56 AM
+3/18/2025 8:41:57 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:57 AM: badposture Notify: 3/18/2025 8:41:57 AM
+3/18/2025 8:41:58 AM: No blink data found for monitoring.
+3/18/2025 8:41:58 AM: No stress data found for monitoring.
+3/18/2025 8:41:59 AM: No posture data found for monitoring.
+3/18/2025 8:41:59 AM: No blink data found for monitoring.
+3/18/2025 8:41:59 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:41:59 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:00 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:00 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:00 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:01 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:01 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:01 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:01 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:02 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:03 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:03 AM: badposture Notify: 3/18/2025 8:42:03 AM
+3/18/2025 8:42:04 AM: No posture data found for monitoring.
+3/18/2025 8:42:04 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:04 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:42:04 AM: Processed Blink Count: 0
+3/18/2025 8:42:04 AM: Eye strain detected: 3/18/2025 8:42:04 AM
+3/18/2025 8:42:05 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:05 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 2}
+3/18/2025 8:42:05 AM: Processed Blink Count: 2
+3/18/2025 8:42:05 AM: Eye strain detected: 3/18/2025 8:42:05 AM
+3/18/2025 8:42:06 AM: No stress data found for monitoring.
+3/18/2025 8:42:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:07 AM: badposture Notify: 3/18/2025 8:42:07 AM
+3/18/2025 8:42:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:07 AM: badposture Notify: 3/18/2025 8:42:07 AM
+3/18/2025 8:42:08 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:08 AM: badposture Notify: 3/18/2025 8:42:08 AM
+3/18/2025 8:42:09 AM: No posture data found for monitoring.
+3/18/2025 8:42:09 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:09 AM: badposture Notify: 3/18/2025 8:42:09 AM
+3/18/2025 8:42:09 AM: No blink data found for monitoring.
+3/18/2025 8:42:09 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:09 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:10 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:10 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:10 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:10 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:10 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:10 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:10 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:11 AM: No blink data found for monitoring.
+3/18/2025 8:42:11 AM: No stress data found for monitoring.
+3/18/2025 8:42:13 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:13 AM: badposture Notify: 3/18/2025 8:42:13 AM
+3/18/2025 8:42:14 AM: No posture data found for monitoring.
+3/18/2025 8:42:14 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:14 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:42:14 AM: Processed Blink Count: 0
+3/18/2025 8:42:14 AM: Eye strain detected: 3/18/2025 8:42:14 AM
+3/18/2025 8:42:15 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:15 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 2}
+3/18/2025 8:42:15 AM: Processed Blink Count: 2
+3/18/2025 8:42:15 AM: Eye strain detected: 3/18/2025 8:42:15 AM
+3/18/2025 8:42:16 AM: No stress data found for monitoring.
+3/18/2025 8:42:17 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:17 AM: badposture Notify: 3/18/2025 8:42:17 AM
+3/18/2025 8:42:19 AM: No posture data found for monitoring.
+3/18/2025 8:42:19 AM: No blink data found for monitoring.
+3/18/2025 8:42:19 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:19 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:22 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:22 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:23 AM: badposture Notify: 3/18/2025 8:42:23 AM
+3/18/2025 8:42:23 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:23 AM: badposture Notify: 3/18/2025 8:42:23 AM
+3/18/2025 8:42:24 AM: No posture data found for monitoring.
+3/18/2025 8:42:24 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:24 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 0}
+3/18/2025 8:42:24 AM: Processed Blink Count: 0
+3/18/2025 8:42:24 AM: Eye strain detected: 3/18/2025 8:42:24 AM
+3/18/2025 8:42:29 AM: No posture data found for monitoring.
+3/18/2025 8:42:29 AM: No blink data found for monitoring.
+3/18/2025 8:42:29 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:29 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:31 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:31 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:31 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:31 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:31 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:31 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:31 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:31 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:31 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:32 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:32 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:32 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:32 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:32 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:32 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 2}
+3/18/2025 8:42:32 AM: Processed Blink Count: 2
+3/18/2025 8:42:32 AM: Eye strain detected: 3/18/2025 8:42:32 AM
+3/18/2025 8:42:32 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:32 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 3}
+3/18/2025 8:42:32 AM: Processed Blink Count: 3
+3/18/2025 8:42:32 AM: Eye strain detected: 3/18/2025 8:42:32 AM
+3/18/2025 8:42:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:33 AM: badposture Notify: 3/18/2025 8:42:33 AM
+3/18/2025 8:42:33 AM: No stress data found for monitoring.
+3/18/2025 8:42:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:33 AM: badposture Notify: 3/18/2025 8:42:33 AM
+3/18/2025 8:42:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:33 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:33 AM: badposture Notify: 3/18/2025 8:42:33 AM
+3/18/2025 8:42:34 AM: No posture data found for monitoring.
+3/18/2025 8:42:34 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:34 AM: badposture Notify: 3/18/2025 8:42:34 AM
+3/18/2025 8:42:34 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:34 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 2}
+3/18/2025 8:42:34 AM: Processed Blink Count: 2
+3/18/2025 8:42:34 AM: Eye strain detected: 3/18/2025 8:42:34 AM
+3/18/2025 8:42:34 AM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:34 AM: Extracting Blink Data: {"eye_state": "Unknown", "distance": "No Face Detected", "blink_count": 3}
+3/18/2025 8:42:34 AM: Processed Blink Count: 3
+3/18/2025 8:42:34 AM: Eye strain detected: 3/18/2025 8:42:34 AM
+3/18/2025 8:42:35 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:35 AM: badposture Notify: 3/18/2025 8:42:35 AM
+3/18/2025 8:42:35 AM: No stress data found for monitoring.
+3/18/2025 8:42:35 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:35 AM: badposture Notify: 3/18/2025 8:42:35 AM
+3/18/2025 8:42:35 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:35 AM: badposture Notify: 3/18/2025 8:42:35 AM
+3/18/2025 8:42:36 AM: No blink data found for monitoring.
+3/18/2025 8:42:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:36 AM: badposture Notify: 3/18/2025 8:42:36 AM
+3/18/2025 8:42:36 AM: No stress data found for monitoring.
+3/18/2025 8:42:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:36 AM: badposture Notify: 3/18/2025 8:42:36 AM
+3/18/2025 8:42:36 AM: No blink data found for monitoring.
+3/18/2025 8:42:37 AM: No stress data found for monitoring.
+3/18/2025 8:42:37 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:37 AM: badposture Notify: 3/18/2025 8:42:37 AM
+3/18/2025 8:42:38 AM: No blink data found for monitoring.
+3/18/2025 8:42:38 AM: No stress data found for monitoring.
+3/18/2025 8:42:39 AM: No posture data found for monitoring.
+3/18/2025 8:42:39 AM: No blink data found for monitoring.
+3/18/2025 8:42:39 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:39 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:41 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:41 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:41 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:43 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:43 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:43 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:43 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:43 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:43 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:43 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:43 AM: badposture Notify: 3/18/2025 8:42:43 AM
+3/18/2025 8:42:44 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:44 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:44 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:44 AM: badposture Notify: 3/18/2025 8:42:44 AM
+3/18/2025 8:42:45 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:45 AM: badposture Notify: 3/18/2025 8:42:45 AM
+3/18/2025 8:42:45 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:45 AM: badposture Notify: 3/18/2025 8:42:45 AM
+3/18/2025 8:42:45 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:45 AM: badposture Notify: 3/18/2025 8:42:45 AM
+3/18/2025 8:42:46 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:46 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:46 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:46 AM: No blink data found for monitoring.
+3/18/2025 8:42:46 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:46 AM: No stress data found for monitoring.
+3/18/2025 8:42:49 AM: No posture data found for monitoring.
+3/18/2025 8:42:49 AM: No blink data found for monitoring.
+3/18/2025 8:42:49 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:49 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:51 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:51 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:51 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:52 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:52 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:52 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:53 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:53 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:53 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:54 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:54 AM: badposture Notify: 3/18/2025 8:42:54 AM
+3/18/2025 8:42:55 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:55 AM: badposture Notify: 3/18/2025 8:42:55 AM
+3/18/2025 8:42:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:56 AM: badposture Notify: 3/18/2025 8:42:56 AM
+3/18/2025 8:42:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:56 AM: badposture Notify: 3/18/2025 8:42:56 AM
+3/18/2025 8:42:57 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:57 AM: badposture Notify: 3/18/2025 8:42:57 AM
+3/18/2025 8:42:57 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:57 AM: badposture Notify: 3/18/2025 8:42:57 AM
+3/18/2025 8:42:59 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:42:59 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:42:59 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:42:59 AM: No blink data found for monitoring.
+3/18/2025 8:42:59 AM: No stress data found for monitoring.
+3/18/2025 8:42:59 AM: No posture data found for monitoring.
+3/18/2025 8:42:59 AM: No blink data found for monitoring.
+3/18/2025 8:43:00 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:00 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:00 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:01 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:01 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:01 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:01 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:03 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:03 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:03 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:03 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:03 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:03 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:04 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:04 AM: badposture Notify: 3/18/2025 8:43:04 AM
+3/18/2025 8:43:04 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:04 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:04 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:04 AM: badposture Notify: 3/18/2025 8:43:04 AM
+3/18/2025 8:43:05 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:05 AM: badposture Notify: 3/18/2025 8:43:05 AM
+3/18/2025 8:43:06 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:06 AM: badposture Notify: 3/18/2025 8:43:06 AM
+3/18/2025 8:43:06 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:06 AM: badposture Notify: 3/18/2025 8:43:06 AM
+3/18/2025 8:43:07 AM: No blink data found for monitoring.
+3/18/2025 8:43:07 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:08 AM: No stress data found for monitoring.
+3/18/2025 8:43:09 AM: No posture data found for monitoring.
+3/18/2025 8:43:09 AM: No blink data found for monitoring.
+3/18/2025 8:43:09 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:09 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:11 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:11 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:11 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:13 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:13 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:13 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:14 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:14 AM: badposture Notify: 3/18/2025 8:43:14 AM
+3/18/2025 8:43:14 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:14 AM: badposture Notify: 3/18/2025 8:43:14 AM
+3/18/2025 8:43:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:15 AM: badposture Notify: 3/18/2025 8:43:15 AM
+3/18/2025 8:43:16 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:16 AM: badposture Notify: 3/18/2025 8:43:16 AM
+3/18/2025 8:43:17 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:17 AM: badposture Notify: 3/18/2025 8:43:17 AM
+3/18/2025 8:43:17 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:17 AM: badposture Notify: 3/18/2025 8:43:17 AM
+3/18/2025 8:43:18 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:18 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:18 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:18 AM: No blink data found for monitoring.
+3/18/2025 8:43:18 AM: No stress data found for monitoring.
+3/18/2025 8:43:19 AM: No posture data found for monitoring.
+3/18/2025 8:43:19 AM: No blink data found for monitoring.
+3/18/2025 8:43:19 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:19 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:19 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:19 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:19 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:20 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:20 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:20 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:24 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:24 AM: badposture Notify: 3/18/2025 8:43:24 AM
+3/18/2025 8:43:26 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:26 AM: badposture Notify: 3/18/2025 8:43:26 AM
+3/18/2025 8:43:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:28 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:28 AM: badposture Notify: 3/18/2025 8:43:28 AM
+3/18/2025 8:43:29 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:29 AM: badposture Notify: 3/18/2025 8:43:29 AM
+3/18/2025 8:43:29 AM: No posture data found for monitoring.
+3/18/2025 8:43:29 AM: No blink data found for monitoring.
+3/18/2025 8:43:30 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:30 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:30 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:30 AM: badposture Notify: 3/18/2025 8:43:30 AM
+3/18/2025 8:43:31 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:31 AM: badposture Notify: 3/18/2025 8:43:31 AM
+3/18/2025 8:43:32 AM: No blink data found for monitoring.
+3/18/2025 8:43:32 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:32 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:32 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:32 AM: No stress data found for monitoring.
+3/18/2025 8:43:33 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:33 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:33 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:34 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:34 AM: badposture Notify: 3/18/2025 8:43:34 AM
+3/18/2025 8:43:35 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:35 AM: badposture Notify: 3/18/2025 8:43:35 AM
+3/18/2025 8:43:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:36 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:36 AM: badposture Notify: 3/18/2025 8:43:36 AM
+3/18/2025 8:43:37 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:37 AM: badposture Notify: 3/18/2025 8:43:37 AM
+3/18/2025 8:43:37 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:37 AM: badposture Notify: 3/18/2025 8:43:37 AM
+3/18/2025 8:43:38 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:38 AM: badposture Notify: 3/18/2025 8:43:38 AM
+3/18/2025 8:43:38 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:38 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:38 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:38 AM: No blink data found for monitoring.
+3/18/2025 8:43:39 AM: No stress data found for monitoring.
+3/18/2025 8:43:39 AM: No posture data found for monitoring.
+3/18/2025 8:43:39 AM: No blink data found for monitoring.
+3/18/2025 8:43:39 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:39 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:40 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:42 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:42 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:42 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:44 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:44 AM: badposture Notify: 3/18/2025 8:43:44 AM
+3/18/2025 8:43:44 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:44 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:44 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:45 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:45 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:45 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:46 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:46 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:46 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:46 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:47 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:47 AM: badposture Notify: 3/18/2025 8:43:47 AM
+3/18/2025 8:43:48 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:48 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:48 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:48 AM: badposture Notify: 3/18/2025 8:43:48 AM
+3/18/2025 8:43:49 AM: No posture data found for monitoring.
+3/18/2025 8:43:49 AM: No blink data found for monitoring.
+3/18/2025 8:43:50 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:50 AM: badposture Notify: 3/18/2025 8:43:50 AM
+3/18/2025 8:43:50 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:50 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:52 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:52 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:52 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:53 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:53 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:53 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:54 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:54 AM: badposture Notify: 3/18/2025 8:43:54 AM
+3/18/2025 8:43:55 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:55 AM: badposture Notify: 3/18/2025 8:43:55 AM
+3/18/2025 8:43:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:56 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:56 AM: badposture Notify: 3/18/2025 8:43:56 AM
+3/18/2025 8:43:57 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:57 AM: badposture Notify: 3/18/2025 8:43:57 AM
+3/18/2025 8:43:58 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:58 AM: badposture Notify: 3/18/2025 8:43:58 AM
+3/18/2025 8:43:58 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:58 AM: badposture Notify: 3/18/2025 8:43:58 AM
+3/18/2025 8:43:59 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:59 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:59 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:43:59 AM: No blink data found for monitoring.
+3/18/2025 8:43:59 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:43:59 AM: No posture data found for monitoring.
+3/18/2025 8:43:59 AM: No blink data found for monitoring.
+3/18/2025 8:43:59 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:43:59 AM: badposture Notify: 3/18/2025 8:43:59 AM
+3/18/2025 8:44:00 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:00 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:00 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:00 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:00 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:01 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:01 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:01 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:01 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:01 AM: badposture Notify: 3/18/2025 8:44:01 AM
+3/18/2025 8:44:02 AM: No blink data found for monitoring.
+3/18/2025 8:44:03 AM: No stress data found for monitoring.
+3/18/2025 8:44:04 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:04 AM: badposture Notify: 3/18/2025 8:44:04 AM
+3/18/2025 8:44:06 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:06 AM: badposture Notify: 3/18/2025 8:44:06 AM
+3/18/2025 8:44:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:07 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:07 AM: badposture Notify: 3/18/2025 8:44:07 AM
+3/18/2025 8:44:09 AM: No posture data found for monitoring.
+3/18/2025 8:44:09 AM: No blink data found for monitoring.
+3/18/2025 8:44:09 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:09 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:10 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:10 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:10 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:11 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:11 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:11 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:13 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:13 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:13 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:14 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:14 AM: badposture Notify: 3/18/2025 8:44:14 AM
+3/18/2025 8:44:14 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:14 AM: badposture Notify: 3/18/2025 8:44:14 AM
+3/18/2025 8:44:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:15 AM: badposture Notify: 3/18/2025 8:44:15 AM
+3/18/2025 8:44:15 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:15 AM: badposture Notify: 3/18/2025 8:44:15 AM
+3/18/2025 8:44:16 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:16 AM: badposture Notify: 3/18/2025 8:44:16 AM
+3/18/2025 8:44:16 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:16 AM: badposture Notify: 3/18/2025 8:44:16 AM
+3/18/2025 8:44:17 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:17 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:17 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:17 AM: No blink data found for monitoring.
+3/18/2025 8:44:17 AM: No stress data found for monitoring.
+3/18/2025 8:44:17 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:17 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:17 AM: badposture Notify: 3/18/2025 8:44:17 AM
+3/18/2025 8:44:18 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:18 AM: badposture Notify: 3/18/2025 8:44:18 AM
+3/18/2025 8:44:19 AM: No posture data found for monitoring.
+3/18/2025 8:44:19 AM: No blink data found for monitoring.
+3/18/2025 8:44:19 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:19 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:20 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:20 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:20 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:21 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:21 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:21 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:22 AM: StressData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:22 AM: Stress Calculation - Negative: 0.0%, Happy: 0, Neutral: 0
+3/18/2025 8:44:22 AM: Determined Stress Level: Medium Stress
+3/18/2025 8:44:22 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:22 AM: badposture Notify: 3/18/2025 8:44:22 AM
+3/18/2025 8:44:23 AM: No blink data found for monitoring.
+3/18/2025 8:44:23 AM: No stress data found for monitoring.
+3/18/2025 8:44:24 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:24 AM: badposture Notify: 3/18/2025 8:44:24 AM
+3/18/2025 8:44:26 AM: PostureData.Outputs System.Collections.Generic.List`1[System.String]
+3/18/2025 8:44:26 AM: badposture Notify: 3/18/2025 8:44:26 AM

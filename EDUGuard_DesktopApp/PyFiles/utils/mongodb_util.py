@@ -1,5 +1,7 @@
 from pymongo import MongoClient
 from bson import ObjectId
+import threading
+import time
 
 # MongoDB connection setup
 MONGO_URI = "mongodb+srv://myUser:myPassword123@cluster0.qk0epky.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -112,3 +114,30 @@ def update_eye_blink_outputs(progress_report_id, batch_data):
 
     except Exception as e:
         print(f"Error updating eye blink data: {e}")
+
+
+def refresh_progress_reports():
+    """
+    Refreshes the ProgressReports collection every 2 minutes.
+    """
+    while True:
+        try:
+            print("Refreshing ProgressReports collection...")
+
+            # Fetch the latest progress report
+            latest_report = progress_reports_collection.find().sort([("_id", -1)]).limit(1)
+            latest_report = list(latest_report)
+
+            if latest_report:
+                print(f"Latest Progress Report ID: {latest_report[0]['_id']}")
+            else:
+                print("No progress reports found.")
+
+        except Exception as e:
+            print(f"Error refreshing ProgressReports: {e}")
+
+        time.sleep(120)  # Wait for 2 minutes before refreshing again
+
+# Start the auto-refresh in a background thread
+refresh_thread = threading.Thread(target=refresh_progress_reports, daemon=True)
+refresh_thread.start()
