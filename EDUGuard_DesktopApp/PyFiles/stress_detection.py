@@ -37,7 +37,7 @@ data = b""
 last_saved_time = time.time()
 last_batch_time = time.time()
 save_interval = 1  # Save data every 6 seconds
-batch_interval = 120  # Save the batch to the database every 30 seconds
+batch_interval = 60  # Save the batch to the database every 30 seconds
 current_batch = []  # Temporary list to store data for the current batch
 
 try:
@@ -96,9 +96,9 @@ try:
                 last_batch_time = current_time
 
         # Show the frame
-        #cv2.imshow(f"{USER_EMAIL} - Stress Detection", frame)
-        #if cv2.waitKey(10) & 0xFF == ord('q'):
-        #   break
+        cv2.imshow(f"{USER_EMAIL} - Stress Detection", frame)
+        if cv2.waitKey(10) & 0xFF == ord('q'):
+           break
 finally:
     client_socket.close()
     cv2.destroyAllWindows()

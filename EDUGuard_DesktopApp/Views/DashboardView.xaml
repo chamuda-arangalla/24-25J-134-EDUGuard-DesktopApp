@@ -87,13 +87,13 @@
             <TabItem Header="Dashboard">
                 <Border Background="White" Margin="10" Padding="20" CornerRadius="10">
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button x:Name="Model1Button" Content="Start Model 1" Click="Model1Button_Click"
+                        <Button x:Name="Model1Button" Content="Start Posture Monitoring" Click="Model1Button_Click"
                                 Style="{StaticResource RoundedButtonStyle}" Width="200" Height="50"/>
-                        <Button x:Name="Model2Button" Content="Start Model 2" Click="Model2Button_Click"
+                        <Button x:Name="Model2Button" Content="Start Stress Monitoring" Click="Model2Button_Click"
                                 Style="{StaticResource RoundedButtonStyle}" Width="200" Height="50"/>
-                        <Button x:Name="Model3Button" Content="Start Model 3" Click="Model3Button_Click"
+                        <Button x:Name="Model3Button" Content="Start Eye Monitoring" Click="Model3Button_Click"
                                 Style="{StaticResource RoundedButtonStyle}" Width="200" Height="50"/>
-                        <Button x:Name="Model4Button" Content="Start Model 4" Click="Model4Button_Click"
+                        <Button x:Name="Model4Button" Content="Start Hydration Monitoring" Click="Model4Button_Click"
                                 Style="{StaticResource RoundedButtonStyle}" Width="200" Height="50"/>
                     </StackPanel>
                 </Border>

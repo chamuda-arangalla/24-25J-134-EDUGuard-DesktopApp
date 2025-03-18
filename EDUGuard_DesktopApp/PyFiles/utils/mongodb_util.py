@@ -116,6 +116,24 @@ def update_eye_blink_outputs(progress_report_id, batch_data):
         print(f"Error updating eye blink data: {e}")
 
 
+def update_hydration_outputs(progress_report_id, batch_data):
+    try:
+
+        object_id = ObjectId(progress_report_id)
+
+        filter_query = {"_id": object_id}
+        update_query = {"$push": {
+            "HydrationData.Outputs": {"$each": [batch_data]}
+            }
+        }
+
+        result = progress_reports_collection.update_one(filter_query, update_query)
+        print(f"Updated {result.modified_count} records for hydration data.")
+
+    except Exception as e:
+        print(f"Error updating hydration data: {e}")
+
+
 def refresh_progress_reports():
     """
     Refreshes the ProgressReports collection every 2 minutes.

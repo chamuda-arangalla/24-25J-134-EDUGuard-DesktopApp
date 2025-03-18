@@ -26,6 +26,9 @@ namespace EDUGuard_DesktopApp.Views
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
+                //CustomMessageBox msgBox = new CustomMessageBox("Alert: Your posture quality is poor! Correct it immediately.");
+                //msgBox.ShowDialog();
+
                 // Navigate to dashboard or application home
                 // Start session
                 SessionManager.StartSession(user);

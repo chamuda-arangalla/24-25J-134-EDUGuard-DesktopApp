@@ -38,7 +38,7 @@ pose = mp_pose.Pose()
 last_saved_time = time.time()
 last_batch_time = time.time()
 save_interval = 1  # Save data every 6 seconds
-batch_interval = 120  # Save the batch to the database every 30 seconds
+batch_interval = 60  # Save the batch to the database every 30 seconds
 current_batch = []  # Temporary list to store data for the current batch
 
 # Function to calculate angles
@@ -105,7 +105,11 @@ try:
 
             # Display results
             cv2.putText(frame, f"Posture: {posture}", (50, 50),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+            cv2.putText(frame, f"Angle (Red-Green): {int(angle_red_green)}", (50, 100),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+            cv2.putText(frame, f"Angle (Blue-Green): {int(angle_blue_green)}", (50, 150),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
 
             # Save posture data at intervals
             current_time = time.time()
@@ -121,9 +125,9 @@ try:
                 last_batch_time = current_time
 
         # Show the frame
-        #cv2.imshow(f"{USER_EMAIL} - Posture Detection", frame)
-        #if cv2.waitKey(10) & 0xFF == ord('q'):
-        #   break
+        cv2.imshow('Posture Detection', frame)
+        if cv2.waitKey(10) & 0xFF == ord('q'):
+           break
 finally:
     client_socket.close()
     cv2.destroyAllWindows()

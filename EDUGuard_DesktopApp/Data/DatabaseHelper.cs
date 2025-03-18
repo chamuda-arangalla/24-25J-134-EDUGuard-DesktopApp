@@ -48,6 +48,10 @@ namespace EDUGuard_DesktopApp
             {
                 progressReport.CVSData.StartTime = startTime;
             }
+            else
+            {
+                progressReport.HydrationData.StartTime = startTime;
+            }
 
             ProgressReports.InsertOne(progressReport);
             return progressReport.Id;

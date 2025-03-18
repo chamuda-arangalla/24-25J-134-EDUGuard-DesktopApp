@@ -261,7 +261,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="PyFiles\models\drinking_model.pkl" />
     <None Include="PyFiles\models\eye_blink_model.h5" />
+    <None Include="PyFiles\models\MobileNetSSD_deploy.caffemodel" />
+    <None Include="PyFiles\models\MobileNetSSD_deploy.prototxt" />
     <None Include="PyFiles\models\posture_classifier.pkl" />
     <None Include="PyFiles\models\model_file_30epochs.h5" />
     <None Include="PyFiles\models\random_forest_model.h5" />
@@ -298,6 +301,9 @@
     <Resource Include="Assets\warning.png" />
     <Content Include="Assets\notification.wav" />
     <Content Include="PyFiles\cvs_detection.py" />
+    <Content Include="PyFiles\hydration_detection.py" />
+    <Resource Include="PyFiles\models\haarcascade_frontalface_default.xml" />
+    <Resource Include="PyFiles\models\haarcascade_mcs_mouth.xml" />
     <Content Include="PyFiles\posture_detection.py" />
     <Content Include="PyFiles\posture_detection1.py" />
     <Content Include="PyFiles\stress_detection.py" />

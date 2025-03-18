@@ -143,7 +143,7 @@ namespace EDUGuard_DesktopApp.Views
             // Store the progress report ID for later retrieval
             _modelProgressReports[modelName] = progressReportId;
 
-            Logger.LogError($"modelReport : {_modelProgressReports}");
+            //Logger.LogError($"modelReport : {_modelProgressReports}");
 
             var processInfo = new ProcessStartInfo
             {
@@ -331,7 +331,7 @@ namespace EDUGuard_DesktopApp.Views
             //_monitorTimer.Start();
 
             _processedArraysCount = 0; // Reset count when model starts
-            _monitorTimer = new System.Timers.Timer(128000); 
+            _monitorTimer = new System.Timers.Timer(38000); 
             _monitorTimer.Elapsed += async (sender, e) =>
             {
                 _processedArraysCount = 0; // Reset so alerts do not get stuck
@@ -436,7 +436,7 @@ namespace EDUGuard_DesktopApp.Views
                 if (badPosturePercentage > 60)
                 {
                     Logger.LogError($"badposture Notify: {DateTime.Now},{badPosturePercentage}");
-                    ShowNotification($"Alert: Your posture quality is poor! Correct it immediately.");
+                    ShowNotification($"Alert: Your posture quality is poor ({badPosturePercentage})! Correct it immediately.");
                 }
 
                 // Update processed count to avoid rechecking the same batch
@@ -487,11 +487,11 @@ namespace EDUGuard_DesktopApp.Views
                         if (blinkCount > 17)
                         {
                             Logger.LogError($"High blink rate detected: {DateTime.Now}");
-                            ShowNotification("Warning: High blink rate detected. Look at a long-distance object!");
+                            ShowNotification($"Alert: High blink rate detected ({blinkCount}). Look at a long-distance object!");
                         }
                         else {
                             Logger.LogError($"Eye strain detected: {DateTime.Now}");
-                            ShowNotification("Alert: You have eye strain. Take a break!");
+                            ShowNotification($"Alert: You have eye strain({blinkCount}). Take a break!");
                         }
                         
                     }
@@ -554,12 +554,12 @@ namespace EDUGuard_DesktopApp.Views
                     if (negativePercentage > 60)
                     {
                         stressLevel = "High Stress";
-                        ShowNotification("High Stress Detected! Try relaxation techniques.");
+                        ShowNotification($"High Stress Detected({stressLevel})! Try relaxation techniques.");
                     }
                     else if (neutralCount >= happinessCount && neutralCount >= surpriseCount)
                     {
                         stressLevel = "Medium Stress";
-                        ShowNotification("Medium Stress Level. Consider taking a short break.");
+                        ShowNotification($"Medium Stress Level({stressLevel})!. Consider taking a short break.");
                     }
                     else if (happinessCount > neutralCount)
                     {
@@ -664,7 +664,7 @@ namespace EDUGuard_DesktopApp.Views
 
         private void Model4Button_Click(object sender, RoutedEventArgs e)
         {
-            ToggleModel("hydration", ref _isModel4Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\model4.py");
+            ToggleModel("hydration", ref _isModel4Running, (Button)sender, "C:\\Users\\chamu\\source\\repos\\EDUGuard_DesktopApp\\EDUGuard_DesktopApp\\PyFiles\\hydration_detection.py");
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
@@ -742,6 +742,10 @@ namespace EDUGuard_DesktopApp.Views
                     update = Builders<ProgressReports>.Update.Set(r => r.StressData.EndTime, DateTime.UtcNow);
                 }
                 else if (modelName.ToLower().Contains("cvs"))
+                {
+                    update = Builders<ProgressReports>.Update.Set(r => r.CVSData.EndTime, DateTime.UtcNow);
+                }
+                else
                 {
                     update = Builders<ProgressReports>.Update.Set(r => r.CVSData.EndTime, DateTime.UtcNow);
                 }

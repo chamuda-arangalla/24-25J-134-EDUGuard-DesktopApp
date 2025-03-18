@@ -44,8 +44,8 @@ EYE_LOSS_RESET_TIME = 2  # Time in seconds to reset blink count if eyes are lost
 # Timer setup
 last_saved_time = time.time()
 last_batch_time = time.time()
-save_interval = 120  # Save every 6 seconds
-batch_interval = 120  # Save batch every 30 seconds
+save_interval = 60  # Save every 6 seconds
+batch_interval = 60  # Save batch every 30 seconds
 current_batch = []  # Store batch data
 
 blink_count = 0
@@ -122,6 +122,13 @@ try:
                     distance_msg = "Good Distance"
                     color = (0, 255, 0)
 
+                # Display distance info
+                cv2.putText(frame, f'Distance: {int(distance_cm)} cm', (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
+                cv2.putText(frame, distance_msg, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
+
+            # Draw face bounding box
+            cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
+
             roi = gray_frame[y:y + h // 2, x:x + w]
 
             if roi.size > 0:
@@ -162,6 +169,18 @@ try:
                 update_eye_blink_outputs(progress_report_id, current_batch)
                 current_batch = []
             last_batch_time = current_time
+
+        
+         # Display blink count & eye state
+        cv2.putText(frame, f'Blink Count: {blink_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        cv2.putText(frame, f'Eye State: {eye_state}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        
+         # Show video feed with annotations
+        cv2.imshow('Eye Blink Detection & Distance Monitoring', frame)
+
+        # Press 'q' to quit
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
 finally:
     client_socket.close()
