@@ -189,6 +189,8 @@ namespace EDUGuard_DesktopApp.Views
 
         private void StopModel(string modelName, ref bool isRunning, Button modelButton)
         {
+            _monitorTimer.AutoReset = true;
+            _monitorTimer.Start();
             try
             {
                 if (_modelProcesses.ContainsKey(modelName))
@@ -346,35 +348,30 @@ namespace EDUGuard_DesktopApp.Views
 
         private void StartMonitoring(string progressReportId)
         {
-            _processedArraysCount = 0; // Reset count when model starts
-            _monitorTimer = new System.Timers.Timer(38000);
+            _monitorTimer = new System.Timers.Timer(78000);
 
             _monitorTimer.Elapsed += async (sender, e) =>
             {
-                bool hasNewData = false; // Flag to check if new data was processed
+                Logger.LogError("🔄 Monitoring cycle started... Checking for new data.");
 
-                int postureProcessed = await CheckPostureAlerts(progressReportId);
-                int blinkProcessed = await CheckBlinkAlerts(progressReportId);
-                int stressProcessed = await CheckStressAlerts(progressReportId);
+                bool newPostureData = await CheckPostureAlerts(progressReportId);
+                bool newBlinkData = await CheckBlinkAlerts(progressReportId);
+                bool newStressData = await CheckStressAlerts(progressReportId);
 
-                // If at least one model has new data, keep monitoring
-                if (postureProcessed > 0 || blinkProcessed > 0 || stressProcessed > 0)
+                // If ALL models have NO new data, stop monitoring
+                if (!newPostureData && !newBlinkData && !newStressData)
                 {
-                    hasNewData = true;
-                }
-
-                // Stop monitoring if no new data is found
-                if (!hasNewData)
-                {
+                    Logger.LogError("✅ Monitoring stopped: No new data available.");
                     _monitorTimer.Stop();
                     _monitorTimer.Dispose();
-                    Logger.LogError("Monitoring stopped: No new data available.");
                 }
             };
 
             _monitorTimer.AutoReset = true;
             _monitorTimer.Start();
         }
+
+
 
 
         //Check posture
@@ -613,33 +610,28 @@ namespace EDUGuard_DesktopApp.Views
 
 
         //1
-        private async Task<int> CheckPostureAlerts(string progressReportId)
+        private async Task<bool> CheckPostureAlerts(string progressReportId)
         {
             try
             {
+                Logger.LogError("🔍 Checking posture alerts...");
+
                 var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
                 var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
 
                 if (report == null || report.PostureData?.Outputs == null || report.PostureData.Outputs.Count == 0)
                 {
-                    Logger.LogError("No posture data found for monitoring.");
-                    return 0;
+                    Logger.LogError("⚠️ No posture data found for monitoring.");
+                    return false;
                 }
 
-                int latestIndex = report.PostureData.Outputs.Count - 1;
-
-                if (latestIndex < _processedArraysCount)
-                {
-                    Logger.LogError("No new posture data to process.");
-                    return 0;
-                }
-
-                var latestBatch = report.PostureData.Outputs[latestIndex];
+                // Get only the LAST array in the Outputs list
+                var latestBatch = report.PostureData.Outputs.Last();
 
                 if (latestBatch.Count == 0)
                 {
-                    Logger.LogError("Latest batch is empty, skipping.");
-                    return 0;
+                    Logger.LogError("⚠️ Latest posture batch is empty, skipping.");
+                    return false;
                 }
 
                 int badPostureCount = latestBatch.Count(p => p == "Bad Posture");
@@ -647,48 +639,43 @@ namespace EDUGuard_DesktopApp.Views
 
                 if (badPosturePercentage > 60)
                 {
-                    Console.WriteLine($"cheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeek{badPosturePercentage}");
+                    Logger.LogError($"🚨 Alert: Bad posture detected ({badPosturePercentage}%)");
                     ShowNotification($"Alert: Your posture quality is poor ({badPosturePercentage}%)! Correct it immediately.");
+                    return true;
                 }
 
-                _processedArraysCount = latestIndex + 1;
-                return 1; // Indicates that new data was processed
+                return false;
             }
             catch (Exception ex)
             {
-                Logger.LogError($"Error checking posture alerts: {ex.Message}");
-                return 0;
+                Logger.LogError($"❌ Error checking posture alerts: {ex.Message}");
+                return false;
             }
         }
 
+
         //2
-        private async Task<int> CheckBlinkAlerts(string progressReportId)
+        private async Task<bool> CheckBlinkAlerts(string progressReportId)
         {
             try
             {
+                Logger.LogError("🔍 Checking blink alerts...");
+
                 var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
                 var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
 
                 if (report == null || report.CVSData?.Outputs == null || report.CVSData.Outputs.Count == 0)
                 {
-                    Logger.LogError("No blink data found for monitoring.");
-                    return 0;
+                    Logger.LogError("⚠️ No blink data found for monitoring.");
+                    return false;
                 }
 
-                int latestIndex = report.CVSData.Outputs.Count - 1;
-
-                if (latestIndex < _processedArraysCount)
-                {
-                    Logger.LogError("No new blink data to process.");
-                    return 0;
-                }
-
-                var latestBatch = report.CVSData.Outputs[latestIndex];
+                var latestBatch = report.CVSData.Outputs.Last();
 
                 if (latestBatch.Count == 0)
                 {
-                    Logger.LogError("Latest blink batch is empty, skipping.");
-                    return 0;
+                    Logger.LogError("⚠️ Latest blink batch is empty, skipping.");
+                    return false;
                 }
 
                 int blinkCount = ExtractBlinkCount(latestBatch);
@@ -697,52 +684,50 @@ namespace EDUGuard_DesktopApp.Views
                 {
                     if (blinkCount > 17)
                     {
+                        Logger.LogError($"🚨 High blink rate detected: {blinkCount}");
                         ShowNotification($"Alert: High blink rate detected ({blinkCount}). Look at a long-distance object!");
                     }
                     else
                     {
+                        Logger.LogError($"🚨 Eye strain detected: {blinkCount}");
                         ShowNotification($"Alert: You have eye strain ({blinkCount}). Take a break!");
                     }
+                    return true;
                 }
 
-                _processedArraysCount = latestIndex + 1;
-                return 1; // Indicates that new data was processed
+                return false;
             }
             catch (Exception ex)
             {
-                Logger.LogError($"Error checking blink alerts: {ex.Message}");
-                return 0;
+                Logger.LogError($"❌ Error checking blink alerts: {ex.Message}");
+                return false;
             }
         }
 
+
+
         //3
-        private async Task<int> CheckStressAlerts(string progressReportId)
+        private async Task<bool> CheckStressAlerts(string progressReportId)
         {
             try
             {
+                Logger.LogError("🔍 Checking stress alerts...");
+
                 var filter = Builders<ProgressReports>.Filter.Eq(r => r.Id, progressReportId);
                 var report = await _dbHelper.ProgressReports.Find(filter).FirstOrDefaultAsync();
 
                 if (report == null || report.StressData?.Outputs == null || report.StressData.Outputs.Count == 0)
                 {
-                    Logger.LogError("No stress data found for monitoring.");
-                    return 0;
+                    Logger.LogError("⚠️ No stress data found for monitoring.");
+                    return false;
                 }
 
-                int latestIndex = report.StressData.Outputs.Count - 1;
-
-                if (latestIndex < _processedArraysCount)
-                {
-                    Logger.LogError("No new stress data to process.");
-                    return 0;
-                }
-
-                var latestBatch = report.StressData.Outputs[latestIndex];
+                var latestBatch = report.StressData.Outputs.Last();
 
                 if (latestBatch.Count == 0)
                 {
-                    Logger.LogError("Latest stress batch is empty, skipping.");
-                    return 0;
+                    Logger.LogError("⚠️ Latest stress batch is empty, skipping.");
+                    return false;
                 }
 
                 int angerCount = latestBatch.Count(e => e == "angry");
@@ -754,34 +739,22 @@ namespace EDUGuard_DesktopApp.Views
                 int negativeEmotions = angerCount + fearCount + disgustCount + sadnessCount;
                 double negativePercentage = (double)negativeEmotions / totalEmotions * 100;
 
-                string stressLevel = "Unknown";
-
                 if (negativePercentage > 60)
                 {
-                    stressLevel = "High Stress";
-                    ShowNotification($"High Stress Detected ({stressLevel})! Try relaxation techniques.");
-                }
-                else if (negativePercentage > 30)
-                {
-                    stressLevel = "Medium Stress";
-                    ShowNotification($"Medium Stress Level ({stressLevel}). Consider taking a short break.");
-                }
-                else
-                {
-                    stressLevel = "Low Stress";
+                    Logger.LogError($"🚨 High Stress Detected ({negativePercentage}%)");
+                    ShowNotification($"High Stress Detected ({negativePercentage}%)! Try relaxation techniques.");
+                    return true;
                 }
 
-                Logger.LogError($"Determined Stress Level: {stressLevel}");
-
-                _processedArraysCount = latestIndex + 1;
-                return 1; // Indicates that new data was processed
+                return false;
             }
             catch (Exception ex)
             {
-                Logger.LogError($"Error checking stress alerts: {ex.Message}");
-                return 0;
+                Logger.LogError($"❌ Error checking stress alerts: {ex.Message}");
+                return false;
             }
         }
+
 
 
 
@@ -882,9 +855,12 @@ namespace EDUGuard_DesktopApp.Views
             {
                 SessionManager.EndSession();
                 StopAllProcesses();
+                _monitorTimer.Stop();
+                _monitorTimer.Dispose();
                 var mainWindow = new MainWindow();
                 mainWindow.Show();
                 Close();
+
             }
         }
 

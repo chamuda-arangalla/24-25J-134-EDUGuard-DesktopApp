@@ -1,331 +1,39 @@
-3/18/2025 9:14:59 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/18/2025 9:15:02 AM: [posture Error]: 2025-03-18 09:15:02.860744: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:15:05 AM: [posture Error]: 2025-03-18 09:15:05.618858: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:15:14 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 9:15:14 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 9:15:14 AM: [posture Error]: W0000 00:00:1742269514.695338   22424 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:15:14 AM: [posture Error]: W0000 00:00:1742269514.736121   12388 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:15:15 AM: [posture Error]: W0000 00:00:1742269515.500575   13936 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 9:17:04 AM: No posture data found for monitoring.
-3/18/2025 9:17:05 AM: No blink data found for monitoring.
-3/18/2025 9:17:05 AM: No stress data found for monitoring.
-3/18/2025 9:19:09 AM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:19:09 AM: badposture Notify: 3/18/2025 9:19:09 AM,76.7857142857143
-3/18/2025 9:19:12 AM: No blink data found for monitoring.
-3/18/2025 9:19:12 AM: No stress data found for monitoring.
-3/18/2025 9:21:14 AM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:21:14 AM: badposture Notify: 3/18/2025 9:21:14 AM,87.719298245614
-3/18/2025 9:21:16 AM: No blink data found for monitoring.
-3/18/2025 9:21:17 AM: No stress data found for monitoring.
-3/18/2025 9:23:02 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/18/2025 9:23:05 AM: [posture Error]: 2025-03-18 09:23:05.605851: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:23:07 AM: [posture Error]: 2025-03-18 09:23:07.703752: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:23:15 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 9:23:15 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 9:23:15 AM: [posture Error]: W0000 00:00:1742269995.216806   24276 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:23:15 AM: [posture Error]: W0000 00:00:1742269995.276588   24276 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:23:15 AM: [posture Error]: W0000 00:00:1742269995.922223   17544 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 9:25:11 AM: No posture data found for monitoring.
-3/18/2025 9:25:11 AM: No blink data found for monitoring.
-3/18/2025 9:25:11 AM: No stress data found for monitoring.
-3/18/2025 9:27:19 AM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:27:19 AM: badposture Notify: 3/18/2025 9:27:19 AM,62.1621621621622
-3/18/2025 9:27:22 AM: No blink data found for monitoring.
-3/18/2025 9:27:22 AM: No stress data found for monitoring.
-3/18/2025 9:30:53 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/18/2025 9:30:57 AM: [posture Error]: 2025-03-18 09:30:57.749120: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:30:59 AM: [posture Error]: 2025-03-18 09:30:59.758590: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:31:07 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 9:31:07 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 9:31:07 AM: [posture Error]: W0000 00:00:1742270467.267865   17916 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:31:07 AM: [posture Error]: W0000 00:00:1742270467.322464     856 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:31:07 AM: [posture Error]: W0000 00:00:1742270467.945357    4956 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 9:33:02 AM: No posture data found for monitoring.
-3/18/2025 9:33:02 AM: No blink data found for monitoring.
-3/18/2025 9:33:02 AM: No stress data found for monitoring.
-3/18/2025 9:35:10 AM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:35:10 AM: badposture Notify: 3/18/2025 9:35:10 AM,79.646017699115
-3/18/2025 9:35:15 AM: No blink data found for monitoring.
-3/18/2025 9:35:16 AM: No stress data found for monitoring.
-3/18/2025 9:35:38 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/18/2025 9:35:40 AM: [stress Error]: 2025-03-18 09:35:40.362478: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:35:41 AM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/18/2025 9:35:42 AM: [cvs Error]: 2025-03-18 09:35:42.209274: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:35:42 AM: [stress Error]: 2025-03-18 09:35:42.951671: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:35:43 AM: [cvs Error]: 2025-03-18 09:35:43.450591: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:35:56 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/18/2025 9:35:56 AM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/18/2025 9:35:56 AM: [cvs Error]: 2025-03-18 09:35:56.773462: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/18/2025 9:35:56 AM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/18/2025 9:35:57 AM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/18/2025 9:35:57 AM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/18/2025 9:35:57 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/18/2025 9:35:57 AM: [stress Error]:   warnings.warn(
-3/18/2025 9:35:57 AM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/18/2025 9:35:57 AM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/18/2025 9:37:18 AM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:37:18 AM: badposture Notify: 3/18/2025 9:37:18 AM,94.7368421052632
-3/18/2025 9:37:20 AM: No blink data found for monitoring.
-3/18/2025 9:37:21 AM: No stress data found for monitoring.
-3/18/2025 9:37:46 AM: No posture data found for monitoring.
-3/18/2025 9:37:47 AM: No blink data found for monitoring.
-3/18/2025 9:37:47 AM: No stress data found for monitoring.
-3/18/2025 9:37:49 AM: No posture data found for monitoring.
-3/18/2025 9:37:49 AM: No blink data found for monitoring.
-3/18/2025 9:37:50 AM: No stress data found for monitoring.
-3/18/2025 9:38:37 AM: [posture Error]: Traceback (most recent call last):
-3/18/2025 9:38:37 AM: [posture Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\posture_detection1.py", line 62, in <module>
-3/18/2025 9:38:37 AM: [posture Error]:     msg_size = struct.unpack("Q", packed_msg_size)[0]
-3/18/2025 9:38:37 AM: [posture Error]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/18/2025 9:38:37 AM: [posture Error]: struct.error: unpack requires a buffer of 8 bytes
-3/18/2025 9:38:37 AM: [stress Error]: Traceback (most recent call last):
-3/18/2025 9:38:37 AM: [cvs Error]: Traceback (most recent call last):
-3/18/2025 9:38:37 AM: [stress Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\stress_detection.py", line 47, in <module>
-3/18/2025 9:38:37 AM: [cvs Error]:   File "C:\Users\chamu\source\repos\EDUGuard_DesktopApp\EDUGuard_DesktopApp\PyFiles\cvs_detection.py", line 77, in <module>
-3/18/2025 9:38:37 AM: [cvs Error]:     packet = client_socket.recv(4 * 1024)
-3/18/2025 9:38:37 AM: [cvs Error]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/18/2025 9:38:37 AM: [cvs Error]: ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-3/18/2025 9:38:37 AM: [stress Error]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3/18/2025 9:38:37 AM: [stress Error]: ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
-3/18/2025 9:39:26 AM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:39:26 AM: badposture Notify: 3/18/2025 9:39:26 AM,94.7368421052632
-3/18/2025 9:39:28 AM: No blink data found for monitoring.
-3/18/2025 9:39:29 AM: No stress data found for monitoring.
-3/18/2025 3:30:22 PM: modelReport : System.Collections.Generic.Dictionary`2[System.String,System.String]
-3/18/2025 3:30:26 PM: [hydration Error]: 2025-03-18 15:30:26.760277: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 3:30:29 PM: [hydration Error]: 2025-03-18 15:30:29.671397: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 3:30:44 PM: [hydration Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 3:30:44 PM: [hydration Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 3:30:44 PM: [hydration Error]: W0000 00:00:1742292044.685423   20560 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 3:30:44 PM: [hydration Error]: W0000 00:00:1742292044.805431   22944 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 3:30:45 PM: [hydration Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.6.1 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
-3/18/2025 3:30:45 PM: [hydration Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
-3/18/2025 3:30:45 PM: [hydration Error]:   warnings.warn(
-3/18/2025 3:30:45 PM: [hydration Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.6.1 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
-3/18/2025 3:30:45 PM: [hydration Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
-3/18/2025 3:30:45 PM: [hydration Error]:   warnings.warn(
-3/18/2025 3:32:31 PM: No posture data found for monitoring.
-3/18/2025 3:32:31 PM: No blink data found for monitoring.
-3/18/2025 3:32:31 PM: No stress data found for monitoring.
-3/18/2025 3:34:39 PM: No posture data found for monitoring.
-3/18/2025 3:34:39 PM: No blink data found for monitoring.
-3/18/2025 3:34:39 PM: No stress data found for monitoring.
-3/18/2025 3:37:17 PM: [hydration Error]: 2025-03-18 15:37:17.143447: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 3:37:21 PM: [hydration Error]: 2025-03-18 15:37:21.481792: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 3:37:42 PM: [hydration Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 3:37:43 PM: [hydration Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 3:37:43 PM: [hydration Error]: W0000 00:00:1742292463.170894    6092 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 3:37:43 PM: [hydration Error]: W0000 00:00:1742292463.281111   20228 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 3:37:43 PM: [hydration Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.6.1 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
-3/18/2025 3:37:43 PM: [hydration Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
-3/18/2025 3:37:43 PM: [hydration Error]:   warnings.warn(
-3/18/2025 3:37:43 PM: [hydration Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\sklearn\base.py:376: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.6.1 when using version 1.5.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
-3/18/2025 3:37:43 PM: [hydration Error]: https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
-3/18/2025 3:37:43 PM: [hydration Error]:   warnings.warn(
-3/18/2025 3:39:21 PM: No posture data found for monitoring.
-3/18/2025 3:39:21 PM: No blink data found for monitoring.
-3/18/2025 3:39:22 PM: No stress data found for monitoring.
-3/18/2025 3:44:41 PM: [cvs Error]: 2025-03-18 15:44:41.391717: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 3:44:44 PM: [cvs Error]: 2025-03-18 15:44:44.292387: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 3:45:13 PM: [cvs Error]: 2025-03-18 15:45:13.312788: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/18/2025 3:45:13 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/18/2025 3:45:14 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/18/2025 3:46:48 PM: No posture data found for monitoring.
-3/18/2025 3:46:48 PM: No blink data found for monitoring.
-3/18/2025 3:46:48 PM: No stress data found for monitoring.
-3/18/2025 3:48:56 PM: No posture data found for monitoring.
-3/18/2025 3:48:56 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/18/2025 3:48:56 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Good Distance", "blink_count": 19}
-3/18/2025 3:48:56 PM: Processed Blink Count: 19
-3/18/2025 3:48:56 PM: High blink rate detected: 3/18/2025 3:48:56 PM
-3/18/2025 3:49:02 PM: No stress data found for monitoring.
-3/18/2025 3:51:04 PM: No posture data found for monitoring.
-3/18/2025 3:51:04 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/18/2025 3:51:04 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Good Distance", "blink_count": 19}
-3/18/2025 3:51:04 PM: Processed Blink Count: 19
-3/18/2025 3:51:04 PM: High blink rate detected: 3/18/2025 3:51:04 PM
-3/18/2025 3:51:08 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/18/2025 3:51:08 PM: Extracting Blink Data: {"eye_state": "Open", "distance": "Too Far!", "blink_count": 7}
-3/18/2025 3:51:08 PM: Processed Blink Count: 7
-3/18/2025 3:51:08 PM: Eye strain detected: 3/18/2025 3:51:08 PM
-3/18/2025 3:51:11 PM: No stress data found for monitoring.
-3/18/2025 8:03:08 PM: [posture Error]: 2025-03-18 20:03:08.821683: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:03:36 PM: [posture Error]: 2025-03-18 20:03:36.364291: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:04:17 PM: [posture Error]: 2025-03-18 20:04:17.749861: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:04:21 PM: [posture Error]: 2025-03-18 20:04:21.891806: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computatioqqn orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:11:01 PM: [posture Error]: 2025-03-18 20:11:01.804586: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:11:05 PM: [posture Error]: 2025-03-18 20:11:05.980879: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:12:11 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 8:12:11 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 8:12:11 PM: [posture Error]: W0000 00:00:1742308931.636673   24108 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 8:12:11 PM: [posture Error]: W0000 00:00:1742308931.757500   17376 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 8:12:12 PM: [posture Error]: W0000 00:00:1742308932.205285   23088 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 8:13:05 PM: No posture data found for monitoring.
-3/18/2025 8:13:05 PM: No blink data found for monitoring.
-3/18/2025 8:13:06 PM: No stress data found for monitoring.
-3/18/2025 8:15:13 PM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 8:15:13 PM: badposture Notify: 3/18/2025 8:15:13 PM,97.2222222222222
-3/18/2025 8:15:24 PM: No blink data found for monitoring.
-3/18/2025 8:15:25 PM: No stress data found for monitoring.
-3/18/2025 8:29:47 PM: [posture Error]: 2025-03-18 20:29:47.806678: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:29:50 PM: [posture Error]: 2025-03-18 20:29:50.679689: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:30:01 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 8:30:01 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 8:30:01 PM: [posture Error]: W0000 00:00:1742310001.678333    9580 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 8:30:01 PM: [posture Error]: W0000 00:00:1742310001.725680    1748 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 8:30:02 PM: [posture Error]: W0000 00:00:1742310002.569276   25492 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 8:31:53 PM: No posture data found for monitoring.
-3/18/2025 8:31:53 PM: No blink data found for monitoring.
-3/18/2025 8:31:53 PM: No stress data found for monitoring.
-3/18/2025 8:34:01 PM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 8:34:01 PM: badposture Notify: 3/18/2025 8:34:01 PM,99.0825688073395
-3/18/2025 8:34:07 PM: No blink data found for monitoring.
-3/18/2025 8:34:07 PM: No stress data found for monitoring.
-3/18/2025 8:53:12 PM: [posture Error]: 2025-03-18 20:53:12.674138: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:53:15 PM: [posture Error]: 2025-03-18 20:53:15.443474: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 8:53:24 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 8:53:25 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 8:53:25 PM: [posture Error]: W0000 00:00:1742311405.018533   17488 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 8:53:25 PM: [posture Error]: W0000 00:00:1742311405.054640   17488 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 8:53:25 PM: [posture Error]: W0000 00:00:1742311405.726555   23840 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 8:55:17 PM: No posture data found for monitoring.
-3/18/2025 8:55:17 PM: No blink data found for monitoring.
-3/18/2025 8:55:17 PM: No stress data found for monitoring.
-3/18/2025 8:57:25 PM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 8:57:25 PM: badposture Notify: 3/18/2025 8:57:25 PM,98.9010989010989
-3/18/2025 8:57:41 PM: No blink data found for monitoring.
-3/18/2025 8:57:41 PM: No stress data found for monitoring.
-3/18/2025 9:14:27 PM: [posture Error]: 2025-03-18 21:14:27.531412: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:14:30 PM: [posture Error]: 2025-03-18 21:14:30.218133: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:14:39 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 9:14:39 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 9:14:39 PM: [posture Error]: W0000 00:00:1742312679.350660    5076 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:14:39 PM: [posture Error]: W0000 00:00:1742312679.394546    9940 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:14:40 PM: [posture Error]: W0000 00:00:1742312680.043425    4692 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 9:15:01 PM: No posture data found for monitoring.
-3/18/2025 9:15:01 PM: No blink data found for monitoring.
-3/18/2025 9:15:01 PM: No stress data found for monitoring.
-3/18/2025 9:15:39 PM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:15:39 PM: badposture Notify: 3/18/2025 9:15:39 PM,89.6551724137931
-3/18/2025 9:15:42 PM: No blink data found for monitoring.
-3/18/2025 9:15:42 PM: No stress data found for monitoring.
-3/18/2025 9:16:17 PM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:16:17 PM: badposture Notify: 3/18/2025 9:16:17 PM,89.6551724137931
-3/18/2025 9:16:20 PM: No blink data found for monitoring.
-3/18/2025 9:16:21 PM: No stress data found for monitoring.
-3/18/2025 9:16:55 PM: Latest PostureData.Outputs: System.Collections.Generic.List`1[System.String]
-3/18/2025 9:16:55 PM: badposture Notify: 3/18/2025 9:16:55 PM,91.5254237288136
-3/18/2025 9:16:57 PM: No blink data found for monitoring.
-3/18/2025 9:16:58 PM: No stress data found for monitoring.
-3/18/2025 9:26:24 PM: [posture Error]: 2025-03-18 21:26:24.499511: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:26:27 PM: [posture Error]: 2025-03-18 21:26:27.459938: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:26:35 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 9:26:35 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 9:26:35 PM: [posture Error]: W0000 00:00:1742313395.489386   12484 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:26:35 PM: [posture Error]: W0000 00:00:1742313395.537691    9596 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:26:36 PM: [posture Error]: W0000 00:00:1742313396.249601   23768 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 9:26:59 PM: No posture data found for monitoring.
-3/18/2025 9:26:59 PM: No blink data found for monitoring.
-3/18/2025 9:26:59 PM: No stress data found for monitoring.
-3/18/2025 9:28:10 PM: [stress Error]: 2025-03-18 21:28:10.626426: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:28:12 PM: [stress Error]: 2025-03-18 21:28:12.951702: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:28:22 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-3/18/2025 9:28:22 PM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-3/18/2025 9:28:22 PM: [stress Error]: 2025-03-18 21:28:22.942455: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/18/2025 9:28:22 PM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/18/2025 9:28:23 PM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
-3/18/2025 9:28:23 PM: [stress Error]:   warnings.warn(
-3/18/2025 9:28:23 PM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/18/2025 9:28:23 PM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
-3/18/2025 9:28:46 PM: [posture Error]: 2025-03-18 21:28:46.396071: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:28:47 PM: No posture data found for monitoring.
-3/18/2025 9:28:47 PM: No blink data found for monitoring.
-3/18/2025 9:28:47 PM: [posture Error]: 2025-03-18 21:28:47.711293: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:28:47 PM: No stress data found for monitoring.
-3/18/2025 9:28:53 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 9:28:53 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 9:28:53 PM: [posture Error]: W0000 00:00:1742313533.153626   23004 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:28:53 PM: [posture Error]: W0000 00:00:1742313533.202806   23004 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 9:28:53 PM: [posture Error]: W0000 00:00:1742313533.229104    3000 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 9:29:15 PM: [cvs Error]: 2025-03-18 21:29:15.170810: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 9:29:16 PM: [cvs Error]: 2025-03-18 21:29:16.576979: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:23:42 PM: No posture data found for monitoring.
-3/18/2025 11:23:42 PM: No blink data found for monitoring.
-3/18/2025 11:23:42 PM: No stress data found for monitoring.
-3/18/2025 11:24:20 PM: No posture data found for monitoring.
-3/18/2025 11:24:20 PM: No blink data found for monitoring.
-3/18/2025 11:24:20 PM: No stress data found for monitoring.
-3/18/2025 11:24:58 PM: No posture data found for monitoring.
-3/18/2025 11:24:58 PM: No blink data found for monitoring.
-3/18/2025 11:24:58 PM: No stress data found for monitoring.
-3/18/2025 11:27:22 PM: [cvs Error]: 2025-03-18 23:27:22.037740: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:27:24 PM: [cvs Error]: 2025-03-18 23:27:24.472100: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:27:33 PM: [cvs Error]: 2025-03-18 23:27:33.610770: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/18/2025 11:27:33 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/18/2025 11:27:33 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/18/2025 11:27:57 PM: No posture data found for monitoring.
-3/18/2025 11:27:58 PM: No blink data found for monitoring.
-3/18/2025 11:27:58 PM: No stress data found for monitoring.
-3/18/2025 11:28:07 PM: [cvs Error]: 2025-03-18 23:28:07.619191: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:28:09 PM: [cvs Error]: 2025-03-18 23:28:09.391194: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:28:15 PM: [cvs Error]: 2025-03-18 23:28:15.878022: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-3/18/2025 11:28:15 PM: [cvs Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-3/18/2025 11:28:16 PM: [cvs Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
-3/18/2025 11:28:35 PM: No posture data found for monitoring.
-3/18/2025 11:28:36 PM: No blink data found for monitoring.
-3/18/2025 11:28:36 PM: No stress data found for monitoring.
-3/18/2025 11:28:44 PM: No posture data found for monitoring.
-3/18/2025 11:28:44 PM: No blink data found for monitoring.
-3/18/2025 11:28:44 PM: No stress data found for monitoring.
-3/18/2025 11:29:13 PM: No posture data found for monitoring.
-3/18/2025 11:29:14 PM: No blink data found for monitoring.
-3/18/2025 11:29:14 PM: No stress data found for monitoring.
-3/18/2025 11:29:22 PM: No posture data found for monitoring.
-3/18/2025 11:29:22 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/18/2025 11:29:22 PM: Extracting Blink Data: {"eye_state": "Closed", "distance": "Good Distance", "blink_count": 33}
-3/18/2025 11:29:22 PM: Processed Blink Count: 33
-3/18/2025 11:29:22 PM: High blink rate detected: 3/18/2025 11:29:22 PM
-3/18/2025 11:29:26 PM: No stress data found for monitoring.
-3/18/2025 11:29:51 PM: No posture data found for monitoring.
-3/18/2025 11:29:52 PM: No blink data found for monitoring.
-3/18/2025 11:29:52 PM: No stress data found for monitoring.
-3/18/2025 11:30:00 PM: No posture data found for monitoring.
-3/18/2025 11:30:00 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/18/2025 11:30:00 PM: Extracting Blink Data: {"eye_state": "Closed", "distance": "Good Distance", "blink_count": 33}
-3/18/2025 11:30:00 PM: Processed Blink Count: 33
-3/18/2025 11:30:00 PM: High blink rate detected: 3/18/2025 11:30:00 PM
-3/18/2025 11:30:03 PM: No stress data found for monitoring.
-3/18/2025 11:30:29 PM: No posture data found for monitoring.
-3/18/2025 11:30:30 PM: No blink data found for monitoring.
-3/18/2025 11:30:30 PM: No stress data found for monitoring.
-3/18/2025 11:30:38 PM: No posture data found for monitoring.
-3/18/2025 11:30:38 PM: BlinkData.Outputs System.Collections.Generic.List`1[System.String]
-3/18/2025 11:30:38 PM: Extracting Blink Data: {"eye_state": "Closed", "distance": "Good Distance", "blink_count": 33}
-3/18/2025 11:30:38 PM: Processed Blink Count: 33
-3/18/2025 11:30:38 PM: High blink rate detected: 3/18/2025 11:30:38 PM
-3/18/2025 11:43:54 PM: [posture Error]: 2025-03-18 23:43:54.586409: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:43:57 PM: [posture Error]: 2025-03-18 23:43:57.415429: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:44:05 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 11:44:05 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 11:44:05 PM: [posture Error]: W0000 00:00:1742321645.704045   17496 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 11:44:05 PM: [posture Error]: W0000 00:00:1742321645.753971   20512 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 11:44:06 PM: [posture Error]: W0000 00:00:1742321646.455343   15844 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 11:44:28 PM: No posture data found for monitoring.
-3/18/2025 11:44:28 PM: No blink data found for monitoring.
-3/18/2025 11:44:28 PM: No stress data found for monitoring.
-3/18/2025 11:44:28 PM: Monitoring stopped: No new data available.
-3/18/2025 11:50:34 PM: [posture Error]: 2025-03-18 23:50:34.376036: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:50:36 PM: [posture Error]: 2025-03-18 23:50:36.850027: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-3/18/2025 11:50:54 PM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
-3/18/2025 11:50:54 PM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-3/18/2025 11:50:54 PM: [posture Error]: W0000 00:00:1742322054.591892    9600 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 11:50:54 PM: [posture Error]: W0000 00:00:1742322054.740658    9600 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
-3/18/2025 11:50:55 PM: [posture Error]: W0000 00:00:1742322055.560583   21248 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
-3/18/2025 11:51:08 PM: No posture data found for monitoring.
-3/18/2025 11:51:09 PM: No blink data found for monitoring.
-3/18/2025 11:51:09 PM: No stress data found for monitoring.
-3/18/2025 11:51:09 PM: Monitoring stopped: No new data available.
-3/19/2025 12:20:01 AM: No posture data found for monitoring.
-3/19/2025 12:20:01 AM: No blink data found for monitoring.
-3/19/2025 12:20:01 AM: No stress data found for monitoring.
-3/19/2025 12:20:01 AM: Monitoring stopped: No new data available.
+3/19/2025 1:14:57 AM: [posture Error]: 2025-03-19 01:14:57.853428: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/19/2025 1:15:01 AM: [posture Error]: 2025-03-19 01:15:01.258776: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/19/2025 1:15:10 AM: [posture Error]: INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+3/19/2025 1:15:10 AM: [posture Error]: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+3/19/2025 1:15:10 AM: [posture Error]: W0000 00:00:1742327110.965960   12376 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/19/2025 1:15:11 AM: [posture Error]: W0000 00:00:1742327111.020711   12376 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+3/19/2025 1:15:11 AM: [posture Error]: W0000 00:00:1742327111.890387   22872 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+3/19/2025 1:16:12 AM: 🔄 Monitoring cycle started... Checking for new data.
+3/19/2025 1:16:12 AM: 🔍 Checking posture alerts...
+3/19/2025 1:16:13 AM: 🚨 Alert: Bad posture detected (76.3636363636364%)
+3/19/2025 1:16:17 AM: 🔍 Checking blink alerts...
+3/19/2025 1:16:17 AM: ⚠️ No blink data found for monitoring.
+3/19/2025 1:16:17 AM: 🔍 Checking stress alerts...
+3/19/2025 1:16:17 AM: ⚠️ No stress data found for monitoring.
+3/19/2025 1:17:30 AM: 🔄 Monitoring cycle started... Checking for new data.
+3/19/2025 1:17:30 AM: 🔍 Checking posture alerts...
+3/19/2025 1:17:30 AM: 🚨 Alert: Bad posture detected (77.3584905660377%)
+3/19/2025 1:17:34 AM: 🔍 Checking blink alerts...
+3/19/2025 1:17:35 AM: ⚠️ No blink data found for monitoring.
+3/19/2025 1:17:35 AM: 🔍 Checking stress alerts...
+3/19/2025 1:17:35 AM: ⚠️ No stress data found for monitoring.
+3/19/2025 1:19:47 AM: [stress Error]: 2025-03-19 01:19:47.849372: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/19/2025 1:19:51 AM: [stress Error]: 2025-03-19 01:19:51.635804: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+3/19/2025 1:20:03 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+3/19/2025 1:20:03 AM: [stress Error]:   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+3/19/2025 1:20:03 AM: [stress Error]: 2025-03-19 01:20:03.734382: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+3/19/2025 1:20:03 AM: [stress Error]: To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+3/19/2025 1:20:04 AM: [stress Error]: C:\Users\chamu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\optimizers\base_optimizer.py:86: UserWarning: Argument `decay` is no longer supported and will be ignored.
+3/19/2025 1:20:04 AM: [stress Error]:   warnings.warn(
+3/19/2025 1:20:04 AM: [stress Error]: WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+3/19/2025 1:20:04 AM: [stress Error]: WARNING:absl:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+3/19/2025 1:21:02 AM: 🔄 Monitoring cycle started... Checking for new data.
+3/19/2025 1:21:02 AM: 🔍 Checking posture alerts...
+3/19/2025 1:21:03 AM: ⚠️ No posture data found for monitoring.
+3/19/2025 1:21:03 AM: 🔍 Checking blink alerts...
+3/19/2025 1:21:03 AM: ⚠️ No blink data found for monitoring.
+3/19/2025 1:21:03 AM: 🔍 Checking stress alerts...
+3/19/2025 1:21:03 AM: ⚠️ No stress data found for monitoring.
+3/19/2025 1:21:03 AM: ✅ Monitoring stopped: No new data available.
